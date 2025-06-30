@@ -20,7 +20,7 @@ const testimonials = [
 
 function ClientStories() {
   return (
-    <section className="px-4 sm:px-6 pt-28 pb-12 bg-white font-questrial rounded-t-[3rem]">
+    <section className="px-4 sm:px-6 pt-28 pb-12 bg-white font-questrial rounded-t-[3rem] h-screen">
       <div className="max-w-[1400px] mx-auto">
         {/* Header */}
         <div className="mb-10">
@@ -33,16 +33,16 @@ function ClientStories() {
         </div>
 
         {/* Testimonials */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12  lg:flex lg:justify-end lg:gap-2">
           {testimonials.map((testimonial, idx) => (
             <div
               key={idx}
-              className="bg-stone-300 rounded-[3rem] p-8 sm:p-10 w-full min-h-[21rem] flex flex-col justify-between"
+              className="bg-stone-300 rounded-[3rem] p-8 sm:p-10 w-full h-full md:h-[23rem] flex flex-col justify-between lg:w-[25rem] lg:h-[23rem] "
             >
-              <p className="text-green-700 text-base sm:text-md mb-6">
+              <p className="text-green-700 text-base sm:text-md mb-6 md:py-5">
                 {testimonial.text}
               </p>
-              <div className="text-white italic text-right mt-auto">
+              <div className="text-white italic text-right mt-auto md:pb-16">
                 {testimonial.author}<br />
                 <span className="not-italic">{testimonial.company}</span>
               </div>

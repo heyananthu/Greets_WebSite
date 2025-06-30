@@ -1,5 +1,6 @@
 import React from 'react';
 import gridimg from '../../assets/gird-img.jpg';
+import icon from '../../assets/gridsection-icon.svg'
 
 function GridSection() {
     return (
@@ -7,10 +8,10 @@ function GridSection() {
             <div className='font-[var(--font-questrial)]'>
 
                 {/* Top Row */}
-                <div className="flex flex-col md:flex-row md:justify-end gap-12 md:gap-4 lg:gap-32 mb-6 w-full  mx-auto">
+                <div className="flex flex-col md:flex-row md:justify-end gap-12 md:gap-4 lg:gap-64 mb-6 w-full  mx-auto">
                     {/* React Block */}
                     <div className='w-full lg:w-[35rem]'>
-                        <div className="bg-green-700 text-white p-6 md:p-8 rounded-tr-[2.5rem] shadow h-[19rem] flex flex-col justify-between md:w-[rem] lg:w-[42rem]">
+                        <div className="bg-green-700 text-white p-6 md:p-8 rounded-tr-[2.5rem] shadow h-[19rem] flex flex-col justify-between md:w-[rem] lg:w-[49rem]">
                             <div className='lg:px-6 lg:py-6'>
                                 <h2 className="text-2xl lg:text-4xl font-bold mb-4">React</h2>
                                 <p className="text-sm md:text-base">
@@ -57,7 +58,7 @@ function GridSection() {
                     </div>
 
                     {/* Relaunch Block */}
-                    <div className="bg-stone-200 p-6 md:p-10 rounded-[2.5rem] shadow h-auto  md:h-[20rem] lg:h-[20rem] w-full md:w-[32rem] lg:w-[38rem] flex flex-col ">
+                    <div className="bg-stone-200 p-6 md:p-10 rounded-[2.5rem] shadow h-auto  md:h-[20rem] lg:h-[20rem] w-full md:w-[32rem] lg:w-[46rem] flex flex-col ">
                         <div className='lg:px-6'>
                             <h2 className="text-2xl md:text-3xl font-bold mb-4">Relaunch</h2>
                             <p className="text-green-700 text-sm md:text-base mb-4 lg:w-[78%]">
@@ -73,8 +74,8 @@ function GridSection() {
                     </div>
 
                     {/* Icon Block */}
-                    <div className="bg-green-600 flex items-center justify-center rounded-[2.5rem] p-6 md:pr-8 h-[10rem] md:h-[14rem] w-full md:w-[17rem] ">
-                        <div className="text-black text-5xl md:text-6xl font-bold">🔗</div>
+                    <div className="bg-green-700 flex items-center justify-center rounded-[2.5rem] p-6 md:pr-8 h-[10rem] md:h-[14rem] w-full md:w-[17rem] ">
+                        <img src={icon} alt="icon" className='size-56' />
                     </div>
                 </div>
 
