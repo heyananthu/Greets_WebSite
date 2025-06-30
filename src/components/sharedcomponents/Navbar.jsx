@@ -1,0 +1,177 @@
+import React, { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { motion, AnimatePresence } from 'framer-motion'
+import logo from '../../assets/Greets_Logo.avif'
+
+function Navbar() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isVisible, setIsVisible] = useState(true)
+    const [lastScrollY, setLastScrollY] = useState(0)
+    const location = useLocation()
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY
+
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                // Scrolling down and past 100px
+                setIsVisible(false)
+            } else {
+                // Scrolling up
+                setIsVisible(true)
+            }
+
+            setLastScrollY(currentScrollY)
+        }
+
+        window.addEventListener('scroll', handleScroll, { passive: true })
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, [lastScrollY])
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen)
+    }
+
+    const isActive = (path) => {
+        return location.pathname === path
+    }
+
+    const menuItems = [
+        { path: '/', label: 'Home' },
+        { path: '/about', label: 'About' },
+        { path: '/solutions', label: 'Services' },
+        { path: '/projects', label: 'Projects' },
+        { path: '/contact', label: 'Contact Us' }
+    ]
+
+    const navbarVariants = {
+        visible: {
+            y: 0,
+            opacity: 1,
+            backgroundColor: 'rgba(255, 255, 255, 0.95)',
+            backdropFilter: 'blur(10px)',
+            transition: {
+                duration: 0.6,
+                ease: [0.25, 0.46, 0.45, 0.94],
+                opacity: { duration: 0.4 },
+                backgroundColor: { duration: 0.5 },
+                backdropFilter: { duration: 0.5 }
+            }
+        },
+        hidden: {
+            y: -100,
+            opacity: 0,
+            backgroundColor: 'rgba(255, 255, 255, 0)',
+            backdropFilter: 'blur(0px)',
+            transition: {
+                duration: 0.8,
+                ease: [0.55, 0.055, 0.675, 0.19],
+                opacity: { duration: 0.6, delay: 0.1 },
+                backgroundColor: { duration: 0.7 },
+                backdropFilter: { duration: 0.7 }
+            }
+        }
+    }
+
+    return (
+        <AnimatePresence>
+            <motion.div
+                className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 sm:px-8 lg:px-16 p-2 bg-gray-100 font-questrial"
+                variants={navbarVariants}
+                initial="visible"
+                animate={isVisible ? "visible" : "hidden"}
+                exit="hidden"
+            >
+                <div>
+                    <img src={logo} alt="logo" className='w-32 h-20 sm:w-40 sm:h-24' />
+                </div>
+
+                {/* Desktop Menu */}
+                <div className='hidden md:block'>
+                    <ul className='flex gap-8 text-sm'>
+                        {menuItems.map((item) => (
+                            <li key={item.path}>
+                                <Link
+                                    to={item.path}
+                                    className={`cursor-pointer transition-colors ${isActive(item.path)
+                                        ? 'text-green-700 px-3 py-2 rounded-md'
+                                        : 'text-gray-700'
+                                        }`}
+                                >
+                                    {item.label}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
+                {/* Mobile Menu Button */}
+                <div className='md:hidden'>
+                    <button
+                        onClick={toggleMenu}
+                        className='text-5xl font-light hover:text-green-700 transition-colors'
+                        aria-label="Toggle menu"
+                    >
+                        =
+                    </button>
+                </div>
+
+                {/* Mobile Menu Overlay */}
+                <AnimatePresence>
+                    {isMenuOpen && (
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className='fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden'
+                            onClick={toggleMenu}
+                        >
+                            <motion.div
+                                initial={{ x: '100%' }}
+                                animate={{ x: 0 }}
+                                exit={{ x: '100%' }}
+                                transition={{ duration: 0.3, ease: 'easeOut' }}
+                                className='fixed top-0 right-0 h-full w-full bg-[#1C6900] shadow-lg z-50'
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                <div className='flex justify-end p-4'>
+                                    <button
+                                        onClick={toggleMenu}
+                                        className='text-2xl font-bold text-white hover:text-green-700 transition-colors'
+                                        aria-label="Close menu"
+                                    >
+                                        ✕
+                                    </button>
+                                </div>
+                                <nav className='px-6 py-4 h-screen bg-[#1C6900]'>
+                                    <ul className='space-y-4 text-lg'>
+                                        {menuItems.map((item) => (
+                                            <li key={item.path} className='border-gray-200 pb-2 text-5xl'>
+                                                <Link
+                                                    to={item.path}
+                                                    onClick={toggleMenu}
+                                                    className={`cursor-pointer transition-colors block ${isActive(item.path)
+                                                        ? 'text-green-700 px-3 py-2 rounded-md'
+                                                        : 'text-white'
+                                                        }`}
+                                                >
+                                                    {item.label}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </nav>
+                            </motion.div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+            </motion.div>
+        </AnimatePresence>
+    )
+}
+
+export default Navbar
