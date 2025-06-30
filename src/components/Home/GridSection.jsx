@@ -11,7 +11,7 @@ function GridSection() {
                 <div className="flex flex-col md:flex-row md:justify-end gap-12 md:gap-4 lg:gap-64 mb-6 w-full  mx-auto">
                     {/* React Block */}
                     <div className='w-full lg:w-[35rem]'>
-                        <div className="bg-green-700 text-white p-6 md:p-8 rounded-tr-[2.5rem] shadow h-[19rem] flex flex-col justify-between md:w-[rem] lg:w-[49rem]">
+                        <div className="bg-green-700 text-white p-6 md:p-8 rounded-tr-[2.5rem] shadow h-[15rem] md:h-[19rem] flex flex-col justify-between md:w-[rem] lg:w-[49rem]">
                             <div className='lg:px-6 lg:py-6'>
                                 <h2 className="text-2xl lg:text-4xl font-bold mb-4">React</h2>
                                 <p className="text-sm md:text-base">
@@ -27,7 +27,7 @@ function GridSection() {
                     </div>
 
                     {/* Revitalize Block */}
-                    <div className="bg-stone-300 p-6 md:p-8 rounded-tl-[2.5rem] shadow h-[19rem] w-full lg:w-[40rem]">
+                    <div className="bg-stone-300 p-6 md:p-8 rounded-tl-[2.5rem] shadow h-[15rem] md:h-[19rem] w-full lg:w-[40rem]">
                         <div className='flex flex-col justify-start h-full space-y-10'>
                             <div className='lg:px-6 lg:py-8'>
                                 <h2 className="text-2xl md:text-4xl font-bold text-green-700 mb-2">Revitalize</h2>
@@ -74,7 +74,7 @@ function GridSection() {
                     </div>
 
                     {/* Icon Block */}
-                    <div className="bg-green-700 flex items-center justify-center rounded-[2.5rem] p-6 md:pr-8 h-[10rem] md:h-[14rem] w-full md:w-[17rem] ">
+                    <div className="bg-green-700 flex items-center justify-center rounded-[2.5rem] p-6 md:pr-8 h-[14rem] md:h-[14rem] w-full md:w-[17rem] ">
                         <img src={icon} alt="icon" className='size-56' />
                     </div>
                 </div>
