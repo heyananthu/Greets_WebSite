@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 // import logo from '../../assets/Greets_Logo.avif' // Uncomment and adjust if you want to use an image
-
+import footerlogo from '../../assets/footerlogo.svg'
 function FooterSub() {
     const [openAccordion, setOpenAccordion] = useState(false)
 
@@ -11,7 +11,7 @@ function FooterSub() {
                 <h1 className='lg:text-[19rem] text-8xl'>Greets</h1>
             </div>
             <div className='md:flex md:justify-between px-8 mt-5'>
-                <div className='md:pl-8  grid grid-cols-1 md:grid-cols-4 text-[13px] gap-x-8 gap-y-8'>
+                <div className='md:pl-8  grid grid-cols-1 md:grid-cols-4 text-[14px] gap-x-12 gap-y-8'>
                     <div className='flex flex-col gap-y-1 w-fit relative'>
                         <NavLink
                             to='/'
@@ -64,9 +64,11 @@ function FooterSub() {
                         <p>Privacy Policy</p>
                     </div>
                 </div>
-                <div>
-                    <h1>Greets</h1>
-                    <p>@2035</p>
+                <div className='relative flex items-center gap-x-1 '>
+                    <img src={footerlogo} alt="footerlogo" className='size-32' />
+                    <div className="flex items-end  w-full md:w-auto mt-8">
+                        <span className="text-sm ">© 2035<span className="align-super text-xs ml-1">_™</span></span>
+                    </div>
                 </div>
             </div>
         </div>
