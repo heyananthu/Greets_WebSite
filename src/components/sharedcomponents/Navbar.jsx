@@ -7,11 +7,14 @@ function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isVisible, setIsVisible] = useState(true)
     const [lastScrollY, setLastScrollY] = useState(0)
+    const [isAtTop, setIsAtTop] = useState(true)
     const location = useLocation()
 
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY
+
+            setIsAtTop(currentScrollY === 0)
 
             if (currentScrollY > lastScrollY && currentScrollY > 100) {
                 // Scrolling down and past 100px
@@ -51,27 +54,19 @@ function Navbar() {
         visible: {
             y: 0,
             opacity: 1,
-            backgroundColor: 'rgba(255, 255, 255, 0.95)',
-            backdropFilter: 'blur(10px)',
             transition: {
                 duration: 0.6,
                 ease: [0.25, 0.46, 0.45, 0.94],
-                opacity: { duration: 0.4 },
-                backgroundColor: { duration: 0.5 },
-                backdropFilter: { duration: 0.5 }
+                opacity: { duration: 0.4 }
             }
         },
         hidden: {
             y: -100,
             opacity: 0,
-            backgroundColor: 'rgba(255, 255, 255, 0)',
-            backdropFilter: 'blur(0px)',
             transition: {
                 duration: 0.8,
                 ease: [0.55, 0.055, 0.675, 0.19],
-                opacity: { duration: 0.6, delay: 0.1 },
-                backgroundColor: { duration: 0.7 },
-                backdropFilter: { duration: 0.7 }
+                opacity: { duration: 0.6, delay: 0.1 }
             }
         }
     }
@@ -79,7 +74,7 @@ function Navbar() {
     return (
         <AnimatePresence>
             <motion.div
-                className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 sm:px-8 lg:px-16 p-2 bg-gray-100 font-questrial"
+                className={`fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 sm:px-8 lg:px-16 p-2 font-questrial ${isAtTop ? 'bg-gray-100' : 'bg-white'}`}
                 variants={navbarVariants}
                 initial="visible"
                 animate={isVisible ? "visible" : "hidden"}

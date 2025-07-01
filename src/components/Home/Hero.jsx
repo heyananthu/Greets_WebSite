@@ -3,9 +3,9 @@ import banner from '../../assets/hero-banner.png'
 
 function Hero() {
     return (
-        <div className="px-4 sm:px-8 lg:px-16 mb-16 mt-32 ">
+        <div className="px-4 sm:px-8 lg:px-16 mb-16 ">
             <div
-                className="w-full h-[15rem] bg-cover bg-center md:h-[18rem] md:w-full  sm:h-[24rem] lg:h-[28rem] "
+                className="w-full h-[15rem] bg-cover bg-center md:h-[18rem] md:w-full  sm:h-[24rem] lg:h-[28rem] mt-24"
                 style={{ backgroundImage: `url(${banner})` }}
             >
                 <div className="p-4">

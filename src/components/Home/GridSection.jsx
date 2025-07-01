@@ -4,10 +4,10 @@ import icon from '../../assets/gridsection-icon.svg'
 
 function GridSection() {
     return (
-        <div className='p-4 md:p-0 font-questrial'>
+        <div className='p-4 md:p-0 font-questrial mb-20'>
             <div className='font-[var(--font-questrial)]'>
                 {/* Top Row */}
-                <div className="flex flex-col md:flex-row md:justify-between md:gap-4 lg:gap-4 mb-6 w-full mx-auto">
+                <div className="flex flex-col md:flex-row md:justify-between md:gap-4 lg:gap-4 mb-6 w-full mx-auto space-y-4">
                     {/* Left Block */}
                     <div className="w-full md:flex-1 min-w-0 lg:ml-16">
                         <div className="bg-green-700 text-white p-6 md:p-8 rounded-tr-[2.5rem] shadow h-[15rem] md:h-[19rem] flex flex-col justify-between">
