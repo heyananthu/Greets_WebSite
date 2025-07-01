@@ -3,12 +3,27 @@ import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import logo from '../../assets/Greets_Logo.avif'
 
+// ChevronDown SVG component
+const ChevronDown = ({ className = '' }) => (
+  <svg
+    className={`w-4 h-4 inline-block ml-1 transition-transform duration-200 ${className}`}
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+  </svg>
+);
+
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isVisible, setIsVisible] = useState(true)
     const [lastScrollY, setLastScrollY] = useState(0)
     const [isAtTop, setIsAtTop] = useState(true)
     const location = useLocation()
+    const [openDropdown, setOpenDropdown] = useState(null)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -46,7 +61,15 @@ function Navbar() {
         { path: '/', label: 'Home' },
         { path: '/about', label: 'About' },
         { path: '/solutions', label: 'Services' },
-        { path: '/projects', label: 'Projects' },
+        {
+            path: '/projects',
+            label: 'Projects',
+            children: [
+                { path: '/projects/all', label: 'All Projects' },
+                { path: '/projects/ongoing', label: 'Ongoing' },
+                { path: '/projects/completed', label: 'Completed' }
+            ]
+        },
         { path: '/contact', label: 'Contact Us' }
     ]
 
@@ -87,17 +110,50 @@ function Navbar() {
                 {/* Desktop Menu */}
                 <div className='hidden md:block'>
                     <ul className='flex gap-8 text-sm'>
-                        {menuItems.map((item) => (
-                            <li key={item.path}>
-                                <Link
-                                    to={item.path}
-                                    className={`cursor-pointer transition-colors ${isActive(item.path)
-                                        ? 'text-green-700 px-3 py-2 rounded-md'
-                                        : 'text-gray-700'
-                                        }`}
-                                >
-                                    {item.label}
-                                </Link>
+                        {menuItems.map((item, idx) => (
+                            <li key={item.path} className='relative'>
+                                {item.children ? (
+                                    <div className="inline-block">
+                                        <button
+                                            type="button"
+                                            onClick={() => setOpenDropdown(openDropdown === idx ? null : idx)}
+                                            className={`cursor-pointer transition-colors flex items-center ${isActive(item.path)
+                                                ? 'text-green-700 px-3 py-2 rounded-md'
+                                                : 'text-gray-700'
+                                                }`}
+                                        >
+                                            {item.label}
+                                            <ChevronDown className={openDropdown === idx ? 'rotate-180' : ''} />
+                                        </button>
+                                        {/* Dropdown */}
+                                        {openDropdown === idx && (
+                                            <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-50">
+                                                <ul className="py-2">
+                                                    {item.children.map((child) => (
+                                                        <li key={child.path}>
+                                                            <Link
+                                                                to={child.path}
+                                                                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-700 transition-colors"
+                                                            >
+                                                                {child.label}
+                                                            </Link>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        )}
+                                    </div>
+                                ) : (
+                                    <Link
+                                        to={item.path}
+                                        className={`cursor-pointer transition-colors ${isActive(item.path)
+                                            ? 'text-green-700 px-3 py-2 rounded-md'
+                                            : 'text-gray-700'
+                                            }`}
+                                    >
+                                        {item.label}
+                                    </Link>
+                                )}
                             </li>
                         ))}
                     </ul>
@@ -144,18 +200,43 @@ function Navbar() {
                                 </div>
                                 <nav className='px-6 py-4 h-screen bg-[#1C6900]'>
                                     <ul className='space-y-4 text-lg'>
-                                        {menuItems.map((item) => (
+                                        {menuItems.map((item, idx) => (
                                             <li key={item.path} className='border-gray-200 pb-2 text-5xl'>
-                                                <Link
-                                                    to={item.path}
-                                                    onClick={toggleMenu}
-                                                    className={`cursor-pointer transition-colors block ${isActive(item.path)
-                                                        ? 'text-green-700 px-3 py-2 rounded-md'
-                                                        : 'text-white'
-                                                        }`}
-                                                >
-                                                    {item.label}
-                                                </Link>
+                                                {item.children ? (
+                                                    <div>
+                                                        <button
+                                                            type="button"
+                                                            onClick={() => setOpenDropdown(openDropdown === idx ? null : idx)}
+                                                            className="flex items-center w-full text-left text-white focus:outline-none"
+                                                        >
+                                                            {item.label}
+                                                            <ChevronDown className={openDropdown === idx ? 'rotate-180' : ''} />
+                                                        </button>
+                                                        {openDropdown === idx && (
+                                                            <ul className="pl-6 mt-2 space-y-2">
+                                                                {item.children.map((child) => (
+                                                                    <li key={child.path} className="text-3xl">
+                                                                        <Link
+                                                                            to={child.path}
+                                                                            onClick={toggleMenu}
+                                                                            className="block text-white hover:text-green-400 transition-colors"
+                                                                        >
+                                                                            {child.label}
+                                                                        </Link>
+                                                                    </li>
+                                                                ))}
+                                                            </ul>
+                                                        )}
+                                                    </div>
+                                                ) : (
+                                                    <Link
+                                                        to={item.path}
+                                                        onClick={toggleMenu}
+                                                        className="cursor-pointer transition-colors block text-white"
+                                                    >
+                                                        {item.label}
+                                                    </Link>
+                                                )}
                                             </li>
                                         ))}
                                     </ul>

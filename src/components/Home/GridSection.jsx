@@ -4,7 +4,7 @@ import icon from '../../assets/gridsection-icon.svg'
 
 function GridSection() {
     return (
-        <div className='p-4 md:p-0 font-questrial mb-20'>
+        <div className='p-4 md:p-0 font-questrial '>
             <div className='font-[var(--font-questrial)]'>
                 {/* Top Row */}
                 <div className="flex flex-col md:flex-row md:justify-between md:gap-4 lg:gap-4 mb-6 w-full mx-auto space-y-4">
