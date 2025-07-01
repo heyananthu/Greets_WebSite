@@ -13,7 +13,7 @@ function Strategy() {
                 </div>
 
                 {/* Right Side */}
-                <div className="flex-1 flex flex-col items-center justify-center px-6 py-8 text-center bg-white">
+                <div className="flex-1 flex flex-col items-center justify-center  py-8 text-center bg-white">
                     <h2 className="text-3xl md:text-4xl font-bold text-black mb-4 font-questrial">Execution</h2>
                     <p className="text-[#0a9d3a] text-base md:text-sm max-w-md">
                         Describe the service and how customers or clients can benefit from it. It's an opportunity to add a short description with relevant details, like pricing, duration, and how to book.
