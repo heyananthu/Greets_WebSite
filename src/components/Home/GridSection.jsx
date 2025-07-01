@@ -35,7 +35,7 @@ function GridSection() {
                                 </p>
                             </div>
                             <div className='lg:px-6'>
-                                <button className="px-6 py-3 cursor-pointer border border-white rounded-bl-none rounded-[2rem] text-sm bg-green-700 text-white hover:bg-white hover:text-black transition-all duration-200 w-full md:w-[15rem]">
+                                <button className="px-6 py-3 cursor-pointer border border-white rounded-bl-none rounded-[2rem] text-sm bg-green-700 text-white  hover:text-black transition-all duration-200 w-full md:w-[15rem]">
                                     Read Our Latest Report
                                 </button>
                             </div>
@@ -64,7 +64,7 @@ function GridSection() {
                             </p>
                         </div>
                         <div className='lg:px-6'>
-                            <button className="px-6 py-3 cursor-pointer border border-white rounded-bl-none rounded-[2rem] text-sm bg-black text-white hover:bg-green-400 hover:text-black transition-all duration-200 w-full md:w-[15rem]">
+                            <button className="px-6 py-3 cursor-pointer border border-white rounded-bl-none rounded-[2rem] text-sm bg-black text-white hover:bg-green-700 hover:text-black transition-all duration-200 w-full md:w-[15rem]">
                                 Check Our Solutions
                             </button>
                         </div>

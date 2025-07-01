@@ -22,7 +22,7 @@ function Consultancy() {
                         Architecture consultancy helps you turn your vision into a practical, well-designed space by offering expert guidance on planning, design, regulations, and sustainability. Ideal for residential, commercial, or renovation projects, this service ensures cost efficiency, compliance with local laws, and personalized design solutions. Clients benefit from smart space planning, eco-friendly recommendations, and early-stage advice that prevents costly mistakes. Packages start at ₹2,500 with both online and in-person options. Booking is simple through our website—just choose a package, share your project details, and get expert support tailored to your needs.
                     </p>
 
-                    <button className="px-8 sm:px-12 py-3 border border-green-400 rounded-bl-none rounded-[2rem] text-sm bg-green-600 text-green-300 hover:bg-green-500 hover:text-black transition-all duration-200">
+                    <button className="px-8 sm:px-12 py-3 cursor-pointer border border-green-700 rounded-bl-none rounded-[2rem] text-sm bg-black text-green-300 hover:bg-green-700 hover:text-black transition-all duration-200">
                         Check Our Solutions
                     </button>
                 </div>
