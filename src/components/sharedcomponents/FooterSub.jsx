@@ -64,7 +64,7 @@ function FooterSub() {
                         <p>Privacy Policy</p>
                     </div>
                 </div>
-                <div className='relative flex items-center gap-x-1 '>
+                <div className='relative flex flex-row  items-center gap-x-1 '>
                     <img src={footerlogo} alt="footerlogo" className='size-32' />
                     <div className="flex items-end  w-full md:w-auto mt-8">
                         <span className="text-sm ">© 2035<span className="align-super text-xs ml-1">_™</span></span>
