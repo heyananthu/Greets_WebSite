@@ -60,7 +60,7 @@ function Navbar() {
     const menuItems = [
         { path: '/', label: 'Home' },
         { path: '/about', label: 'About' },
-        { path: '/solutions', label: 'Services' },
+        { path: '/services', label: 'Services' },
         {
             path: '/projects',
             label: 'Projects',

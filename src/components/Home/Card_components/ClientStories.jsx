@@ -40,7 +40,7 @@ function ClientStories() {
               className="bg-stone-300 rounded-[3rem] p-8 sm:p-10 w-full h-full md:h-[23rem] flex flex-col justify-between lg:w-[25rem] lg:h-[23rem] "
             >
               <p className="text-green-700 text-base sm:text-md mb-6 md:py-5">
-                {testimonial.text}
+                <span className='font-bold'>Dummy : </span> {testimonial.text}
               </p>
               <div className="text-white italic text-right mt-auto md:pb-16">
                 {testimonial.author}<br />

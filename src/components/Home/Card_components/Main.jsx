@@ -3,8 +3,9 @@ import OurSolutions from "./OurSolutions";
 import Strategy from "./Strategy";
 import Consultancy from "./Consultancy";
 import ClientStories from "./ClientStories";
+import Approach2 from './Approach2';
 
-const cards = [<OurSolutions />, <Strategy />, <Consultancy />, <ClientStories />];
+const cards = [<OurSolutions />, <Strategy />, <Approach2 />, <Consultancy />, <ClientStories />];
 
 function Main() {
     return (

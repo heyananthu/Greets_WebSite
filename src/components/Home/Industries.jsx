@@ -4,21 +4,21 @@ const industries = [
     {
         title: "Energy",
         description:
-            "Use this space to promote the business, its products or its services. Help people become familiar with the business and its offerings, creating a sense of connection and trust.",
+            "Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsumio de usar textos como por ejemplo.",
         green: false,
         className: "rounded-[60px] p-10 flex flex-col text-black"
     },
     {
         title: "Technology",
         description:
-            "Use this space to promote the business, its products or its services. Help people become familiar with the business and its offerings, creating a sense of connection and trust.",
+            "Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin.",
         green: true,
         className: "bg-green-700 rounded-[60px] p-10 flex flex-col text-black"
     },
     {
         title: "Infrastructure",
         description:
-            "Use this space to promote the business, its products or its services. Help people become familiar with the business and its offerings, creating a sense of connection and trust.",
+            "Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsumio de usar textos como por ejemplo.",
         green: false,
         className: "rounded-[60px] p-10 flex flex-col text-black"
     },
@@ -28,14 +28,14 @@ const industries2 = [
     {
         title: "Building & Architecture",
         description:
-            "Use this space to promote the business, its products or its services. Help people become familiar with the business and its offerings, creating a sense of connection and trust.",
+            "Si vas a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de que no hay nada avergonzante escondido en el medio del texto. Todos los generadores de Lorem Ipsum que se encuentran en Internet.",
         green: false,
         className: "rounded-[60px] p-10 flex flex-col text-black place-items-end"
     },
     {
         title: "Logistics",
         description:
-            "Use this space to promote the business, its products or its services. Help people become familiar with the business and its offerings, creating a sense of connection and trust.",
+            "Lorem Ipsum viene de las secciones 1.10.32 y 1.10.33 de de Finnibus Bonorum et Malorum (Los Extremos del Bien y El Mal) por Cicero, escrito en el año 45 antes de Cristo.",
         green: true,
         className: "bg-green-700 rounded-[60px] p-10 flex flex-col text-black"
     },

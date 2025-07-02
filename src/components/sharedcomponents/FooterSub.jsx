@@ -129,7 +129,7 @@ function FooterSub() {
                         ))}
                     </div>
                     <div className='md:-translate-x-16'>
-                        <p>500 Terry Francine Street,<br />  San Francisco, CA 94158</p>
+                        <p><span className='font-bold'>Dummy : </span> 500 Terry Francine Street,<br />  San Francisco, CA 94158</p>
                         <p>info@gmail.com</p>
                         <p>123-456-7890</p>
                     </div>
@@ -142,9 +142,9 @@ function FooterSub() {
                         <p>Privacy Policy</p>
                     </div>
                 </div>
-                <div className='relative flex flex-row  items-center gap-x-1 '>
+                <div className='relative flex flex-row  items-center gap-x-1 md:flex-col'>
                     <img src={footerlogo} alt="footerlogo" className='size-32' />
-                    <div className="flex items-end  w-full md:w-auto mt-8">
+                    <div className="flex items-end  w-full md:w-auto mt-8 md:mt-0">
                         <span className="text-sm ">© 2035<span className="align-middle text-xs ml-1 underline">™</span></span>
                     </div>
                 </div>
