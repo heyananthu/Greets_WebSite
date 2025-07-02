@@ -16,6 +16,7 @@ function Footer() {
                             <div className=" mb-5">
                                 <div className="font-normal text-2xl mb-6">Subscribe to our newsletter</div>
                             </div>
+                            
                             <div className="mb-3">
                                 <label htmlFor="footer-email" className="block text-sm mb-2 font-medium text-black text-left">Email *</label>
                                 <input

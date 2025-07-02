@@ -10,7 +10,7 @@ import Footer from '../components/sharedcomponents/Footer'
 function Home() {
     return (
         <div>
-            <div className='bg-gray-100 '>
+            <div className='bg-gray-100 pb-12'>
                 <Navbar />
                 <Hero />
                 <GridSection />
