@@ -6,6 +6,9 @@ import OverviewSection from '../components/About/OverviewSection'
 import GrowthStory from '../components/About/GrowthStory'
 import Presence from '../components/About/Presence'
 import OurMoto from '../components/About/OurMoto'
+import Approach from '../components/About/Approach'
+import UsInNumber from '../components/About/UsInNumber'
+import Covered from '../components/About/Covered'
 
 function About() {
     return (
@@ -13,9 +16,12 @@ function About() {
             <Navbar />
             <Hero />
             <OverviewSection />
-            {/* <GrowthStory /> */}
+            <GrowthStory />
+            <Approach />
             <Presence />
             <OurMoto />
+            <UsInNumber />
+            <Covered />
             <Footer />
         </div>
     )
