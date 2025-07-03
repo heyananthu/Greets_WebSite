@@ -12,7 +12,7 @@ function Hero() {
             </div>
             <div className='flex justify-end lg:pr-20 pr-8'>
                 <div>
-                    <img src={heroBanner} alt="Tree" className="lg:w-[250px] lg:h-[250px] md:w-[150px] md:h-[150px] w-[60px] h-[60px] object-cover rounded-full" />
+                    <img src={heroBanner} alt="Tree" className="lg:w-[240px] lg:h-[240px] md:w-[150px] md:h-[150px] w-[60px] h-[60px] object-cover rounded-full" />
                 </div>
             </div>
 
