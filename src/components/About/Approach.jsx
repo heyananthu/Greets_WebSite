@@ -23,9 +23,9 @@ function Approach() {
             </div>
 
             {/* Right: Green Circle Container */}
-            <div className="relative flex-1 bg-green-700 min-h-[590px] rounded-tl-[40px] rounded-bl-[40px] overflow-hidden flex items-center justify-center">
+            <div className="relative flex-1 bg-green-700 min-h-[590px] rounded-tl-[40px] rounded-bl-[40px] overflow-x-auto flex items-center justify-center">
                 <div className="relative w-full h-[28rem] max-w-6xl mx-auto overflow-x-auto md:overflow-visible lg:pt-12  pt-12 pr-12 lg:pr-24 ">
-                    <div className="relative w-[700px] lg:w-full h-full  lg:absolute lg:right-6 ">
+                    <div className="relative w-[700px]  h-full">
                         {circles.map((circle, index) => (
                             <div
                                 key={index}
