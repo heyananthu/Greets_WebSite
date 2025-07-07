@@ -5,10 +5,16 @@ import chart2021 from '../../assets/2021.png'
 import chart2023 from '../../assets/chart-2023.png'
 import chart2024 from '../../assets/chart-2024.png'
 import chart2025 from '../../assets/2025.png'
+import india from '../../assets/flag/india flag.png'
+import maldives from '../../assets/flag/Maldives flag.png'
+import mauritius from '../../assets/flag/mauritius.png'
+import seychelles from '../../assets/flag/seychelles.png'
+import gambia from '../../assets/flag/gambia.png'
 
 const growthData = [
     {
         chart: chart2016,
+        img: india,
         items: [
             { text: 'MEP Design', bold: true },
             { text: 'HVAC' },
@@ -19,6 +25,7 @@ const growthData = [
     },
     {
         chart: chart2018,
+        // img: maldives,
         items: [
             { text: 'MEP Design', bold: true },
             { text: 'PMC', new: true },
@@ -30,6 +37,7 @@ const growthData = [
     },
     {
         chart: chart2021,
+        img: mauritius,
         items: [
             { text: 'MEP Design', bold: true },
             { text: 'PMC', bold: true },
@@ -46,6 +54,7 @@ const growthData = [
     },
     {
         chart: chart2023,
+        img: maldives,
         items: [
             { text: 'MEP Design', bold: true },
             { text: 'PMC', bold: true },
@@ -64,6 +73,7 @@ const growthData = [
     },
     {
         chart: chart2024,
+        img: seychelles,
         items: [
             { text: 'MEP Design', bold: true },
             { text: 'PMC', bold: true },
@@ -86,6 +96,7 @@ const growthData = [
     },
     {
         chart: chart2025,
+        img: gambia,
         items: [
             { text: 'MEP Design', bold: true, },
             { text: 'PMC', bold: true },
@@ -117,13 +128,16 @@ function GrowthStory() {
             <div className="max-w-screen mx-auto flex flex-col items-center">
                 <div className="flex flex-wrap justify-center w-full">
                     {growthData.map((entry, idx) => (
-                        <div key={entry.year} className="flex flex-col items-center">
+                        <div key={entry.year} className="flex flex-col items-center ">
                             {/* Card with image */}
-                            <div className="relative w-64 h-64 md:w-56 md:h-56 flex items-center justify-center border-8 border-green-700 mb-6 bg-black">
+                            <div className="relative w-64 h-64 md:w-56 md:h-56 flex items-center justify-center border-8 border-green-700  bg-black">
                                 <img src={entry.chart} alt={`chart for ${entry.year}`} className="w-full h-full object-cover" />
-                                <span className="absolute inset-0 flex items-center justify-center text-white text-4xl z-10">{entry.year}</span>
+                                {/* <span className="absolute inset-0 flex items-center justify-center text-white text-4xl z-10">{entry.year}</span> */}
                             </div>
                             {/* List */}
+                            <div className='flex justify-end w-48'>
+                                {entry.img && <img src={entry.img} alt="" className='size-12'/>}
+                            </div>
                             <ul className="text-black text-left text-md w-full pl-3">
                                 {entry.items.map((item, i) => (
                                     <li
