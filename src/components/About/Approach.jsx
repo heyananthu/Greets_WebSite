@@ -1,5 +1,6 @@
 import React from 'react';
 import banner from '../../assets/about-approach.avif';
+import screenshot from '../../assets/approach-screenshot.png'
 
 const circles = [
     { label: 'TECHNOLOGY', size: 'w-24 h-24 md:w-36 md:h-36 lg:w-40 lg:h-40', position: 'left-[3rem] top-[9rem] md:left-[8rem] md:top-[10rem] lg:left-24 lg:top-[9rem]', z: 'z-10', extra: '-translate-x-1/3 translate-y-1/3' },
@@ -24,20 +25,21 @@ function Approach() {
 
             {/* Right: Green Circle Container */}
             <div className="relative flex-1 bg-green-700 min-h-[590px] rounded-tl-[40px] rounded-bl-[40px] overflow-x-auto flex items-center justify-center">
-                <div className="relative w-full h-[28rem] max-w-6xl mx-auto overflow-x-auto md:overflow-visible lg:pt-12  pt-12 pr-12 lg:pr-24 ">
-                    <div className="relative w-[700px]  h-full">
+                {/* <div className="relative w-full h-[28rem] max-w-6xl mx-auto overflow-x-auto md:overflow-visible lg:pt-8 pt-12 pr-12 lg:pr-16">
+                    <div className="relative w-full lg:w-[450px] h-full">
                         {circles.map((circle, index) => (
                             <div
                                 key={index}
                                 className={`absolute ${circle.position} ${circle.size} bg-black rounded-full border border-white flex items-center justify-center ${circle.z} ${circle.extra}`}
                             >
-                                <span className="text-white text-xs sm:text-sm lg:text-lg font-light text-center px-2">
+                                <span className="text-white text-xs sm:text-sm lg:text-md font-light text-center px-2">
                                     {circle.label}
                                 </span>
                             </div>
                         ))}
                     </div>
-                </div>
+                </div> */}
+                <img src={screenshot} className='w-full object-cover'/>
             </div>
         </div>
     );
