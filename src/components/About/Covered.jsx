@@ -13,10 +13,10 @@ function Covered() {
         </h1>
 
         {/* Covered Logos */}
-        <div className="bg-green-700 flex flex-col md:flex-row justify-center lg:justify-around items-center gap-8 px-6 py-10 rounded-[2rem]">
-          <img src={img1} alt="covered 1" className="w-32 md:w-28 lg:w-40 object-contain" />
-          <img src={img2} alt="covered 2" className="w-28 md:w-24 lg:w-32 object-contain" />
-          <img src={img3} alt="covered 3" className="w-32 md:w-28 lg:w-40 object-contain" />
+        <div className="bg-green-700 flex flex-col md:flex-row justify-center lg:justify-around items-center gap-8 px-6 py-12 rounded-[3rem]">
+          <div className=" text-center text-black font-bold text-4xl text-nowrap">Our Clients</div>
+          <div className=" text-center text-black font-bold text-4xl text-nowrap">Trusted By</div>
+          <div className=" text-center text-black font-bold text-4xl  text-nowrap">Our Track Record</div>
         </div>
       </div>
     </div>

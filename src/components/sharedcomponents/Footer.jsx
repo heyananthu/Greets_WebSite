@@ -7,16 +7,16 @@ function Footer() {
             <footer className=" flex flex-wrap items-center justify-between gap-8 px-[5vw] pt-16  w-full font-questrial text-white md:mt-16">
                 {/* Left: Brand */}
                 <div className="font-bold  text-green-700 leading-none min-w-[350px] flex-1 md:text-7xl text-5xl md:-translate-y-10">
-                    FOMO got you <br className='md:block hidden' />  puzzled?
+                    Stay Ahead with<br className='md:block hidden' /> Industry Insights
                 </div>
                 {/* Right: Newsletter */}
                 <div className="flex-1 max-w-[500px] w-full ml-auto text-black">
                     <div className="flex justify-center items-center  min-h-[60vh] w-full bg-white">
                         <form className="w-full max-w-xl mx-auto">
                             <div className=" mb-5">
-                                <div className="font-normal text-2xl mb-6">Subscribe to our newsletter</div>
+                                <div className="font-normal text-xl mb-6">Subscribe to our newsletter for updates, project highlights, and expert perspectives.</div>
                             </div>
-                            
+
                             <div className="mb-3">
                                 <label htmlFor="footer-email" className="block text-sm mb-2 font-medium text-black text-left">Email *</label>
                                 <input

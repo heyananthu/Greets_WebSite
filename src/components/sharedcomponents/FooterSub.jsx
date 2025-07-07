@@ -129,9 +129,9 @@ function FooterSub() {
                         ))}
                     </div>
                     <div className='md:-translate-x-16'>
-                        <p><span className='font-bold'>Dummy : </span> 500 Terry Francine Street,<br />  San Francisco, CA 94158</p>
+                        <p>384, 9th Main Rd, 7th Sector<br />HSR Layout, Bengalure <br />Karnataka 560102</p>
                         <p>info@gmail.com</p>
-                        <p>123-456-7890</p>
+                        <p>080 4302 7655</p>
                     </div>
                     <div className='flex flex-col gap-y-2 w-fit'>
                         <NavLink to='/' >LinkedIn</NavLink>

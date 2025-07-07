@@ -7,10 +7,8 @@ function OurMoto() {
                 <h1 className='text-4xl font-bold'>Our Moto</h1>
             </div>
             <div className='lg:w-[60%] lg:text-left text-center mt-5 lg:mt-0'>
-                <p className='lg:w-[80%] text-white text-xl lg:text-3xl lg:leading-10'>Our motive is to <br className='hidden' />
-                    “Strive continuously towards transformation <br className='hidden' />
-                    by providing ecological design solutions that are <br className='hidden' />
-                    Effective, Affordable, and Remarkable.”</p>
+                <p className='lg:w-[80%] text-white text-xl lg:text-3xl lg:leading-10'>Our motive is to <br className='hidden md:block' />
+                    “As a comprehensive MEP service provider, we specialize in Design Management, Cost Estimation, Planning, Procurement, and Construction Management, delivering end-to-end solutions that are efficient, cost-effective, and tailored to project needs. ”</p>
             </div>
 
         </div>

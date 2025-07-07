@@ -1,27 +1,16 @@
 import React from 'react'
-import chart2015 from '../../assets/chart-2015.png'
-import chart2017 from '../../assets/chart-2017.png'
+import chart2016 from '../../assets/2016.png'
 import chart2018 from '../../assets/chart-2018.png'
-import chart2020 from '../../assets/chart-2020.png'
+import chart2021 from '../../assets/2021.png'
 import chart2023 from '../../assets/chart-2023.png'
 import chart2024 from '../../assets/chart-2024.png'
+import chart2025 from '../../assets/2025.png'
 
 const growthData = [
     {
-        chart: chart2015,
+        chart: chart2016,
         items: [
             { text: 'MEP Design', bold: true },
-            { text: 'HVAC' },
-            { text: 'Electrical' },
-            { text: 'Plumbing' },
-            { text: 'Fire' },
-        ],
-    },
-    {
-        chart: chart2017,
-        items: [
-            { text: 'MEP Design', bold: true },
-            { text: 'PMC', bold: true },
             { text: 'HVAC' },
             { text: 'Electrical' },
             { text: 'Plumbing' },
@@ -32,7 +21,19 @@ const growthData = [
         chart: chart2018,
         items: [
             { text: 'MEP Design', bold: true },
+            { text: 'PMC', new: true },
+            { text: 'HVAC' },
+            { text: 'Electrical' },
+            { text: 'Plumbing' },
+            { text: 'Fire' },
+        ],
+    },
+    {
+        chart: chart2021,
+        items: [
+            { text: 'MEP Design', bold: true },
             { text: 'PMC', bold: true },
+            { text: 'Trade', new: true },
             { text: 'HVAC' },
             { text: 'Electrical' },
             { text: 'Plumbing' },
@@ -44,13 +45,12 @@ const growthData = [
         ],
     },
     {
-        chart: chart2020,
+        chart: chart2023,
         items: [
             { text: 'MEP Design', bold: true },
             { text: 'PMC', bold: true },
-            { text: 'Execution', bold: true },
-            { text: 'AMC', bold: true },
             { text: 'Trade', bold: true },
+            { text: 'Execution', new: true },
             { text: 'HVAC' },
             { text: 'Electrical' },
             { text: 'Plumbing' },
@@ -63,34 +63,13 @@ const growthData = [
         ],
     },
     {
-        chart: chart2023,
-        items: [
-            { text: 'MEP Design', bold: true },
-            { text: 'PMC', bold: true },
-            { text: 'Execution', bold: true },
-            { text: 'AMC', bold: true },
-            { text: 'Trade', bold: true },
-            { text: 'HVAC' },
-            { text: 'Electrical' },
-            { text: 'Plumbing' },
-            { text: 'Fire' },
-            { text: 'Sustainability' },
-            { text: 'Networking' },
-            { text: 'BMS' },
-            { text: 'Security & AV' },
-            { text: 'LMS' },
-            { text: 'Compressed air' },
-
-        ],
-    },
-    {
         chart: chart2024,
         items: [
             { text: 'MEP Design', bold: true },
             { text: 'PMC', bold: true },
-            { text: 'Execution', bold: true },
-            { text: 'AMC', bold: true },
             { text: 'Trade', bold: true },
+            { text: 'Execution', bold: true },
+            { text: 'AMC', new: true },
             { text: 'HVAC' },
             { text: 'Electrical' },
             { text: 'Plumbing' },
@@ -102,7 +81,31 @@ const growthData = [
             { text: 'Home Automation' },
             { text: 'LMS' },
             { text: 'IOT' },
-            { text: 'Compressed air' },
+
+        ],
+    },
+    {
+        chart: chart2025,
+        items: [
+            { text: 'MEP Design', bold: true, },
+            { text: 'PMC', bold: true },
+            { text: 'Trade', bold: true },
+            { text: 'Execution', bold: true },
+            { text: 'AMC', bold: true },
+            { text: 'Intl. Local', new: true },
+            { text: 'Presence', new: true },
+            { text: 'HVAC' },
+            { text: 'Electrical' },
+            { text: 'Plumbing' },
+            { text: 'Fire' },
+            { text: 'Sustainability' },
+            { text: 'Networking' },
+            { text: 'BMS' },
+            { text: 'Security & AV' },
+            { text: 'Home Automation' },
+            { text: 'LMS' },
+            { text: 'IOT' },
+            // { text: 'Compressed air' },
         ],
     },
 ];
@@ -123,7 +126,14 @@ function GrowthStory() {
                             {/* List */}
                             <ul className="text-black text-left text-md w-full pl-3">
                                 {entry.items.map((item, i) => (
-                                    <li key={i} className={item.bold ? 'font-bold' : ''}>{item.text}</li>
+                                    <li
+                                        key={i}
+                                        className={
+                                            `${item.bold ? 'font-bold text-2xl' : ''} ${item.new ? 'text-blue-950 font-black text-2xl' : ''}`
+                                        }
+                                    >
+                                        {item.text}
+                                    </li>
                                 ))}
                             </ul>
                         </div>
