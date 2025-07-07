@@ -1,65 +1,169 @@
-import React, { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
-import logo from '../../assets/Greets_Logo.avif'
+/* -------------------------------------------------- */
+/*  Navbar.jsx                                        */
+/* -------------------------------------------------- */
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import logo from '../../assets/Greets_Logo.avif';
 
-// ChevronDown SVG component
-const ChevronDown = ({ className = '' }) => (
-  <svg
-    className={`w-4 h-4 inline-block ml-1 transition-transform duration-200 ${className}`}
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-  </svg>
+/* ---------- tiny helper for the caret ---------- */
+const ChevronDown = ({ rotated }) => (
+    <svg
+        className={`w-4 h-4 ml-1 transition-transform duration-200 ${rotated ? 'rotate-180' : ''
+            }`}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+    >
+        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+    </svg>
 );
 
-function Navbar() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
-    const [isVisible, setIsVisible] = useState(true)
-    const [lastScrollY, setLastScrollY] = useState(0)
-    const [isAtTop, setIsAtTop] = useState(true)
-    const location = useLocation()
-    const [openDropdown, setOpenDropdown] = useState(null)
+/* ---------- one desktop item (with optional dropdown) ---------- */
+function DesktopItem({ item, idx, openIdx, setOpenIdx, active }) {
+    const hasChildren = !!item.children;
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollY = window.scrollY
+    return (
+        <li className="relative flex items-center h-full px-2">
+            {/* parent link */}
+            <Link
+                to={item.path}
+                className={`transition-colors px-2 py-2 rounded-md ${active ? 'text-green-700 ' : 'text-gray-700 hover:text-green-700'
+                    }`}
+                style={{ minHeight: '40px' }}
+            >
+                {item.label}
+            </Link>
 
-            setIsAtTop(currentScrollY === 0)
+            {/* caret + dropdown */}
+            {hasChildren && (
+                <>
+                    <button
+                        aria-label="toggle submenu"
+                        onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
+                        className="flex items-center h-full px-1"
+                    >
+                        <ChevronDown rotated={openIdx === idx} />
+                    </button>
 
-            if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                // Scrolling down and past 100px
-                setIsVisible(false)
-            } else {
-                // Scrolling up
-                setIsVisible(true)
-            }
+                    {openIdx === idx && (
+                        <div
+                            className="absolute top-full left-1/2 -translate-x-1/2 mt-2
+                         w-48 bg-transparent  rounded-md shadow-lg z-50"
+                        >
+                            <ul className="py-2">
+                                {item.children.map((child) => (
+                                    <li key={child.path}>
+                                        <Link
+                                            to={child.path}
+                                            className="block px-4 py-2 text-gray-700 hover:bg-white hover:text-green-700"
+                                        >
+                                            {child.label}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+                </>
+            )}
+        </li>
+    );
+}
 
-            setLastScrollY(currentScrollY)
-        }
+/* ---------- mobile slide‑in menu ---------- */
+function MobilePanel({ menu, openIdx, setOpenIdx, close }) {
+    const location = useLocation();
 
-        window.addEventListener('scroll', handleScroll, { passive: true })
+    return (
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/50 z-40 md:hidden"
+            onClick={close}
+        >
+            <motion.div
+                initial={{ x: '100%' }}
+                animate={{ x: 0 }}
+                exit={{ x: '100%' }}
+                transition={{ duration: 0.3 }}
+                className="fixed top-0 right-0 h-full w-full bg-[#1C6900] z-50"
+                onClick={(e) => e.stopPropagation()}
+            >
+                <div className="flex justify-end p-4">
+                    <button onClick={close} className="text-2xl font-bold text-white">
+                        ✕
+                    </button>
+                </div>
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll)
-        }
-    }, [lastScrollY])
+                <nav className="px-6 py-4 space-y-6 text-6xl text-gray-700">
+                    {menu.map((item, idx) => (
+                        <div key={item.path}>
+                            <Link
+                                to={item.path}
+                                onClick={close}
+                                className={
+                                    location.pathname === item.path
+                                        ? 'text-green-700 '
+                                        : 'text-white'
+                                }
+                            >
+                                {item.label}
+                            </Link>
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen)
-    }
+                            {item.children && (
+                                <>
+                                    <button
+                                        onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
+                                        className="ml-2 align-middle"
+                                        aria-label="toggle submenu"
+                                    >
+                                        <ChevronDown rotated={openIdx === idx} />
+                                    </button>
 
-    const isActive = (path) => {
-        return location.pathname === path
-    }
+                                    {openIdx === idx && (
+                                        <ul className="pl-6 mt-2 space-y-2 text-2xl">
+                                            {item.children.map((child) => (
+                                                <li key={child.path}>
+                                                    <Link
+                                                        to={child.path}
+                                                        onClick={close}
+                                                        className={
+                                                            location.pathname === child.path
+                                                                ? 'text-green-700 font-bold'
+                                                                : 'text-gray-700'
+                                                        }
+                                                    >
+                                                        {child.label}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </>
+                            )}
+                        </div>
+                    ))}
+                </nav>
+            </motion.div>
+        </motion.div>
+    );
+}
 
-    const menuItems = [
+/* ---------- MAIN NAVBAR ---------- */
+export default function Navbar() {
+    const location = useLocation();
+
+    /* menu structure */
+    const menu = [
         { path: '/', label: 'Home' },
-        { path: '/about', label: 'About' },
+        {
+            path: '/about',
+            label: 'About',
+            children: [{ path: '/testimonial', label: 'Testimonial' }],
+        },
         { path: '/services', label: 'Services' },
         {
             path: '/projects',
@@ -67,187 +171,87 @@ function Navbar() {
             children: [
                 { path: '/projects/all', label: 'All Projects' },
                 { path: '/projects/ongoing', label: 'Ongoing' },
-                { path: '/projects/completed', label: 'Completed' }
-            ]
+                { path: '/projects/completed', label: 'Completed' },
+            ],
         },
-        { path: '/contact', label: 'Contact Us' }
-    ]
+        { path: '/contact', label: 'Contact Us' },
+    ];
 
-    const navbarVariants = {
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.6,
-                ease: [0.25, 0.46, 0.45, 0.94],
-                opacity: { duration: 0.4 }
-            }
-        },
-        hidden: {
-            y: -100,
-            opacity: 0,
-            transition: {
-                duration: 0.8,
-                ease: [0.55, 0.055, 0.675, 0.19],
-                opacity: { duration: 0.6, delay: 0.1 }
-            }
-        }
-    }
+    /* state */
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [openDropdown, setOpenDropdown] = useState(null);
+    const [visible, setVisible] = useState(true);
+    const [atTop, setAtTop] = useState(true);
+    const [lastY, setLastY] = useState(0);
+
+    /* hide on scroll‑down */
+    useEffect(() => {
+        const onScroll = () => {
+            const y = window.scrollY;
+            setAtTop(y === 0);
+            setVisible(!(y > lastY && y > 100));
+            setLastY(y);
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
+    }, [lastY]);
+
+    /* framer variants */
+    const variants = {
+        visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
+        hidden: { y: -80, opacity: 0, transition: { duration: 0.5 } },
+    };
 
     return (
         <AnimatePresence>
-            <motion.div
-                className={`fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 sm:px-8 lg:px-16 p-2 font-questrial ${isAtTop ? 'bg-gray-100' : 'bg-white'}`}
-                variants={navbarVariants}
+            <motion.header
+                variants={variants}
                 initial="visible"
-                animate={isVisible ? "visible" : "hidden"}
+                animate={visible ? 'visible' : 'hidden'}
                 exit="hidden"
+                className={`fixed inset-x-0 top-0 z-50 flex items-center justify-between 
+                    px-4 sm:px-8 lg:px-16 py-2 font-questrial
+                    ${atTop ? 'bg-gray-100' : 'bg-white shadow-sm'}`}
             >
-                <div>
-                    <img src={logo} alt="logo" className='w-32 h-20 sm:w-40 sm:h-24' />
-                </div>
+                {/* logo */}
+                <img src={logo} alt="logo" className="w-32 h-20 sm:w-40 sm:h-24" />
 
-                {/* Desktop Menu */}
-                <div className='hidden md:block'>
-                    <ul className='flex gap-8 text-sm'>
-                        {menuItems.map((item, idx) => (
-                            <li key={item.path} className='relative'>
-                                {item.children ? (
-                                    <div className="inline-block">
-                                        <button
-                                            type="button"
-                                            onClick={() => setOpenDropdown(openDropdown === idx ? null : idx)}
-                                            className={`cursor-pointer transition-colors flex items-center ${isActive(item.path)
-                                                ? 'text-green-700 px-3 py-2 rounded-md'
-                                                : 'text-gray-700'
-                                                }`}
-                                        >
-                                            {item.label}
-                                            <ChevronDown className={openDropdown === idx ? 'rotate-180' : ''} />
-                                        </button>
-                                        {/* Dropdown */}
-                                        {openDropdown === idx && (
-                                            <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-50">
-                                                <ul className="py-2">
-                                                    {item.children.map((child) => (
-                                                        <li key={child.path}>
-                                                            <Link
-                                                                to={child.path}
-                                                                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-700 transition-colors"
-                                                            >
-                                                                {child.label}
-                                                            </Link>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-                                        )}
-                                    </div>
-                                ) : (
-                                    <Link
-                                        to={item.path}
-                                        className={`cursor-pointer transition-colors ${isActive(item.path)
-                                            ? 'text-green-700 px-3 py-2 rounded-md'
-                                            : 'text-gray-700'
-                                            }`}
-                                    >
-                                        {item.label}
-                                    </Link>
-                                )}
-                            </li>
+                {/* desktop */}
+                <nav className="hidden md:block">
+                    <ul className="flex gap-1 text-sm h-full items-center">
+                        {menu.map((item, idx) => (
+                            <DesktopItem
+                                key={item.path}
+                                item={item}
+                                idx={idx}
+                                openIdx={openDropdown}
+                                setOpenIdx={setOpenDropdown}
+                                active={location.pathname === item.path}
+                            />
                         ))}
                     </ul>
-                </div>
+                </nav>
 
-                {/* Mobile Menu Button */}
-                <div className='md:hidden'>
-                    <button
-                        onClick={toggleMenu}
-                        className='text-5xl font-light hover:text-green-700 transition-colors'
-                        aria-label="Toggle menu"
-                    >
-                        =
-                    </button>
-                </div>
+                {/* hamburger */}
+                <button
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    className="md:hidden text-5xl font-light hover:text-green-700"
+                >
+                    =
+                </button>
 
-                {/* Mobile Menu Overlay */}
+                {/* mobile panel */}
                 <AnimatePresence>
                     {isMenuOpen && (
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className='fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden'
-                            onClick={toggleMenu}
-                        >
-                            <motion.div
-                                initial={{ x: '100%' }}
-                                animate={{ x: 0 }}
-                                exit={{ x: '100%' }}
-                                transition={{ duration: 0.3, ease: 'easeOut' }}
-                                className='fixed top-0 right-0 h-full w-full bg-[#1C6900] shadow-lg z-50'
-                                onClick={(e) => e.stopPropagation()}
-                            >
-                                <div className='flex justify-end p-4'>
-                                    <button
-                                        onClick={toggleMenu}
-                                        className='text-2xl font-bold text-white hover:text-green-700 transition-colors'
-                                        aria-label="Close menu"
-                                    >
-                                        ✕
-                                    </button>
-                                </div>
-                                <nav className='px-6 py-4 h-screen bg-[#1C6900]'>
-                                    <ul className='space-y-4 text-lg'>
-                                        {menuItems.map((item, idx) => (
-                                            <li key={item.path} className='border-gray-200 pb-2 text-5xl'>
-                                                {item.children ? (
-                                                    <div>
-                                                        <button
-                                                            type="button"
-                                                            onClick={() => setOpenDropdown(openDropdown === idx ? null : idx)}
-                                                            className="flex items-center w-full text-left text-white focus:outline-none"
-                                                        >
-                                                            {item.label}
-                                                            <ChevronDown className={openDropdown === idx ? 'rotate-180' : ''} />
-                                                        </button>
-                                                        {openDropdown === idx && (
-                                                            <ul className="pl-6 mt-2 space-y-2">
-                                                                {item.children.map((child) => (
-                                                                    <li key={child.path} className="text-3xl">
-                                                                        <Link
-                                                                            to={child.path}
-                                                                            onClick={toggleMenu}
-                                                                            className="block text-white hover:text-green-400 transition-colors"
-                                                                        >
-                                                                            {child.label}
-                                                                        </Link>
-                                                                    </li>
-                                                                ))}
-                                                            </ul>
-                                                        )}
-                                                    </div>
-                                                ) : (
-                                                    <Link
-                                                        to={item.path}
-                                                        onClick={toggleMenu}
-                                                        className="cursor-pointer transition-colors block text-white"
-                                                    >
-                                                        {item.label}
-                                                    </Link>
-                                                )}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </nav>
-                            </motion.div>
-                        </motion.div>
+                        <MobilePanel
+                            menu={menu}
+                            openIdx={openDropdown}
+                            setOpenIdx={setOpenDropdown}
+                            close={() => setIsMenuOpen(false)}
+                        />
                     )}
                 </AnimatePresence>
-            </motion.div>
+            </motion.header>
         </AnimatePresence>
-    )
+    );
 }
-
-export default Navbar
