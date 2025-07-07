@@ -10,7 +10,7 @@ function Presence() {
                 <div className='flex items-start justify-center'>
                     <div className='py-28'>
                         <div className='flex justify-center lg:justify-end  lg:pr-32 lg:mb-12'>
-                            <h1 className='text-green-700 text-5xl font-bold text-center lg:text-right'>Presence</h1>
+                            <h1 className='text-green-700 text-5xl font-bold text-center lg:text-right'>Global foot print </h1>
                         </div>
                         <p className='font-bold p-5 text-center lg:text-left'>Head Quartered at India and with Operational presence Tropical countries like Maldives,
                             St.Lucia ,Seychelles and Few countries in African continent .</p>
