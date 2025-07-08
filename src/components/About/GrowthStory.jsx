@@ -136,7 +136,7 @@ function GrowthStory() {
                             </div>
                             {/* List */}
                             <div className='flex justify-end w-48'>
-                                {entry.img && <img src={entry.img} alt="" className='size-12'/>}
+                                {entry.img && <img src={entry.img} alt="" className='size-12' />}
                             </div>
                             <ul className="text-black text-left text-md w-full pl-3">
                                 {entry.items.map((item, i) => (

@@ -12,8 +12,7 @@ function Presence() {
                         <div className='flex justify-center lg:justify-end  lg:pr-32 lg:mb-12'>
                             <h1 className='text-green-700 text-5xl font-bold text-center lg:text-right'>Global foot print </h1>
                         </div>
-                        <p className='font-bold p-5 text-center lg:text-left'>Head Quartered at India and with Operational presence Tropical countries like Maldives,
-                            St.Lucia ,Seychelles and Few countries in African continent .</p>
+                        <p className='font-bold p-5 text-center lg:text-left'>Headquartered in India, with a local presence in tropical countries such as Mauritius and Seychelles, and operational reach in the Maldives, St. Lucia, Gambia, and several other African nations.</p>
                     </div>
                 </div>
             </div>
