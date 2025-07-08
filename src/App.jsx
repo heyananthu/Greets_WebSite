@@ -5,6 +5,9 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import Testimonial from './pages/Testimonial'
+import CodeOfEthics from './components/Privacy Policy/CodeOfEthics'
+import HealthAndEnvironmental from './components/Privacy Policy/HealthAndEnvironmental'
+import QualityPolicy from './components/Privacy Policy/QualityPolicy'
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -26,6 +29,9 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
           <Route path='/testimonial' element={<Testimonial />} />
+          <Route path='/codeofethics' element={<CodeOfEthics />} />
+          <Route path='/health-saftey-environment' element={<HealthAndEnvironmental />} />
+          <Route path='/quality-policy' element={<QualityPolicy />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -17,6 +17,8 @@ import footerlogo from '../../assets/footerlogo.svg'
 function FooterSub() {
     const [openProjectsAccordion, setOpenProjectsAccordion] = useState(false)
     const [openAboutAccordion, setOpenAboutAccordion] = useState(false)
+    const [openPolicyAccordion, setOpenPolicyAccordion] = useState(false);
+
 
     // Dot animation variants
     const dotVariants = {
@@ -30,7 +32,7 @@ function FooterSub() {
                 <h1 className='lg:text-[19rem] text-8xl'>Greets</h1>
             </div>
             <div className='md:flex md:justify-between px-8 mt-5'>
-                <div className='md:pl-8  grid grid-cols-1 md:grid-cols-4 text-[14px] gap-x-12 gap-y-8'>
+                <div className='md:pl-8  grid grid-cols-1 md:grid-cols-4 text-[14px]  gap-y-8'>
                     <div className='flex flex-col gap-y-1 w-fit relative'>
                         {[
                             { to: '/', label: 'Home' },
@@ -72,53 +74,34 @@ function FooterSub() {
                                     </motion.button>
                                     {(item.label === 'Projects' ? openProjectsAccordion : openAboutAccordion) && (
                                         <div className="flex flex-col pl-6 py-1 gap-y-1">
-                                            {item.label === 'Projects' ? (
-                                                <>
-                                                    <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial">
-                                                        <NavLink to="/projects/one" className="flex items-center gap-1 group">
-                                                            {({ isActive }) => (
-                                                                <>
-                                                                    {isActive ? (
-                                                                        <span className="text-blue-500 text-xs">•</span>
-                                                                    ) : (
-                                                                        <motion.span variants={dotVariants} className="text-black text-xs">•</motion.span>
-                                                                    )}
-                                                                    <span className={isActive ? 'text-black' : ''}>Project One</span>
-                                                                </>
+                                            <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial">
+                                                <NavLink to="/projects/one" className="flex items-center gap-1 group">
+                                                    {({ isActive }) => (
+                                                        <>
+                                                            {isActive ? (
+                                                                <span className="text-blue-500 text-xs">•</span>
+                                                            ) : (
+                                                                <motion.span variants={dotVariants} className="text-black text-xs">•</motion.span>
                                                             )}
-                                                        </NavLink>
-                                                    </motion.div>
-                                                    <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial">
-                                                        <NavLink to="/projects/two" className="flex items-center gap-1 group">
-                                                            {({ isActive }) => (
-                                                                <>
-                                                                    {isActive ? (
-                                                                        <span className="text-black text-xs">•</span>
-                                                                    ) : (
-                                                                        <motion.span variants={dotVariants} className="text-black text-xs">•</motion.span>
-                                                                    )}
-                                                                    <span className={isActive ? 'text-black ' : ''}>Project Two</span>
-                                                                </>
+                                                            <span className={isActive ? 'text-black' : ''}>Project One</span>
+                                                        </>
+                                                    )}
+                                                </NavLink>
+                                            </motion.div>
+                                            <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial">
+                                                <NavLink to="/projects/two" className="flex items-center gap-1 group">
+                                                    {({ isActive }) => (
+                                                        <>
+                                                            {isActive ? (
+                                                                <span className="text-black text-xs">•</span>
+                                                            ) : (
+                                                                <motion.span variants={dotVariants} className="text-black text-xs">•</motion.span>
                                                             )}
-                                                        </NavLink>
-                                                    </motion.div>
-                                                </>
-                                            ) : (
-                                                <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial">
-                                                    <NavLink to="/testimonial" className="flex items-center gap-1 group">
-                                                        {({ isActive }) => (
-                                                            <>
-                                                                {isActive ? (
-                                                                    <span className="text-blue-500 text-xs">•</span>
-                                                                ) : (
-                                                                    <motion.span variants={dotVariants} className="text-black text-xs">•</motion.span>
-                                                                )}
-                                                                <span className={isActive ? 'text-blue-500' : ''}>Testimonial</span>
-                                                            </>
-                                                        )}
-                                                    </NavLink>
-                                                </motion.div>
-                                            )}
+                                                            <span className={isActive ? 'text-black ' : ''}>Project Two</span>
+                                                        </>
+                                                    )}
+                                                </NavLink>
+                                            </motion.div>
                                         </div>
                                     )}
                                 </React.Fragment>
@@ -148,19 +131,92 @@ function FooterSub() {
                             )
                         ))}
                     </div>
-                    <div className='md:-translate-x-16'>
+                    <div className=''>
                         <p>384, 9th Main Rd, 7th Sector<br />HSR Layout, Bengalure <br />Karnataka 560102</p>
                         <p>info@gmail.com</p>
                         <p>080 4302 7655</p>
                     </div>
-                    <div className='flex flex-col gap-y-2 w-fit'>
+                    <div className='flex flex-col gap-y-2 w-fit ml-16'>
                         <NavLink to='/' >LinkedIn</NavLink>
                         <NavLink to='/' >Instagram</NavLink>
                         <NavLink to='/' >Facebook</NavLink>
                     </div>
-                    <div className='md:-translate-x-16'>
-                        <p>Privacy Policy</p>
+                    <div className=" flex flex-col gap-y-1 w-fit  relative cursor-pointer">
+                        <motion.button
+                            type="button"
+                            className="flex items-center gap-1 focus:outline-none group bg-transparent"
+                            onClick={() => setOpenPolicyAccordion((v) => !v)}
+                            whileHover="hover"
+                            initial="initial"
+                        >
+                            <span className="text-black text-xs">•</span>
+                            <span>Privacy Policy</span>
+                            <svg
+                                className={`w-3 h-3 ml-1 transition-transform duration-200 ${openPolicyAccordion ? 'rotate-180' : ''
+                                    }`}
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                viewBox="0 0 24 24"
+                            >
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </motion.button>
+
+                        {openPolicyAccordion && (
+                            <div className="flex flex-col pl-6 py-1 gap-y-1">
+                                <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial">
+                                    <NavLink to="/codeofethics" className="flex items-center gap-1 group">
+                                        {({ isActive }) => (
+                                            <>
+                                                {isActive ? (
+                                                    <span className="text-black text-xs">•</span>
+                                                ) : (
+                                                    <motion.span variants={dotVariants} className="text-black text-xs">
+                                                        •
+                                                    </motion.span>
+                                                )}
+                                                <span className={isActive ? 'text-blue-600' : ''}>Code of Ethics</span>
+                                            </>
+                                        )}
+                                    </NavLink>
+                                </motion.div>
+                                <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial">
+                                    <NavLink to="/health-saftey-environment" className="flex items-center gap-1 group">
+                                        {({ isActive }) => (
+                                            <>
+                                                {isActive ? (
+                                                    <span className="text-black text-xs">•</span>
+                                                ) : (
+                                                    <motion.span variants={dotVariants} className="text-black text-xs">
+                                                        •
+                                                    </motion.span>
+                                                )}
+                                                <span className={isActive ? 'text-blue-600' : ''}>Health, Safety & Environment</span>
+                                            </>
+                                        )}
+                                    </NavLink>
+                                </motion.div>
+                                <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial">
+                                    <NavLink to="/quality-policy" className="flex items-center gap-1 group">
+                                        {({ isActive }) => (
+                                            <>
+                                                {isActive ? (
+                                                    <span className="text-black text-xs">•</span>
+                                                ) : (
+                                                    <motion.span variants={dotVariants} className="text-black text-xs">
+                                                        •
+                                                    </motion.span>
+                                                )}
+                                                <span className={isActive ? 'text-blue-600' : ''}>Quality Policy</span>
+                                            </>
+                                        )}
+                                    </NavLink>
+                                </motion.div>
+                            </div>
+                        )}
                     </div>
+
                 </div>
                 <div className='relative flex flex-row  items-center gap-x-1 md:flex-col'>
                     <img src={footerlogo} alt="footerlogo" className='size-32' />
