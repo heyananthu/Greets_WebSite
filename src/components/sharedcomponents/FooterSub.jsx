@@ -29,7 +29,7 @@ function FooterSub() {
     return (
         <div className='font-questrial text-black mb-12'>
             <div className='text-center md:flex md:justify-start md:pl-12 mt-8'>
-                <h1 className='lg:text-[19rem] text-8xl'>Greets</h1>
+                <h1 className='lg:text-[22rem] text-8xl'>Greets</h1>
             </div>
             <div className='md:flex md:justify-between px-8 mt-5'>
                 <div className='md:pl-8  grid grid-cols-1 md:grid-cols-4 text-[14px]  gap-y-8'>
@@ -141,81 +141,14 @@ function FooterSub() {
                         <NavLink to='/' >Instagram</NavLink>
                         <NavLink to='/' >Facebook</NavLink>
                     </div>
-                    <div className=" flex flex-col gap-y-1 w-fit  relative cursor-pointer">
-                        <motion.button
-                            type="button"
-                            className="flex items-center gap-1 focus:outline-none group bg-transparent"
-                            onClick={() => setOpenPolicyAccordion((v) => !v)}
-                            whileHover="hover"
-                            initial="initial"
-                        >
-                            <span className="text-black text-xs">•</span>
-                            <span>Privacy Policy</span>
-                            <svg
-                                className={`w-3 h-3 ml-1 transition-transform duration-200 ${openPolicyAccordion ? 'rotate-180' : ''
-                                    }`}
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                viewBox="0 0 24 24"
-                            >
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </motion.button>
+                    <div className='flex flex-col  gap-y-2 ml-12'>
+                        <p className='text-sm'>Privacy Policy</p>
+                        <NavLink to='/codeofethics' className='text-sm'>Code of Ethics</NavLink>
+                        <NavLink to='/health-saftey-environment' className='text-sm'>Health, Safety & Environmental</NavLink>
+                        <NavLink to='/quality-policy' className='text-sm'>Quality</NavLink>
 
-                        {openPolicyAccordion && (
-                            <div className="flex flex-col pl-6 py-1 gap-y-1">
-                                <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial">
-                                    <NavLink to="/codeofethics" className="flex items-center gap-1 group">
-                                        {({ isActive }) => (
-                                            <>
-                                                {isActive ? (
-                                                    <span className="text-black text-xs">•</span>
-                                                ) : (
-                                                    <motion.span variants={dotVariants} className="text-black text-xs">
-                                                        •
-                                                    </motion.span>
-                                                )}
-                                                <span className={isActive ? 'text-blue-600' : ''}>Code of Ethics</span>
-                                            </>
-                                        )}
-                                    </NavLink>
-                                </motion.div>
-                                <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial">
-                                    <NavLink to="/health-saftey-environment" className="flex items-center gap-1 group">
-                                        {({ isActive }) => (
-                                            <>
-                                                {isActive ? (
-                                                    <span className="text-black text-xs">•</span>
-                                                ) : (
-                                                    <motion.span variants={dotVariants} className="text-black text-xs">
-                                                        •
-                                                    </motion.span>
-                                                )}
-                                                <span className={isActive ? 'text-blue-600' : ''}>Health, Safety & Environment</span>
-                                            </>
-                                        )}
-                                    </NavLink>
-                                </motion.div>
-                                <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial">
-                                    <NavLink to="/quality-policy" className="flex items-center gap-1 group">
-                                        {({ isActive }) => (
-                                            <>
-                                                {isActive ? (
-                                                    <span className="text-black text-xs">•</span>
-                                                ) : (
-                                                    <motion.span variants={dotVariants} className="text-black text-xs">
-                                                        •
-                                                    </motion.span>
-                                                )}
-                                                <span className={isActive ? 'text-blue-600' : ''}>Quality Policy</span>
-                                            </>
-                                        )}
-                                    </NavLink>
-                                </motion.div>
-                            </div>
-                        )}
                     </div>
+
 
                 </div>
                 <div className='relative flex flex-row  items-center gap-x-1 md:flex-col'>
