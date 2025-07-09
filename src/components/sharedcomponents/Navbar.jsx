@@ -141,7 +141,7 @@ export default function Navbar() {
     const menu = [
         { path: '/', label: 'Home' },
         {
-            path: '/about',
+            path: '/about', 
             label: 'About',
             children: [{ path: '/testimonial', label: 'Testimonial' }],
         },
