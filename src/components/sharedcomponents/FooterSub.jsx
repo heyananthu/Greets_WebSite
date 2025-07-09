@@ -4,15 +4,7 @@ import { motion } from 'framer-motion'
 // import logo from '../../assets/Greets_Logo.avif' // Uncomment and adjust if you want to use an image
 import footerlogo from '../../assets/footerlogo.svg'
 
-// Add this style block at the top of the file (or in your global CSS if preferred)
-// <style>
-// .dot-fade-left {
-//   @apply inline-block transition-all duration-300 opacity-0 -translate-x-2;
-// }
-// .dot-fade-left-active {
-//   @apply opacity-100 translate-x-0;
-// }
-// </style>
+
 
 function FooterSub() {
     const [openProjectsAccordion, setOpenProjectsAccordion] = useState(false)
@@ -32,7 +24,7 @@ function FooterSub() {
                 <h1 className='lg:text-[22rem] text-8xl'>Greets</h1>
             </div>
             <div className='md:flex md:justify-between px-8 mt-5'>
-                <div className='md:pl-8  grid grid-cols-1 md:grid-cols-4 text-[14px]  gap-y-8'>
+                <div className='md:pl-8  grid grid-cols-1 md:grid-cols-4 lg:text-[14px] text-[10px]  gap-y-8'>
                     <div className='flex flex-col gap-y-1 w-fit relative'>
                         {[
                             { to: '/', label: 'Home' },
@@ -136,24 +128,27 @@ function FooterSub() {
                         <p>info@gmail.com</p>
                         <p>080 4302 7655</p>
                     </div>
-                    <div className='flex flex-col gap-y-2 w-fit ml-16'>
+                    <div className='flex flex-col gap-y-2 w-fit lg:ml-16 md:ml-8'>
                         <NavLink to='/' >LinkedIn</NavLink>
                         <NavLink to='/' >Instagram</NavLink>
                         <NavLink to='/' >Facebook</NavLink>
                     </div>
-                    <div className='flex flex-col  gap-y-2 ml-12'>
-                        <p className='text-sm'>Privacy Policy</p>
-                        <NavLink to='/codeofethics' className='text-sm'>Code of Ethics</NavLink>
-                        <NavLink to='/health-saftey-environment' className='text-sm'>Health, Safety & Environmental</NavLink>
-                        <NavLink to='/quality-policy' className='text-sm'>Quality</NavLink>
+                    <div className='flex flex-col  gap-y-2 '>
+                        <p className='text-[10px] lg:text-[14px]'>Privacy Policy</p>
+                        <NavLink to='/codeofethics' className='text-[10px] lg:text-[14px] '>Code of Ethics</NavLink>
+                        <NavLink to='/health-saftey-environment' className='text-[10px] lg:text-[14px]'>Health, Safety & Environmental</NavLink>
+                        <NavLink to='/quality-policy' className='text-[10px] lg:text-[14px]'>Quality</NavLink>
 
                     </div>
 
 
                 </div>
-                <div className='relative flex flex-row  items-center gap-x-1 md:flex-col'>
-                    <img src={footerlogo} alt="footerlogo" className='size-32' />
-                    <div className="flex items-end  w-full md:w-auto mt-8 md:mt-0">
+                <div className='relative flex flex-row  items-center justify-center gap-x-1 '>
+                    <div>
+                        <img src={footerlogo} alt="footerlogo" className='size-32' />
+                    </div>
+
+                    <div className="flex items-end  w-full md:w-auto pt-5">
                         <span className="text-sm ">© 2035<span className="align-middle text-xs ml-1 underline">™</span></span>
                     </div>
                 </div>
@@ -164,6 +159,3 @@ function FooterSub() {
 
 export default FooterSub
 
-// Add this to your Tailwind CSS (or global CSS):
-// .dot-fade-left { @apply inline-block opacity-0 -translate-x-2 transition-all duration-300; }
-// .group:hover .dot-fade-left { @apply opacity-100 translate-x-0; }
