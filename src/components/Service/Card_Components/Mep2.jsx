@@ -4,7 +4,7 @@ import banner from '../../../assets/services-card2.avif'
 
 function Mep2() {
     return (
-        <div className="flex bg-white w-[92vw] max-w-screen mx-auto h-screen rounded-[48px] rounded-br-none rounded-bl-none overflow-hidden">
+        <div className="flex bg-white w-[92vw] max-w-screen mx-auto h-screen rounded-[48px] rounded-br-none rounded-bl-none overflow-hidden font-questrial">
             {/* Left Image */}
             <div className="w-[22rem] min-h-[600px] hidden lg:block relative">
                 <img
