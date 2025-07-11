@@ -88,7 +88,7 @@ function MobilePanel({ menu, openIdx, setOpenIdx, close }) {
                 <nav className="px-6 py-4 space-y-6 text-white">
                     {menu.map((item, idx) => (
                         <div key={item.path}>
-                            <div className="flex justify-between items-center text-5xl">
+                            <div className="flex justify-between items-center text-4xl space-y-2">
                                 <Link
                                     to={item.path}
                                     onClick={close}
