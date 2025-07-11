@@ -14,7 +14,7 @@ function Service() {
                 <Hero />
                 <h1 className='text-center text-[43px] mt-12 font-questrial font-semibold'>MEP (Mechanical, Electrical, and Plumbing) Services</h1>
 
-            <Main />
+                <Main />
             </div>
             <MepExpertise />
             <Footer />

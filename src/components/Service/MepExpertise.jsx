@@ -9,8 +9,8 @@ const expertise = [
 
 function MepExpertise() {
     return (
-        <div className="min-h-full bg-[#222] flex flex-col items-center py-8 font-questrial md:mt-36 mt-[90rem]">
-            <h1 className="text-white text-center text-6xl md:text-7xl font-bold tracking-tight mt-24 mb-28">MEP Expertise</h1>
+        <div className="min-h-full bg-[#222] flex flex-col items-center py-8 font-questrial md:mt-36 mt-[85rem]">
+            <h1 className="text-white text-center text-6xl md:text-7xl font-bold tracking-tight mt-24 mb-28 pt-16 md:pt-3">MEP Expertise</h1>
             <div className="w-full max-w-6xl flex flex-col items-center">
                 <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-y-16 gap-x-8 px-4 md:px-0">
                     {expertise.flat().map((item, idx) => (

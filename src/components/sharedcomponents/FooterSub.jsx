@@ -21,7 +21,7 @@ function FooterSub() {
     return (
         <div className='font-questrial text-black mb-12'>
             <div className='text-center md:flex md:justify-start md:pl-12 mt-8'>
-                <h1 className='lg:text-[22rem] text-8xl'>Greets</h1>
+                <h1 className='lg:text-[20rem] text-8xl'>Greets</h1>
             </div>
             <div className='md:flex md:justify-between px-8 mt-5'>
                 <div className='md:pl-8  grid grid-cols-1 md:grid-cols-4 lg:text-[14px] text-[10px]  gap-y-8'>
