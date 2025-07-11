@@ -1,5 +1,7 @@
 import React from 'react'
 import { FaCog, FaBolt } from 'react-icons/fa'
+import { HiOutlineCog8Tooth } from "react-icons/hi2";
+import { AiFillThunderbolt } from "react-icons/ai";
 import banner from '../../../assets/services-card1.avif'
 function Mep() {
     return (
@@ -13,7 +15,7 @@ function Mep() {
                         <div className="flex flex-col items-start min-w-[340px]">
                             <div className="mb-4">
                                 <span className="inline-flex items-center justify-center w-28 h-28 rounded-full bg-green-700">
-                                    <FaCog className="text-white" size={70} />
+                                    <FaCog className="text-white" size={80} />
                                 </span>
                             </div>
                             <h1 className="lg:text-4xl text-2xl lg:text-nowrap mb-6 font-bold">
@@ -55,7 +57,7 @@ function Mep() {
                         <div className="flex flex-col items-start min-w-[320px]">
                             <div className="mb-4">
                                 <span className="inline-flex items-center justify-center w-28 h-28 rounded-full bg-green-700">
-                                    <FaBolt className="text-white" size={70} />
+                                    <AiFillThunderbolt className="text-white" size={70} />
                                 </span>
                             </div>
                             <h1 className="lg:text-4xl text-2xl font-bold mb-6 ">
