@@ -28,7 +28,11 @@ function FooterSub() {
                     <div className='flex flex-col gap-y-1 w-fit relative'>
                         {[
                             { to: '/', label: 'Home' },
-                            { to: '/about', label: 'About', isAccordion: true },
+                            {
+                                to: '/about', label: 'About', isAccordion: true, children: [
+                                    { to: '/testimonial', label: 'Testimonial' }
+                                ]
+                            },
                             { to: '/services', label: 'Services' },
                             { to: '/projects', label: 'Projects', isAccordion: true },
                             { to: '/contact', label: 'Contact Us' },
@@ -66,34 +70,56 @@ function FooterSub() {
                                     </motion.button>
                                     {(item.label === 'Projects' ? openProjectsAccordion : openAboutAccordion) && (
                                         <div className="flex flex-col pl-6 py-1 gap-y-1">
-                                            <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial">
-                                                <NavLink to="/projects/one" className="flex items-center gap-1 group">
-                                                    {({ isActive }) => (
-                                                        <>
-                                                            {isActive ? (
-                                                                <span className="text-blue-500 text-xs">•</span>
-                                                            ) : (
-                                                                <motion.span variants={dotVariants} className="text-black text-xs">•</motion.span>
+                                            {/* About submenu */}
+                                            {item.label === 'About' && item.children && item.children.map((sub, subIdx) => (
+                                                <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial" key={sub.to}>
+                                                    <NavLink to={sub.to} className="flex items-center gap-1 group">
+                                                        {({ isActive }) => (
+                                                            <>
+                                                                {isActive ? (
+                                                                    <span className="text-blue-500 text-xs">•</span>
+                                                                ) : (
+                                                                    <motion.span variants={dotVariants} className="text-black text-xs">•</motion.span>
+                                                                )}
+                                                                <span className={isActive ? 'text-black' : ''}>{sub.label}</span>
+                                                            </>
+                                                        )}
+                                                    </NavLink>
+                                                </motion.div>
+                                            ))}
+                                            {/* Projects submenu */}
+                                            {item.label === 'Projects' && (
+                                                <>
+                                                    <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial">
+                                                        <NavLink to="/projects/one" className="flex items-center gap-1 group">
+                                                            {({ isActive }) => (
+                                                                <>
+                                                                    {isActive ? (
+                                                                        <span className="text-blue-500 text-xs">•</span>
+                                                                    ) : (
+                                                                        <motion.span variants={dotVariants} className="text-black text-xs">•</motion.span>
+                                                                    )}
+                                                                    <span className={isActive ? 'text-black' : ''}>Project One</span>
+                                                                </>
                                                             )}
-                                                            <span className={isActive ? 'text-black' : ''}>Project One</span>
-                                                        </>
-                                                    )}
-                                                </NavLink>
-                                            </motion.div>
-                                            <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial">
-                                                <NavLink to="/projects/two" className="flex items-center gap-1 group">
-                                                    {({ isActive }) => (
-                                                        <>
-                                                            {isActive ? (
-                                                                <span className="text-black text-xs">•</span>
-                                                            ) : (
-                                                                <motion.span variants={dotVariants} className="text-black text-xs">•</motion.span>
+                                                        </NavLink>
+                                                    </motion.div>
+                                                    <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial">
+                                                        <NavLink to="/projects/two" className="flex items-center gap-1 group">
+                                                            {({ isActive }) => (
+                                                                <>
+                                                                    {isActive ? (
+                                                                        <span className="text-black text-xs">•</span>
+                                                                    ) : (
+                                                                        <motion.span variants={dotVariants} className="text-black text-xs">•</motion.span>
+                                                                    )}
+                                                                    <span className={isActive ? 'text-black ' : ''}>Project Two</span>
+                                                                </>
                                                             )}
-                                                            <span className={isActive ? 'text-black ' : ''}>Project Two</span>
-                                                        </>
-                                                    )}
-                                                </NavLink>
-                                            </motion.div>
+                                                        </NavLink>
+                                                    </motion.div>
+                                                </>
+                                            )}
                                         </div>
                                     )}
                                 </React.Fragment>
@@ -135,9 +161,9 @@ function FooterSub() {
                     </div>
                     <div className='flex flex-col  gap-y-2 '>
                         <p className='text-[14px]'>Privacy Policy</p>
-                        <NavLink to='/codeofethics' className='text-[13px] '>Code of Ethics</NavLink>
-                        <NavLink to='/health-saftey-environment' className='text-[13px]'>Health, Safety & Environmental</NavLink>
-                        <NavLink to='/quality-policy' className='text-[13px]'>Quality</NavLink>
+                        <NavLink to='/codeofethics' className='text-[14px] '>Code of Ethics</NavLink>
+                        <NavLink to='/health-saftey-environment' className='text-[14px]'>Health, Safety & Environmental</NavLink>
+                        <NavLink to='/quality-policy' className='text-[14px]'>Quality</NavLink>
 
                     </div>
 
