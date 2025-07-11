@@ -8,7 +8,7 @@ function Mep() {
             <div className="flex bg-gray-100  w-[92vw] max-w-screen mx-auto h-full rounded-[48px] rounded-br-none rounded-bl-none overflow-hidden ">
                 {/* Left Side */}
                 <div className="flex-1 flex md:flex-col flex-row  justify-center px-12 py-10 bg-white">
-                    <div className="flex flex-row lg:gap-16 gap-4">
+                    <div className="flex md:flex-row flex-col lg:gap-16 gap-4">
                         {/* Mechanical Services */}
                         <div className="flex flex-col items-start min-w-[340px]">
                             <div className="mb-4">
