@@ -9,6 +9,7 @@ import CodeOfEthics from './components/Privacy Policy/CodeOfEthics'
 import HealthAndEnvironmental from './components/Privacy Policy/HealthAndEnvironmental'
 import QualityPolicy from './components/Privacy Policy/QualityPolicy'
 import Services from './pages/Service'
+import KeyProject from './components/Project/Project_sub/KeyProject'
 // Scroll to top on route change
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -28,6 +29,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path='/key-projects' element={<KeyProject />} />
           <Route path="/contact" element={<Contact />} />
           <Route path='/testimonial' element={<Testimonial />} />
           <Route path='/codeofethics' element={<CodeOfEthics />} />

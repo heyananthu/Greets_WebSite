@@ -1,10 +1,14 @@
 import React from 'react'
+import Main from '../components/Project/Main'
+import Navbar from '../components/sharedcomponents/Navbar'
+import Footer from '../components/sharedcomponents/Footer'
 
 function Projects() {
     return (
         <div>
-            <h1>Projects</h1>
-            <p>Not done</p>
+            <Navbar />
+            <Main />
+            <Footer />
         </div>
     )
 }

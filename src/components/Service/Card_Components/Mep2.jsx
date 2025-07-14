@@ -1,7 +1,9 @@
 import React from 'react'
 import { FaTint, FaFire } from 'react-icons/fa'
 import banner from '../../../assets/services-card2.avif'
-
+import { RiDropFill } from "react-icons/ri";
+import dropIcon from '../../../assets/icons/drop-icon.png';
+import fireIcon from '../../../assets/icons/fire-icon.png';
 function Mep2() {
     return (
         <div className="flex bg-white w-[92vw] max-w-screen mx-auto h-screen rounded-[48px] rounded-br-none rounded-bl-none overflow-hidden font-questrial">
@@ -19,8 +21,9 @@ function Mep2() {
                     {/* Plumbing */}
                     <div className="flex flex-col items-start min-w-[340px]">
                         <div className="mb-4">
-                            <span className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-700">
-                                <FaTint className="text-white" size={70} />
+                            <span className="inline-flex items-center justify-center w-24 h-24">
+                                {/* <RiDropFill className="text-white" size={70} /> */}
+                                <img src={dropIcon} alt="Drop Icon" className="w-24 h-24 " />
                             </span>
                         </div>
                         <h1 className="lg:text-4xl text-2xl lg:text-nowrap mb-12 font-bold">Plumbing</h1>
@@ -54,8 +57,8 @@ function Mep2() {
                     {/* Fire Protection Services */}
                     <div className="flex flex-col items-start min-w-[340px]">
                         <div className="mb-4">
-                            <span className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-700">
-                                <FaFire className="text-white" size={70} />
+                            <span className="inline-flex items-center justify-center w-24 h-24">
+                                <img src={fireIcon} alt="Drop Icon" className="w-24 h-24 " />
                             </span>
                         </div>
                         <h1 className="lg:text-4xl text-2xl lg:text-nowrap mb-12 font-bold">Fire Protection Services</h1>
