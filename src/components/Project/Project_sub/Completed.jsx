@@ -24,7 +24,7 @@ function Completed() {
                   <div key={rowIdx * 10 + idx + 1} className="flex items-center border-b-1 border-black py-4">
                     <span className="text-[18px] font-normal w-8 text-right mr-4">{rowIdx * 10 + idx + 1}</span>
                     <span className="flex-1 font-bold text-[18px] md:text-[28px]">{item.name}</span>
-                    <span className="font-bold text-[18px] md:text-[28px] text-left w-32">{item.country}</span>
+                    <span className="font-bold text-[18px] md:text-[28px] text-right w-32">{item.country}</span>
                   </div>
                 ))}
               </div>
@@ -34,7 +34,7 @@ function Completed() {
                   <div key={rowIdx * 10 + idx + 6} className="flex items-center border-b-1 border-black py-4">
                     <span className="text-[18px] font-normal w-8 text-right mr-4">{rowIdx * 10 + idx + 6}</span>
                     <span className="flex-1 font-bold text-[18px] md:text-[28px]">{item.name}</span>
-                    <span className="font-bold text-[18px] md:text-[28px] text-left w-32">{item.country}</span>
+                    <span className="font-bold text-[18px] md:text-[28px] text-right w-32">{item.country}</span>
                   </div>
                 ))}
               </div>
