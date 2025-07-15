@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
 @import "tailwindcss";
 
 /* Self-hosted Questrial */
@@ -15,6 +16,7 @@
 :root {
   --font-questrial: "Questrial", sans-serif;
   --font-fahkwang: "Fahkwang", sans-serif;
+  --font-wix: "Wix Madefor Text", sans-serif;
 
   --breakpoint-3xl: 120rem;
 
@@ -35,4 +37,8 @@
 
 .font-fahkwang {
   font-family: var(--font-fahkwang);
+}
+
+.font-wix {
+  font-family: var(--font-wix);
 }

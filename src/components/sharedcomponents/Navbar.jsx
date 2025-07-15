@@ -116,8 +116,8 @@ function MobilePanel({ menu, openIdx, setOpenIdx, close }) {
                                                 to={child.path}
                                                 onClick={close}
                                                 className={`block ${location.pathname === child.path
-                                                        ? 'text-green-600'
-                                                        : 'text-white'
+                                                    ? 'text-green-600'
+                                                    : 'text-white'
                                                     }`}
                                             >
                                                 {child.label}
@@ -141,7 +141,7 @@ export default function Navbar() {
     const menu = [
         { path: '/', label: 'Home' },
         {
-            path: '/about', 
+            path: '/about',
             label: 'About',
             children: [{ path: '/testimonial', label: 'Testimonial' }],
         },
@@ -150,9 +150,9 @@ export default function Navbar() {
             path: '/projects',
             label: 'Projects',
             children: [
-                { path: '/projects/all', label: 'All Projects' },
-                { path: '/projects/ongoing', label: 'Ongoing' },
-                { path: '/projects/completed', label: 'Completed' },
+                { path: '/key-projects', label: 'Key Projects' },
+                { path: '/upcoming-projects', label: 'Upcoming Projects ' },
+                { path: '/completed-projects', label: 'Completed Projects' },
             ],
         },
         { path: '/contact', label: 'Contact Us' },

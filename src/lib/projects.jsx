@@ -273,3 +273,138 @@ export const keyprojects = [
     },
 
 ];
+export const completedProjects = [
+    { name: "Green Island - RCSC Renovation", country: "SEYCHELLES" },
+    { name: "Horizon Fisheries", country: "MALDIVES" },
+    { name: "Gulf Craft Factory", country: "MALDIVES" },
+    { name: "Gulf Craft Resort", country: "MALDIVES" },
+    { name: "IDC", country: "SEYCHELLES" },
+    { name: "Taj Maldives", country: "MALDIVES" },
+    { name: "ANHENUNFUSHI", country: "MALDIVES" },
+    { name: "AIDHOO", country: "MALDIVES" },
+    { name: "The Horizon", country: "GAMBIA" },
+    { name: "Platinum Towers", country: "GAMBIA" },
+    { name: "Devanahalli Ware House", country: "INDIA" },
+    { name: "Aditya Plot Development", country: "INDIA" },
+    { name: "Mandagalli Ashraya Layout", country: "INDIA" },
+    { name: "IOCL Building", country: "INDIA" },
+    { name: "Jogin Desai Residence", country: "INDIA" },
+    { name: "Bishop Cotton School", country: "INDIA" },
+    { name: "Bodhgaya Museum", country: "INDIA" },
+    {
+        name: "Kaviya Maran Residence", country: "INDIA"
+    },
+    { name: "Mehta Residence Hubballi", country: "INDIA" },
+    { name: "KSRDPRU", country: "INDIA" },
+    { name: "Siddachala Apartment   ", country: "INDIA" },
+    { name: "Siddaramaiya Residence ", country: "INDIA" },
+    { name: "Kempegowda Veera Samadhi", country: "INDIA" },
+    { name: "Annenufunshi", country: "Maldieves" },
+    { name: "IDCO Jajpur", country: "INDIA" },
+    { name: "IDCO Sambalpur", country: "INDIA" },
+    { name: "MBIS", country: "INDIA" },
+    { name: "Forvia", country: "INDIA" },
+    { name: "Nokia", country: "INDIA" },
+    { name: "Jasmine Sangmas Shillong", country: "INDIA" },
+
+    { name: "Mehtab Sangmas Shillong  ", country: "INDIA" },
+
+    { name: "PRK Villa Layout", country: "INDIA" },
+
+    { name: "Raja Apartment (Wind Chimes) ", country: "INDIA" },
+
+    { name: "ST. Marks Commercial Complex ", country: "INDIA" },
+
+    { name: "ABN RK Farm House", country: "INDIA" },
+
+    { name: "Decathlon Hosur", country: "INDIA" },
+
+    { name: "St.Marks", country: "INDIA" },
+
+    { name: "SBR - Tejas ", country: "INDIA" },
+
+    { name: "SBR - Keerthi", country: "INDIA" },
+
+    { name: "Vaishnavi Tech Park IGBC", country: "INDIA" },
+
+    { name: "Icloud Homes - Winds of Change Villa", country: "INDIA" },
+
+    { name: "Icloud Homes - Under The Blue Sky", country: "INDIA" },
+
+    { name: "SBR Kreethi Prime", country: "INDIA" },
+
+    { name: "SBR Pravanika", country: "INDIA" },
+
+    { name: "Phoenix Club House", country: "INDIA" },
+
+    { name: "Urban Zen", country: "INDIA" },
+
+    { name: "Century Attur", country: "INDIA" },
+
+    { name: "Shillong Residence", country: "INDIA" },
+
+    { name: "Tamara Office", country: "INDIA" },
+
+    { name: "SBR Tower", country: "INDIA" },
+
+    { name: "Svamitva Floresta Project", country: "INDIA" },
+
+    { name: "Vaishnavi Signature", country: "INDIA" },
+
+    { name: "St. Marks", country: "INDIA" },
+
+    { name: "Farmland", country: "INDIA" },
+
+    { name: "Sridhar Residence Chennai ", country: "INDIA" },
+
+    { name: "VOorjitha", country: "INDIA" },
+
+    { name: "Gipard", country: "INDIA" },
+
+    { name: "Mehtab Residence", country: "INDIA" },
+
+    { name: "Springseas", country: "INDIA" },
+
+    { name: "Decathlon Sarjapur", country: "INDIA" },
+
+    { name: "Sivamogga Airport", country: "INDIA" },
+
+    { name: "Newry Apartment", country: "INDIA" },
+
+
+    { name: "Residence at Chennai - Kavya", country: "INDIA" },
+
+    { name: "Century CSV Club House", country: "INDIA" },
+    { name: "RV College - Kembhavi", country: "INDIA" },
+
+    { name: "Kannamagala Apt", country: "INDIA" },
+
+    { name: "Decathlon Whitefield", country: "INDIA" },
+
+    { name: "Amararaja Apartment", country: "INDIA" },
+
+    { name: "Nivia Factory", country: "INDIA" },
+
+    { name: "Rajamandry Apartment", country: "INDIA" },
+
+    { name: "Century Horizon", country: "INDIA" },
+
+    { name: "Kembhavi Hubli", country: "INDIA" },
+
+    { name: "Hatha Gorup Villa Project", country: "INDIA" },
+
+    { name: "Century - Pai Residence", country: "INDIA" },
+
+    { name: "Decathlon Anubhava Zone-3", country: "INDIA" },
+
+    { name: "Sarjapur Apartment", country: "INDIA" },
+
+    { name: "ABN Phoenix Commercial", country: "INDIA" },
+
+    { name: "Rade Shyam Apartment", country: "INDIA" },
+
+    { name: "SB Primus Kakinada", country: "INDIA" },
+
+    { name: "SNN Raj Ecover's", country: "INDIA" },
+
+];

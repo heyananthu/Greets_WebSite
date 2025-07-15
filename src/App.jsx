@@ -10,6 +10,9 @@ import HealthAndEnvironmental from './components/Privacy Policy/HealthAndEnviron
 import QualityPolicy from './components/Privacy Policy/QualityPolicy'
 import Services from './pages/Service'
 import KeyProject from './components/Project/Project_sub/KeyProject'
+import Upcoming from './components/Project/Project_sub/Upcoming'
+import Completed from './components/Project/Project_sub/Completed'
+
 // Scroll to top on route change
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -28,8 +31,12 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          {/* PROJECT */}
           <Route path="/projects" element={<Projects />} />
           <Route path='/key-projects' element={<KeyProject />} />
+          <Route path="/upcoming-projects" element={<Upcoming />} />
+          <Route path="/completed-projects" element={<Completed />} />
+
           <Route path="/contact" element={<Contact />} />
           <Route path='/testimonial' element={<Testimonial />} />
           <Route path='/codeofethics' element={<CodeOfEthics />} />

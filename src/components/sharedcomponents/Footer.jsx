@@ -4,7 +4,7 @@ import FooterSub from './FooterSub'
 function Footer() {
     return (
         <>
-            <footer className=" flex flex-wrap items-center justify-between gap-8 px-[5vw] pt-16  w-full font-questrial text-white md:mt-16">
+            <footer className=" flex flex-wrap  items-center justify-between gap-8 px-[5vw] pt-16  w-full font-questrial text-white md:mt-16">
                 {/* Left: Brand */}
                 <div className="font-bold  text-green-700 leading-none w-full flex-1 md:text-7xl text-4xl md:-translate-y-10">
                     Stay Ahead with<br className='md:block hidden' /> Industry Insights

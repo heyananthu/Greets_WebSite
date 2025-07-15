@@ -91,7 +91,7 @@ function FooterSub() {
                                             {item.label === 'Projects' && (
                                                 <>
                                                     <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial">
-                                                        <NavLink to="/projects/one" className="flex items-center gap-1 group">
+                                                        <NavLink to="/key-projects" className="flex items-center gap-1 group">
                                                             {({ isActive }) => (
                                                                 <>
                                                                     {isActive ? (
@@ -99,13 +99,13 @@ function FooterSub() {
                                                                     ) : (
                                                                         <motion.span variants={dotVariants} className="text-black text-xs">•</motion.span>
                                                                     )}
-                                                                    <span className={isActive ? 'text-black' : ''}>Project One</span>
+                                                                    <span className={isActive ? 'text-black' : ''}>Key Projects</span>
                                                                 </>
                                                             )}
                                                         </NavLink>
                                                     </motion.div>
                                                     <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial">
-                                                        <NavLink to="/projects/two" className="flex items-center gap-1 group">
+                                                        <NavLink to="/upcoming-projects" className="flex items-center gap-1 group">
                                                             {({ isActive }) => (
                                                                 <>
                                                                     {isActive ? (
@@ -113,7 +113,21 @@ function FooterSub() {
                                                                     ) : (
                                                                         <motion.span variants={dotVariants} className="text-black text-xs">•</motion.span>
                                                                     )}
-                                                                    <span className={isActive ? 'text-black ' : ''}>Project Two</span>
+                                                                    <span className={isActive ? 'text-black ' : ''}>Upcoming Projects</span>
+                                                                </>
+                                                            )}
+                                                        </NavLink>
+                                                    </motion.div>
+                                                    <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial">
+                                                        <NavLink to="/completed-projects" className="flex items-center gap-1 group">
+                                                            {({ isActive }) => (
+                                                                <>
+                                                                    {isActive ? (
+                                                                        <span className="text-black text-xs">•</span>
+                                                                    ) : (
+                                                                        <motion.span variants={dotVariants} className="text-black text-xs">•</motion.span>
+                                                                    )}
+                                                                    <span className={isActive ? 'text-black ' : ''}>Completed Projects</span>
                                                                 </>
                                                             )}
                                                         </NavLink>
