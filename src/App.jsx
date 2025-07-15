@@ -12,7 +12,7 @@ import Services from './pages/Service'
 import KeyProject from './components/Project/Project_sub/KeyProject'
 import Upcoming from './components/Project/Project_sub/Upcoming'
 import Completed from './components/Project/Project_sub/Completed'
-
+import ContactPage from './pages/Contact'
 // Scroll to top on route change
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -37,7 +37,7 @@ function App() {
           <Route path="/upcoming-projects" element={<Upcoming />} />
           <Route path="/completed-projects" element={<Completed />} />
 
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path='/testimonial' element={<Testimonial />} />
           <Route path='/codeofethics' element={<CodeOfEthics />} />
           <Route path='/health-saftey-environment' element={<HealthAndEnvironmental />} />

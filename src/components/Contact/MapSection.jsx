@@ -1,0 +1,44 @@
+import React from 'react';
+
+function MapSection() {
+    return (
+        <div className="min-h-screen flex flex-col lg:flex-row items-start justify-between px-6 lg:px-20 py-10 gap-12 font-questrial mt-10">
+            {/* Left - Business Info */}
+            <div className="w-full lg:w-1/2 space-y-10">
+                <h1 className="text-[32px] lg:text-[38px] font-bold text-black">Business Info</h1>
+
+                <div>
+                    <h2 className="text-xl lg:text-2xl mb-2 text-black">Location</h2>
+                    <p className="text-black leading-relaxed text-base lg:text-lg">
+                        500 Terry Francois Street,<br />
+                        San Francisco, CA 94158
+                    </p>
+                </div>
+
+                <div>
+                    <h2 className="text-xl lg:text-2xl mb-2 text-black">Hours</h2>
+                    <p className="text-black text-base lg:text-lg">Mon–Fri 9:00 am – 5:00 pm</p>
+                    <p className="text-black text-base lg:text-lg">Saturday 9:00 am – 2:00 pm</p>
+                    <p className="text-black text-base lg:text-lg">Sunday 9:00 am – 2:00 pm</p>
+                </div>
+            </div>
+
+            {/* Right - Google Map */}
+            <div className="w-full lg:w-1/2 h-[300px] lg:h-[600px]">
+                <iframe
+                    title="Greets Office Location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.9337848807954!2d77.57420431481907!3d12.955230090872322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15d096403ab9%3A0x6d5d11d585a51fa!2sGreets%20Office!5e0!3m2!1sen!2sin!4v1623157284744!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="rounded-lg shadow"
+                ></iframe>
+            </div>
+        </div>
+    );
+}
+
+export default MapSection;

@@ -35,7 +35,7 @@ function Upcoming() {
           </div>
 
           {/* Project 2 and 3 */}
-          <div className='flex flex-col lg:flex-row gap-1 w-full '>
+          <div className='flex flex-col lg:flex-row gap-1 lg:gap-8 w-full '>
             {/* Project 2 */}
             <div className='w-full  lg:flex lg:flex-col justify-end lg:h-screen'>
               <img

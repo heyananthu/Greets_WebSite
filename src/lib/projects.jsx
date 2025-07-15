@@ -38,7 +38,7 @@ import prj37 from '../assets/projects/prj37.avif'
 import prj38 from '../assets/projects/prj38.avif'
 import prj39 from '../assets/projects/prj39.avif'
 
-
+import addmore from '../assets/project-img1.jpg'
 
 export const keyprojects = [
     {
@@ -269,6 +269,11 @@ export const keyprojects = [
     {
         img: prj39,
         title: "KHUSHI HOSPITAL",
+
+    },
+        {
+        img: addmore,
+        title: "Add many more",
 
     },
 

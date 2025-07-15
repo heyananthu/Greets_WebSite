@@ -1,0 +1,43 @@
+.custom-phone-input .PhoneInput {
+    position: relative;
+    width: 100%;
+}
+
+.custom-phone-input .PhoneInputInput {
+    width: 100%;
+    padding-left: 2.5rem;
+    padding-right: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #d1d5db;
+    /* Tailwind border-gray-300 */
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+}
+
+/* Hide flag icon */
+.custom-phone-input .PhoneInputCountryIcon {
+    display: none;
+}
+
+/* Hide default arrow */
+.custom-phone-input .PhoneInputCountrySelectArrow {
+    display: none;
+}
+
+.custom-phone-input .PhoneInputCountry {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Add emoji globe */
+.custom-phone-input .PhoneInputCountry::before {
+    content: "🌐";
+    font-size: 1.2rem;
+    color: #000;
+}
