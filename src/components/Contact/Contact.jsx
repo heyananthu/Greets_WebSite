@@ -16,18 +16,18 @@ function Contact() {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                             <div>
                                 <label className="text-gray-400 text-sm mb-1 block">First name</label>
-                                <input type="text" placeholder="First name" className="w-full px-4 py-2 bg-white text-black " />
+                                <input type="text" className="w-full px-4 py-2 bg-white text-black " />
                             </div>
                             <div>
                                 <label className="text-gray-400 text-sm mb-1 block">Last name</label>
-                                <input type="text" placeholder="Last name" className="w-full px-4 py-2 bg-white text-black " />
+                                <input type="text" className="w-full px-4 py-2 bg-white text-black " />
                             </div>
                         </div>
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                             <div>
                                 <label className="text-gray-400 text-sm mb-1 block">Email</label>
-                                <input type="email" placeholder="Email" className="w-full px-4 py-2 bg-white text-black " />
+                                <input type="email" className="w-full px-4 py-2 bg-white text-black " />
                             </div>
                             <div>
                                 <label className="text-gray-400 text-sm mb-1 block">Phone</label>
@@ -52,7 +52,7 @@ function Contact() {
 
                         <div>
                             <label className="text-gray-400 text-sm mb-1 block">Message</label>
-                            <textarea placeholder="Message" className="w-full px-4 py-2 bg-white text-black h-24 resize-none" />
+                            <textarea className="w-full px-4 py-2 bg-white text-black h-24 resize-none" />
                         </div>
 
                         <button type="submit" className="bg-[#098A36] text-white px-8 py-2 mt-2 w-full lg:w-[17rem] hover:bg-green-800 transition ">
@@ -65,12 +65,13 @@ function Contact() {
                 <div className="bg-[#098A36] rounded-[2rem] flex flex-col justify-center items-start p-8 lg:p-12 text-white text-lg gap-8 w-full h-auto lg:w-[40%] lg:h-[28rem]">
                     <div className="pl-12 space-y-20">
                         <div className='text-[24px]'>
-                            500 Terry Francine Street,<br />
-                            San Francisco, CA 94158
+                            384, 9th Main Rd, 7th Sector
+                            <br />HSR Layout, Bengalure<br />
+                            Karnataka 560102
                         </div>
                         <div className='text-[24px]'>
-                            info@mysite.com<br />
-                            123-456-7890
+                            info@gmail.com<br />
+                            080 4302 7655
                         </div>
                     </div>
                 </div>

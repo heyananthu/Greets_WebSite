@@ -10,8 +10,9 @@ function MapSection() {
                 <div>
                     <h2 className="text-xl lg:text-2xl mb-2 text-black">Location</h2>
                     <p className="text-black leading-relaxed text-base lg:text-lg">
-                        500 Terry Francois Street,<br />
-                        San Francisco, CA 94158
+                        384, 9th Main Rd, 7th Sector
+                        <br />HSR Layout, Bengalure<br />
+                        Karnataka 560102
                     </p>
                 </div>
 

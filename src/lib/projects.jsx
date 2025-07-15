@@ -37,7 +37,6 @@ import prj36 from '../assets/projects/prj36.avif'
 import prj37 from '../assets/projects/prj37.avif'
 import prj38 from '../assets/projects/prj38.avif'
 import prj39 from '../assets/projects/prj39.avif'
-
 import addmore from '../assets/project-img1.jpg'
 
 export const keyprojects = [
@@ -271,13 +270,14 @@ export const keyprojects = [
         title: "KHUSHI HOSPITAL",
 
     },
-        {
+    {
         img: addmore,
-        title: "Add many more",
+        title: "And many more",
 
     },
 
 ];
+
 export const completedProjects = [
     { name: "Green Island - RCSC Renovation", country: "SEYCHELLES" },
     { name: "Horizon Fisheries", country: "MALDIVES" },
@@ -411,5 +411,103 @@ export const completedProjects = [
     { name: "SB Primus Kakinada", country: "INDIA" },
 
     { name: "SNN Raj Ecover's", country: "INDIA" },
+
+    { name: " Oerlikon Factory Tumkur", country: "INDIA" },
+
+    { name: "Montra Automobile Warehouse", country: "INDIA" },
+
+    { name: "SBR Villaments", country: "INDIA" },
+
+    { name: "Ambient Ashirwad", country: "INDIA" },
+
+    { name: "Kembhavi Bangalore", country: "INDIA" },
+
+    { name: "Smart Owner Villas/PRK Project", country: "INDIA" },
+
+    { name: "Bhuwalka Residence", country: "INDIA" },
+
+    { name: "Smart Owner Master Plan - PRK", country: "INDIA" },
+
+    { name: "Mootha Brothers Kakinada Apt", country: "INDIA" },
+
+    { name: "Ramji Gond Museum Hyd", country: "INDIA" },
+
+    { name: "Avance Club House", country: "INDIA" },
+{ name: "SBR One Residence", country: "INDIA" },
+{ name: "Residential - Indore", country: "INDIA" },
+{ name: "SS Super Foods", country: "INDIA" },
+{ name: "RBI Bangalore", country: "INDIA" },
+{ name: "Sri Durga Group", country: "INDIA" },
+{ name: "MLA Quarters, Bhubaneshwar", country: "INDIA" },
+{ name: "Decathlon SBR Mall", country: "INDIA" },
+{ name: "Harini", country: "INDIA" },
+{ name: "Arkanic Kolkatta", country: "INDIA" },
+{ name: "Sheraton - Ball Room", country: "INDIA" },
+{ name: "PITTI", country: "INDIA" },
+{ name: "Nalanda Institute Of His Holiness", country: "INDIA" },
+{ name: "Taskus Gurugram", country: "INDIA" },
+{ name: "PHOENIX TRIVIUM", country: "INDIA" },
+{ name: "RBI Mysore", country: "INDIA" },
+{ name: "Harady Resort - Udupi", country: "INDIA" },
+{ name: "PHOENIX HUB 09", country: "INDIA" },
+{ name: "Kolar Master Plan", country: "INDIA" },
+{ name: "NMIAL project", country: "INDIA" },
+{ name: "PHOENIX MEGA 51", country: "INDIA" },
+{ name: "Mulberry Master Plan", country: "INDIA" },
+{ name: "Smart Owner - Summit", country: "INDIA" },
+{ name: "PHOENIX AQUILA", country: "INDIA" },
+{ name: "Casagrand Thalgattapura - Zaiden", country: "INDIA" },
+{ name: "BIAL - New Store", country: "INDIA" },
+{ name: "PHOENIX CENTAURUS", country: "INDIA" },
+{ name: "Decathlon Indiranagar", country: "INDIA" },
+{ name: "Zionhills", country: "INDIA" },
+{ name: "Khushi IVF Hospital", country: "INDIA" },
+{ name: "Cochin Airport T2", country: "INDIA" },
+{ name: "Elgi Fitout", country: "INDIA" },
+{ name: "Tulah Clinical Wellness Retreat", country: "INDIA" },
+{ name: "Cochin Airport T3 Expansion", country: "INDIA" },
+{ name: "One Elahe", country: "INDIA" },
+{ name: "Sumadhura Sushantham", country: "INDIA" },
+{ name: "Casagrand - Thalaghattapura", country: "INDIA" },
+{ name: "Principal Finance - JLL", country: "INDIA" },
+{ name: "Sumadhura Soham", country: "INDIA" },
+{ name: "Bridge Hyd", country: "INDIA" },
+{ name: "Eco Infrastructures", country: "INDIA" },
+{ name: "THE CHATEAU", country: "INDIA" },
+{ name: "Park Raddisson Hotel", country: "INDIA" },
+{ name: "JSSL - Industrial Bharuch", country: "INDIA" },
+{ name: "RGHCL, Mysore", country: "INDIA" },
+{ name: "MVC Villa layout - Smart Owner", country: "INDIA" },
+{ name: "Smart Owner - Beverly Woods", country: "INDIA" },
+{ name: "Yagachi", country: "INDIA" },
+{ name: "Bijilo Gambia Africa", country: "INDIA" },
+{ name: "Aslam - Resi - RR Nagar", country: "INDIA" },
+{ name: "Rewild Master Plan", country: "INDIA" },
+{ name: "Decathlon HSR", country: "INDIA" },
+{ name: "SBR - Minara", country: "INDIA" },
+{ name: "Primus South One Kaggalipura", country: "INDIA" },
+{ name: "Decathlon Lulu", country: "INDIA" },
+{ name: "Siolim", country: "INDIA" },
+{ name: "Varca Layout", country: "INDIA" },
+{ name: "Harvest School", country: "INDIA" },
+{ name: "Villa in Mahabalipuram", country: "INDIA" },
+{ name: "Casagrand Begur", country: "INDIA" },
+{ name: "Flushell", country: "INDIA" },
+{ name: "DB Architects - Signifa", country: "INDIA" },
+{ name: "Urban Zen Whitrfield Project", country: "INDIA" },
+{ name: "Maya Apartment", country: "INDIA" },
+{ name: "Rajendra Naidu", country: "INDIA" },
+{ name: "Vruddhi - St.Marks Bangalore", country: "INDIA" },
+{ name: "Decathlon  Koramangala", country: "INDIA" },
+{ name: "Kasavanahalli", country: "INDIA" },
+{ name: "Aslam - Resi - Spring Field", country: "INDIA" },
+{ name: "DXC Noida", country: "INDIA" },
+{ name: "IOCL -Ventilation & Smoke Pressurisation", country: "INDIA" },
+{ name: "Residential - Indore", country: "INDIA" },
+{ name: "Donapolla", country: "INDIA" },
+{ name: "Vruddhi - St.Marks Bangalore", country: "INDIA" },
+{ name: "Atmosphere Resort, Coorg", country: "INDIA" },
+
+
 
 ];

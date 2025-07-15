@@ -34,7 +34,7 @@ function Section1() {
                             className="bg-green-700 rounded-3xl p-8 md:pl-14  flex flex-col justify-between min-h-[290px] w-full shadow-md"
                         >
                             <div className=" text-white text-lg font-normal pt-4">{t.name}</div>
-                            <div className="text-white text-2xl md:text-[26px] font-light leading-snug ">{t.text}</div>
+                            <div className="text-white text-2xl md:text-[26px] font-light leading-snug "><span className='font-black italic'>Dummy : </span>{t.text}</div>
                         </div>
                     ))}
                 </div>

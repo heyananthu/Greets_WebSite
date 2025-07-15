@@ -12,7 +12,7 @@ function Main() {
                     <div className="bg-[#ffe48c] rounded-[1.3rem] flex flex-col items-center justify-center md:p-10 p-5 md:h-[380px] w-full h-full">
                         <h2 className="text-2xl md:text-5xl font-bold mb-4 text-center">Our Projects</h2>
                         <p className="text-center text-base">
-                            We deliver innovative, sustainable, and high-quality design and engineering solutions across residential, commercial, hospitality, and mixed-use developments worldwide.
+                            <span className='font-black italic'>Dummy : </span> We deliver innovative, sustainable, and high-quality design and engineering solutions across residential, commercial, hospitality, and mixed-use developments worldwide.
                         </p>
                     </div>
                     {/* Bottom image */}

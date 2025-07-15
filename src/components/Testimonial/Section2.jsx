@@ -15,7 +15,7 @@ function Section2() {
     return (
         <div className="max-w-screen mx-auto px-12 py-8 ">
             <h1 className='font-questrial font-black md:text-7xl mb-16'>
-                SERVING INDUSTRY LEADERS
+                SERVING INDUSTRY LEADERS <span className='font-black italic'>(Dummy)</span>
             </h1>
             <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 grid-rows-2 border-t border-l border-gray-300">
                 {brands.map((brand, i) => (

@@ -18,7 +18,7 @@ function Upcoming() {
             OUR LATEST & UPCOMING PROJECTS
           </h2>
           <p className="lg:w-[54%] text-[16px] text-gray-700 text-left lg:px-12 mb-6">
-            Our upcoming and latest projects reflect our continued commitment to excellence, innovation, and sustainable development. From modern residential communities and smart commercial spaces to eco-conscious hospitality ventures, we are currently engaged in a range of projects that push design boundaries while meeting the evolving needs of our clients. Each project is carefully planned and executed to ensure quality, functionality, and long-term value.
+          <span className='font-black italic'>Dummy : </span> Our upcoming and latest projects reflect our continued commitment to excellence, innovation, and sustainable development. From modern residential communities and smart commercial spaces to eco-conscious hospitality ventures, we are currently engaged in a range of projects that push design boundaries while meeting the evolving needs of our clients. Each project is carefully planned and executed to ensure quality, functionality, and long-term value.
           </p>
         </div>
 
