@@ -16,18 +16,18 @@ function Contact() {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                             <div>
                                 <label className="text-gray-400 text-sm mb-1 block">First name</label>
-                                <input type="text" placeholder="First name" className="w-full px-4 py-2 bg-white text-black rounded-md" />
+                                <input type="text" placeholder="First name" className="w-full px-4 py-2 bg-white text-black " />
                             </div>
                             <div>
                                 <label className="text-gray-400 text-sm mb-1 block">Last name</label>
-                                <input type="text" placeholder="Last name" className="w-full px-4 py-2 bg-white text-black rounded-md" />
+                                <input type="text" placeholder="Last name" className="w-full px-4 py-2 bg-white text-black " />
                             </div>
                         </div>
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                             <div>
                                 <label className="text-gray-400 text-sm mb-1 block">Email</label>
-                                <input type="email" placeholder="Email" className="w-full px-4 py-2 bg-white text-black rounded-md" />
+                                <input type="email" placeholder="Email" className="w-full px-4 py-2 bg-white text-black " />
                             </div>
                             <div>
                                 <label className="text-gray-400 text-sm mb-1 block">Phone</label>
@@ -41,9 +41,9 @@ function Contact() {
                                         required: true,
                                         placeholder: 'Phone',
                                     }}
-                                    inputClass="!w-full !py-2 !pl-16 !pr-4 !text-black !bg-white !border !border-gray-300 !rounded-md focus:!outline-none focus:!ring-1 focus:!ring-black placeholder:!text-black"
-                                    buttonClass="!bg-white !border-none !rounded-md !px-3"
-                                    dropdownClass="!max-h-[300px] !bg-white !text-black !shadow-lg !z-50 !rounded-md"
+                                    inputClass="!w-full !py-5 !pl-16 !pr-4 !text-black !bg-white !border !border-gray-300 focus:!outline-none focus:!ring-1 focus:!ring-black placeholder:!text-black"
+                                    buttonClass="!bg-white !border-none  !px-3"
+                                    dropdownClass="!max-h-[300px] !bg-white !text-black !shadow-lg !z-50 "
                                     // searchClass="!w-full !px-3 !py-2 !mb-2  !rounded-md focus:!outline-none !pl-2 !bg-white"
                                     containerClass="!w-full"
                                 />
@@ -52,10 +52,10 @@ function Contact() {
 
                         <div>
                             <label className="text-gray-400 text-sm mb-1 block">Message</label>
-                            <textarea placeholder="Message" className="w-full px-4 py-2 bg-white text-black h-24 resize-none rounded-md" />
+                            <textarea placeholder="Message" className="w-full px-4 py-2 bg-white text-black h-24 resize-none" />
                         </div>
 
-                        <button type="submit" className="bg-[#098A36] text-white px-8 py-2 mt-2 w-full lg:w-[17rem] hover:bg-green-800 transition rounded-md">
+                        <button type="submit" className="bg-[#098A36] text-white px-8 py-2 mt-2 w-full lg:w-[17rem] hover:bg-green-800 transition ">
                             Submit
                         </button>
                     </form>
