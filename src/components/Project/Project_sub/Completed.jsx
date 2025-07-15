@@ -13,7 +13,7 @@ function Completed() {
   return (
     <div>
       <Navbar />
-      <div className="bg-gray-100 py-10 px-2 sm:px-10 font-wix mt-28">
+      <div className="bg-gray-100 py-10 px-2 sm:px-10 font-wix mt-24">
         <div className="max-w-screen px-6">
           <h2 className="font-bold text-[31px] mb-6">Completed Projects</h2>
           {rows.map((row, rowIdx) => (
@@ -22,7 +22,9 @@ function Completed() {
               <div className='mb-20'>
                 {row.slice(0, 5).map((item, idx) => (
                   <div key={rowIdx * 10 + idx + 1} className="flex items-center border-b-1 border-black py-4">
-                    <span className="text-[18px] font-normal w-8 text-right mr-4">{rowIdx * 10 + idx + 1}</span>
+                    <span className="text-[18px] font-normal w-8 text-right mr-4">
+                      {(rowIdx * 10 + idx + 1).toString().padStart(2, '0')}
+                    </span>
                     <span className="flex-1 font-bold text-[18px] md:text-[28px]">{item.name}</span>
                     <span className="font-bold text-[18px] md:text-[28px] text-right w-32">{item.country}</span>
                   </div>
@@ -32,7 +34,9 @@ function Completed() {
               <div>
                 {row.slice(5, 10).map((item, idx) => (
                   <div key={rowIdx * 10 + idx + 6} className="flex items-center border-b-1 border-black py-4">
-                    <span className="text-[18px] font-normal w-8 text-right mr-4">{rowIdx * 10 + idx + 6}</span>
+                    <span className="text-[18px] font-normal w-8 text-right mr-4">
+                      {(rowIdx * 10 + idx + 6).toString().padStart(2, '0')}
+                    </span>
                     <span className="flex-1 font-bold text-[18px] md:text-[28px]">{item.name}</span>
                     <span className="font-bold text-[18px] md:text-[28px] text-right w-32">{item.country}</span>
                   </div>
