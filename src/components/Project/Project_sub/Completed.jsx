@@ -26,7 +26,7 @@ function Completed() {
               ]);
             }
             return (
-              <div key={chunkIdx} className={`grid grid-cols-1 md:grid-cols-2 gap-x-24 ${chunkIdx < chunks.length - 1 ? 'mb-24' : ''}`}>
+              <div key={chunkIdx} className={`grid grid-cols-1 lg:grid-cols-2 gap-x-24 ${chunkIdx < chunks.length - 1 ? 'mb-24' : ''}`}>
                 {rows.map((pair, rowIdx) => (
                   <React.Fragment key={rowIdx}>
                     {/* Left cell */}
