@@ -502,11 +502,11 @@ export const completedProjects = [
 { name: "Kasavanahalli", country: "INDIA" },
 { name: "Aslam - Resi - Spring Field", country: "INDIA" },
 { name: "DXC Noida", country: "INDIA" },
-{ name: "IOCL -Ventilation & Smoke Pressurisation", country: "INDIA" },
-{ name: "Residential - Indore", country: "INDIA" },
-{ name: "Donapolla", country: "INDIA" },
-{ name: "Vruddhi - St.Marks Bangalore", country: "INDIA" },
-{ name: "Atmosphere Resort, Coorg", country: "INDIA" },
+// { name: "IOCL -Ventilation & Smoke Pressurisation", country: "INDIA" },
+// { name: "Residential - Indore", country: "INDIA" },
+// { name: "Donapolla", country: "INDIA" },
+// { name: "Vruddhi - St.Marks Bangalore", country: "INDIA" },
+// { name: "Atmosphere Resort, Coorg", country: "INDIA" },
 
 
 

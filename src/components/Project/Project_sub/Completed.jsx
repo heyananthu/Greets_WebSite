@@ -9,6 +9,14 @@ for (let i = 0; i < completedProjects.length; i += 10) {
   chunks.push(completedProjects.slice(i, i + 10));
 }
 
+const lastData = [
+  { name: "IOCL -Ventilation & Smoke Pressurisation", country: "INDIA" },
+  { name: "Residential - Indore", country: "INDIA" },
+  { name: "Donapolla", country: "INDIA" },
+  { name: "Vruddhi - St.Marks Bangalore", country: "INDIA" },
+  { name: "Atmosphere Resort, Coorg", country: "INDIA" },
+]
+
 function Completed() {
   return (
     <div>
@@ -66,6 +74,48 @@ function Completed() {
               </div>
             );
           })}
+          {/* Render lastData: 3 left, 2 right, aligned row by row, no empty cells */}
+          {(() => {
+            const left = lastData.slice(0, 3);
+            const right = lastData.slice(3, 5);
+            const maxRows = Math.max(left.length, right.length);
+            return (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-24 mt-24">
+                {[...Array(maxRows)].map((_, idx) => (
+                  <React.Fragment key={idx}>
+                    {/* Left cell */}
+                    {left[idx] && (
+                      <div className="flex items-center border-b-1 border-black py-4 min-h-[90px]">
+                        <span className="text-[18px] font-normal w-8 text-right mr-4">
+                          {(chunks.length * 10 + idx + 1).toString().padStart(2, '0')}
+                        </span>
+                        <span className="flex-1 font-bold text-[18px] md:text-[28px]">
+                          {left[idx].name}
+                        </span>
+                        <span className="font-bold text-[18px] md:text-[28px] text-right w-32">
+                          {left[idx].country}
+                        </span>
+                      </div>
+                    )}
+                    {/* Right cell */}
+                    {right[idx] && (
+                      <div className="flex items-center border-b-1 border-black py-4 min-h-[90px]">
+                        <span className="text-[18px] font-normal w-8 text-right mr-4">
+                          {(chunks.length * 10 + 3 + idx + 1).toString().padStart(2, '0')}
+                        </span>
+                        <span className="flex-1 font-bold text-[18px] md:text-[28px]">
+                          {right[idx].name}
+                        </span>
+                        <span className="font-bold text-[18px] md:text-[28px] text-right w-32">
+                          {right[idx].country}
+                        </span>
+                      </div>
+                    )}
+                  </React.Fragment>
+                ))}
+              </div>
+            );
+          })()}
         </div>
       </div>
       <Footer />
