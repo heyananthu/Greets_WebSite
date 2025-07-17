@@ -3,10 +3,10 @@ import Navbar from '../../sharedcomponents/Navbar'
 import Footer from '../../sharedcomponents/Footer'
 import { completedProjects } from '../../../lib/projects'
 
-// Group into rows of 10 (5 left, 5 right)
-const rows = [];
+// Group into chunks of 10
+const chunks = [];
 for (let i = 0; i < completedProjects.length; i += 10) {
-  rows.push(completedProjects.slice(i, i + 10));
+  chunks.push(completedProjects.slice(i, i + 10));
 }
 
 function Completed() {
@@ -16,39 +16,60 @@ function Completed() {
       <div className="bg-gray-100 py-10 px-2 sm:px-10 font-wix mt-24">
         <div className="max-w-screen px-6">
           <h2 className="font-bold text-[31px] mb-6">Completed Projects</h2>
-          {rows.map((row, rowIdx) => (
-            <div key={rowIdx} className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-2 gap-x-24">
-              {/* Left column */}
-              <div className='mb-20'>
-                {row.slice(0, 5).map((item, idx) => (
-                  <div key={rowIdx * 10 + idx + 1} className="flex items-center border-b-1 border-black py-4">
-                    <span className="text-[18px] font-normal w-8 text-right mr-4">
-                      {(rowIdx * 10 + idx + 1).toString().padStart(2, '0')}
-                    </span>
-                    <span className="flex-1 font-bold text-[18px] md:text-[28px]">{item.name}</span>
-                    <span className="font-bold text-[18px] md:text-[28px] text-right w-32">{item.country}</span>
-                  </div>
+          {chunks.map((chunk, chunkIdx) => {
+            // Prepare 5 rows per chunk
+            const rows = [];
+            for (let i = 0; i < 5; i++) {
+              rows.push([
+                chunk[i],         // left project
+                chunk[i + 5],     // right project
+              ]);
+            }
+            return (
+              <div key={chunkIdx} className={`grid grid-cols-1 md:grid-cols-2 gap-x-24 ${chunkIdx < chunks.length - 1 ? 'mb-24' : ''}`}>
+                {rows.map((pair, rowIdx) => (
+                  <React.Fragment key={rowIdx}>
+                    {/* Left cell */}
+                    <div className="flex items-center border-b-1 border-black py-4 min-h-[90px] ">
+                      {pair[0] && (
+                        <>
+                          <span className="text-[18px] font-normal w-8 text-right mr-4">
+                            {(chunkIdx * 10 + rowIdx + 1).toString().padStart(2, '0')}
+                          </span>
+                          <span className="flex-1 font-bold text-[18px] md:text-[28px]">
+                            {pair[0].name}
+                          </span>
+                          <span className="font-bold text-[18px] md:text-[28px] text-right w-32">
+                            {pair[0].country}
+                          </span>
+                        </>
+                      )}
+                    </div>
+                    {/* Right cell */}
+                    <div className="flex items-center border-b-1 border-black py-4 min-h-[90px]">
+                      {pair[1] && (
+                        <>
+                          <span className="text-[18px] font-normal w-8 text-right mr-4">
+                            {(chunkIdx * 10 + rowIdx + 6).toString().padStart(2, '0')}
+                          </span>
+                          <span className="flex-1 font-bold text-[18px] md:text-[28px]">
+                            {pair[1].name}
+                          </span>
+                          <span className="font-bold text-[18px] md:text-[28px] text-right w-32">
+                            {pair[1].country}
+                          </span>
+                        </>
+                      )}
+                    </div>
+                  </React.Fragment>
                 ))}
               </div>
-              {/* Right column */}
-              <div>
-                {row.slice(5, 10).map((item, idx) => (
-                  <div key={rowIdx * 10 + idx + 6} className="flex items-center border-b-1 border-black py-4">
-                    <span className="text-[18px] font-normal w-8 text-right mr-4">
-                      {(rowIdx * 10 + idx + 6).toString().padStart(2, '0')}
-                    </span>
-                    <span className="flex-1 font-bold text-[18px] md:text-[28px]">{item.name}</span>
-                    <span className="font-bold text-[18px] md:text-[28px] text-right w-32">{item.country}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
       <Footer />
     </div>
-
   )
 }
 

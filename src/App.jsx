@@ -29,8 +29,12 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
+
           <Route path="/about" element={<About />} />
+          <Route path='/testimonial' element={<Testimonial />} />
+
           <Route path="/services" element={<Services />} />
+
           {/* PROJECT */}
           <Route path="/projects" element={<Projects />} />
           <Route path='/key-projects' element={<KeyProject />} />
@@ -38,7 +42,8 @@ function App() {
           <Route path="/completed-projects" element={<Completed />} />
 
           <Route path="/contact" element={<ContactPage />} />
-          <Route path='/testimonial' element={<Testimonial />} />
+
+          {/* PRIVACY POLICY */}
           <Route path='/codeofethics' element={<CodeOfEthics />} />
           <Route path='/health-saftey-environment' element={<HealthAndEnvironmental />} />
           <Route path='/quality-policy' element={<QualityPolicy />} />
