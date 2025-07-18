@@ -1,8 +1,8 @@
 import React from 'react';
-
+import worldmap from '../../assets/about-map-new.png'
 function MapSection() {
     return (
-        <div className="min-h-screen flex flex-col lg:flex-row items-start justify-between px-6 lg:px-20 py-10 gap-12 font-questrial mt-10">
+        <div className="min-h-screen bg-gray-50 flex flex-col lg:flex-row items-start justify-between px-6 lg:px-20 py-10 gap-12 font-questrial mt-10">
             {/* Left - Business Info */}
             <div className="w-full lg:w-1/2 space-y-10">
                 <h1 className="text-[32px] lg:text-[38px] font-bold text-black">Business Info</h1>
@@ -26,7 +26,7 @@ function MapSection() {
 
             {/* Right - Google Map */}
             <div className="w-full lg:w-1/2 h-[300px] lg:h-[600px]">
-                <iframe title="Greets Office Location"
+                {/* <iframe title="Greets Office Location"
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.996771182517!2d77.6342905!3d12.9079288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1493c0000001%3A0x4ae0e875b3818a1f!2sGreets%20Building%20Services%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1752570993809!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
@@ -34,18 +34,9 @@ function MapSection() {
                     allowFullScreen=""
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    className="rounded-lg shadow"></iframe>
-                {/* <iframe
-                    title="Greets Office Location"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.9337848807954!2d77.57420431481907!3d12.955230090872322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15d096403ab9%3A0x6d5d11d585a51fa!2sGreets%20Office!5e0!3m2!1sen!2sin!4v1623157284744!5m2!1sen!2sin"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="rounded-lg shadow"
-                ></iframe> */}
+                    className="rounded-lg shadow"></iframe> */}
+                    <img src={worldmap}   />
+                
             </div>
         </div>
     );
