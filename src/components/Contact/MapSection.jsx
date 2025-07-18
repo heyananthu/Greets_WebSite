@@ -25,7 +25,7 @@ function MapSection() {
             </div> */}
 
             {/* Right - Google Map */}
-            <div className="w-full h-[300px] lg:h-[500px]">
+            <div className="w-full h-[300px] lg:h-[650px]">
                 <iframe title="Greets Office Location"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55698785.718229!2d57.12591626172316!3d31.56302699528719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1493c0000001%3A0x4ae0e875b3818a1f!2sGreets%20Building%20Services%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1752830056824!5m2!1sen!2sin"
                     width="100%"
