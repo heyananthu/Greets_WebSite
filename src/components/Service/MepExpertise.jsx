@@ -14,7 +14,7 @@ function MepExpertise() {
                 MEP Expertise
             </h1>
             <div className="w-full max-w-6xl flex flex-col items-center px-2 sm:px-4">
-                <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-6 sm:gap-y-10 gap-x-4 sm:gap-x-8 py-6 sm:py-8">
+                <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-5 sm:gap-y-10 gap-x-4 sm:gap-x-8 py-6 sm:py-8">
                     {expertise.flat().map((item, idx) => (
                         item ? (
                             <div

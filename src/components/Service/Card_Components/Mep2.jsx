@@ -6,7 +6,7 @@ import dropIcon from '../../../assets/icons/drop-icon.png';
 import fireIcon from '../../../assets/icons/fire-icon.png';
 function Mep2() {
     return (
-        <div className="flex bg-white w-[92vw] max-w-screen mx-auto h-screen rounded-[48px] rounded-br-none rounded-bl-none overflow-hidden font-questrial">
+        <div className="flex flex-col md:flex-row bg-white w-[92vw] max-w-screen mx-auto h-screen rounded-[32px] md:rounded-[48px] rounded-br-none rounded-bl-none overflow-hidden font-questrial">
             {/* Left Image */}
             <div className="w-[22rem] min-h-[600px] hidden lg:block relative">
                 <img
@@ -16,17 +16,18 @@ function Mep2() {
                 />
             </div>
             {/* Right Content */}
-            <div className="flex-[2] flex flex-col justify-start  py-10 bg-white lg:pl-10 pl-8">
-                <div className="flex md:flex-row flex-col lg:gap-20 gap-y-3  pt-6">
+            <div className="flex-[2] flex flex-col justify-start py-6 md:py-10 bg-white lg:pl-10 pl-4 md:pl-8">
+                <div className="flex flex-col md:flex-row lg:gap-20 gap-4 pt-6">
                     {/* Plumbing */}
-                    <div className="flex flex-col items-start min-w-[340px]">
-                        <div className="mb-4">
-                            <span className="inline-flex items-center justify-center w-24 h-24">
-                                {/* <RiDropFill className="text-white" size={70} /> */}
-                                <img src={dropIcon} alt="Drop Icon" className="w-24 h-24 " />
-                            </span>
+                    <div className="flex flex-col items-start min-w-0 md:min-w-[340px]">
+                        <div className='flex items-center md:flex-col gap-2'>
+                            <div className="md:mb-4">
+                                <span className="inline-flex items-center justify-center md:w-24 md:h-24 h-12 w-12">
+                                    <img src={dropIcon} alt="Drop Icon" className="md:w-24 md:h-24 h-12 w-12 " />
+                                </span>
+                            </div>
+                            <h1 className="lg:text-4xl text-2xl lg:text-nowrap md:mb-12 mb-1 font-bold">Plumbing</h1>
                         </div>
-                        <h1 className="lg:text-4xl text-2xl lg:text-nowrap mb-12 font-bold">Plumbing</h1>
                         <ul className="lg:text-lg text-sm font-semibold">
                             <li>
                                 <span className="text-black font-bold mr-2">*</span>
@@ -55,13 +56,15 @@ function Mep2() {
                         </ul>
                     </div>
                     {/* Fire Protection Services */}
-                    <div className="flex flex-col items-start min-w-[340px]">
-                        <div className="mb-4">
-                            <span className="inline-flex items-center justify-center w-24 h-24">
-                                <img src={fireIcon} alt="Drop Icon" className="w-24 h-24 " />
-                            </span>
+                    <div className="flex flex-col items-start min-w-0 md:min-w-[340px] pt-12 md:pt-0">
+                        <div className='flex items-center md:flex-col gap-2'>
+                            <div className="md:mb-4">
+                                <span className="inline-flex items-center justify-center md:w-24 md:h-24 h-12 w-12">
+                                    <img src={fireIcon} alt="Drop Icon" className="md:w-24 md:h-24 h-12 w-12 " />
+                                </span>
+                            </div>
+                            <h1 className="lg:text-4xl text-2xl lg:text-nowrap md:mb-12 mb-1 font-bold">Fire Protection Services</h1>
                         </div>
-                        <h1 className="lg:text-4xl text-2xl lg:text-nowrap mb-12 font-bold">Fire Protection Services</h1>
                         <ul className="lg:text-lg text-sm font-semibold ">
                             <li>
                                 <span className="text-black font-bold mr-2">*</span>

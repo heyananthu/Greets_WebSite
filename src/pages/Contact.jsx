@@ -11,7 +11,9 @@ function Contact() {
                 <ContactPage />
                 <MapSection />
             </div>
-            <Footer />
+            <div className='-translate-y-60 lg:-translate-0'>
+                <Footer />
+            </div>
         </div>
     )
 }

@@ -7,21 +7,23 @@ function Mep() {
     return (
         <div className='font-questrial bg-gray-100 pt-1 h-screen w-full'>
             {/* <h1 className='text-center text-[43px] font-bold mb-2'>MEP (Mechanical, Electrical, and Plumbing) Services</h1> */}
-            <div className="flex bg-gray-100  w-[92vw] max-w-screen mx-auto h-full rounded-[48px] rounded-br-none rounded-bl-none overflow-hidden ">
+            <div className="flex flex-col md:flex-row bg-gray-100 w-[92vw] max-w-screen mx-auto h-full rounded-[32px] md:rounded-[48px] rounded-br-none rounded-bl-none overflow-hidden ">
                 {/* Left Side */}
-                <div className="flex-1 flex md:flex-col flex-row  justify-center px-12 py-10 bg-white">
-                    <div className="flex md:flex-row flex-col lg:gap-16 gap-4">
+                <div className="flex-1 flex flex-col justify-center p-4 md:p-12  md:py-10 bg-white">
+                    <div className="flex flex-col md:flex-row lg:gap-16 gap-4">
                         {/* Mechanical Services */}
-                        <div className="flex flex-col items-start min-w-[340px]">
-                            <div className="mb-4">
-                                <span className="inline-flex items-center justify-center">
-                                    <img src={settingIconImage} alt="Drop Icon" className="w-24 h-24 " />
-                                </span>
+                        <div className="flex flex-col items-start min-w-0 md:min-w-[340px]">
+                            <div className='flex md:flex-col gap-2'>
+                                <div className="md:mb-4">
+                                    <span className="inline-flex items-center justify-center">
+                                        <img src={settingIconImage} alt="Drop Icon" className="md:w-24 md:h-24 h-12 w-12 " />
+                                    </span>
+                                </div>
+                                <h1 className="lg:text-4xl text-2xl lg:text-nowrap md:mb-6 mb-1 font-bold">
+                                    Mechanical Services <br />
+                                    (HVAC)
+                                </h1>
                             </div>
-                            <h1 className="lg:text-4xl text-2xl lg:text-nowrap mb-6 font-bold">
-                                Mechanical Services <br />
-                                (HVAC)
-                            </h1>
                             <ul className="lg:text-lg text-sm font-semibold">
                                 <li>
                                     <span className="text-black font-bold mr-2">*</span>
@@ -54,15 +56,17 @@ function Mep() {
                             </ul>
                         </div>
                         {/* Electrical Services */}
-                        <div className="flex flex-col items-start min-w-[320px]">
-                            <div className="mb-4">
-                                <span className="inline-flex items-center justify-center">
-                                <img src={boltIcon} alt="Drop Icon" className="w-24 h-24 " />
-                                </span>
+                        <div className="flex flex-col items-start min-w-0 md:min-w-[320px]">
+                            <div className='flex items-center md:flex-col gap-2'>
+                                <div className="md:mb-4">
+                                    <span className="inline-flex items-center justify-center">
+                                        <img src={boltIcon} alt="Drop Icon" className="md:w-24 md:h-24 h-12 w-12 " />
+                                    </span>
+                                </div>
+                                <h1 className="lg:text-4xl text-2xl font-bold md:mb-6  mb-1">
+                                    Electrical Services
+                                </h1>
                             </div>
-                            <h1 className="lg:text-4xl text-2xl font-bold mb-6 ">
-                                Electrical Services
-                            </h1>
                             <ul className="lg:text-lg text-sm font-semibold">
                                 <li>
                                     <span className="text- font-bold mr-2">*</span>
