@@ -42,7 +42,7 @@ function Contact() {
                                             required: true,
                                             placeholder: 'Phone',
                                         }}
-                                        inputClass="!w-full !py-5 !pl-16 !pr-4 !text-black !bg-white !border !border-gray-300 focus:!outline-none focus:!ring-1 focus:!ring-black placeholder:!text-black"
+                                        inputClass="!w-full !py-5 !pl-16 !pr-4 !text-black !bg-white !border !border-gray-300 focus:!outline-none focus:!ring-1 focus:!ring-black "
                                         buttonClass="!bg-white !border-none !px-3"
                                         dropdownClass="!max-h-[300px] !bg-white !text-black !shadow-lg !z-50"
                                         containerClass="!w-full"
