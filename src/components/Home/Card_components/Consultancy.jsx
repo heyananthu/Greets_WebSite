@@ -4,7 +4,7 @@ import buildingImg from '../../../assets/consultancy.avif';
 function Consultancy() {
     return (
         <section className="h-screen bg-gray-200 flex items-center justify-center px-4 pb-2 pt-2 lg:mb-0">
-            <div className="flex flex-col md:flex-row max-w-[1400px] w-full h-full rounded-[56px] overflow-hidden bg-gray-200 items-center">
+            <div className="flex flex-col  md:flex-row max-w-[1400px] w-full h-full rounded-[56px] overflow-hidden bg-gray-200 items-center">
                 {/* Image Section */}
                 <div className="w-full md:w-[40rem] h-[230px] sm:h-[350px] md:h-full md:pl-12 md:pt-12">
                     <img
