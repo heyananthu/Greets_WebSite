@@ -30,7 +30,7 @@ const industries2 = [
         description:
             "Si vas a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de que no hay nada avergonzante escondido en el medio del texto. Todos los generadores de Lorem Ipsum que se encuentran en Internet.",
         green: false,
-        className: "rounded-[60px] p-10 flex flex-col text-black place-items-end"
+        className: "rounded-[60px] p-10 flex flex-col text-black "
     },
     {
         title: "Logistics",

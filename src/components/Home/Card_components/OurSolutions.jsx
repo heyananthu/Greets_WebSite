@@ -26,7 +26,7 @@ function OurSolutions() {
                 </div>
 
                 {/* Right Side */}
-                <div className="flex-1 h-[250px] sm:h-[400px] md:h-auto hidden md:block">
+                <div className="flex-1 h-[250px] sm:h-[400px] md:h-auto ">
                     <img
                         src={oursolution}
                         alt="Our Solutions"
