@@ -19,7 +19,7 @@ function MepExpertise() {
                         item ? (
                             <div
                                 key={item + idx}
-                                className="flex items-center justify-center md:justify-start mb-2 md:pl-12"
+                                className={`flex items-center justify-center md:justify-start mb-2 md:pl-12 ${item === "INDUSTRIES" ? '-translate-y-5 md:-translate-y-0 block md:mt-0' : ''}`}
                             >
                                 <span className="text-white text-sm sm:text-base md:text-md font-bold text-center md:text-left w-full">
                                     {item}

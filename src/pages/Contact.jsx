@@ -7,13 +7,9 @@ function Contact() {
     return (
         <div>
             <Navbar />
-            <div className=''>
-                <ContactPage />
-                <MapSection />
-            </div>
-            <div className='-translate-y-60 lg:-translate-0'>
-                <Footer />
-            </div>
+            <ContactPage />
+            <MapSection />
+            <Footer />
         </div>
     )
 }

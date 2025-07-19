@@ -9,7 +9,7 @@ function Mep() {
             {/* <h1 className='text-center text-[43px] font-bold mb-2'>MEP (Mechanical, Electrical, and Plumbing) Services</h1> */}
             <div className="flex flex-col md:flex-row bg-gray-100 w-[92vw] max-w-screen mx-auto h-full rounded-[32px] md:rounded-[48px] rounded-br-none rounded-bl-none overflow-hidden ">
                 {/* Left Side */}
-                <div className="flex-1 flex flex-col justify-center p-4 md:p-12  md:py-10 bg-white">
+                <div className="flex-1 flex flex-col justify-center items-center p-4 md:p-12  md:py-10 bg-white">
                     <div className="flex flex-col md:flex-row lg:gap-16 gap-4">
                         {/* Mechanical Services */}
                         <div className="flex flex-col items-start min-w-0 md:min-w-[340px]">

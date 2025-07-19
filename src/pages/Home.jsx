@@ -18,8 +18,8 @@ function Home() {
             <TransformingSolution />
             <Industries />
             <Main />
-            <Ourclient />
-            <Footer />
+            {/* <Ourclient /> */}
+            {/* <Footer /> */}
         </div>
     )
 }

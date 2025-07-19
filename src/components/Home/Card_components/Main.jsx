@@ -13,7 +13,7 @@ function Main() {
             {cards.map((Card, index) => (
                 <div
                     key={index}
-                    className="sticky top-0 h-screen w-full py-12"
+                    className="sticky top-0 h-fit w-full py-12"
                     style={{ zIndex: index + 1 }}
                 >
                     {Card}

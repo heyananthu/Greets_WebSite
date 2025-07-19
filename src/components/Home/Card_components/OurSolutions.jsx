@@ -6,14 +6,14 @@ function OurSolutions() {
         <div className="h-screen w-full flex items-center justify-center font-questrial px-4">
             <div className="w-[92vw] max-w-screen h-full bg-[#e7e7e7] rounded-[48px] rounded-br-none rounded-bl-none flex flex-col md:flex-row overflow-hidden">
                 {/* Left Side */}
-                <div className="flex-1 flex flex-col items-center  py-5 px-6 mb-12 lg:mb-0">
-                    <h1 className="text-green-700 text-4xl sm:text-5xl md:text-5xl font-bold leading-snug mb-6">
+                <div className="flex-1 flex flex-col items-center  py-5 px-6 md:mb-12 lg:mb-0">
+                    <h1 className="text-green-700 text-4xl sm:text-5xl md:text-5xl font-bold leading-snug  md:mb-6">
                         Our Approach
                     </h1>
-                    <p className="text-black text-xl font-semibold italic">
+                    <p className="text-black text-xl font-semibold italic mb-2">
                         "Helping you make the right decision."
                     </p>
-                    <p className='lg:text-xl text:lg  mt-12 e'>
+                    <p className='lg:text-xl text:lg  md:mt-12 e'>
                         <span className='font-bold'>Dummy : </span> At GREETS,<br />
                         we offer a full spectrum of MEP (Mechanical, Electrical, and Plumbing) services designed to power sustainable, smart, and efficient infrastructure.<br />
                         From HVAC systems to advanced BMS, fire safety, water management & automation<br />
@@ -26,7 +26,7 @@ function OurSolutions() {
                 </div>
 
                 {/* Right Side */}
-                <div className="flex-1 h-[250px] sm:h-[400px] md:h-auto">
+                <div className="flex-1 h-[250px] sm:h-[400px] md:h-auto hidden md:block">
                     <img
                         src={oursolution}
                         alt="Our Solutions"
