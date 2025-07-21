@@ -10,7 +10,7 @@ const expertise = [
 function MepExpertise() {
     return (
         <div className="bg-[#222] flex flex-col items-center py-8 font-questrial">
-            <h1 className="text-white text-center text-5xl  md:text-6xl lg:text-8xl font-bold tracking-tight mb-8 sm:mb-12 pt-6 sm:pt-8">
+            <h1 className="text-white text-center text-5xl  md:text-6xl lg:text-8xl font-bold tracking-tight mb-8 sm:mb-12 pt-6 sm:pt-16">
                 MEP Expertise
             </h1>
             <div className="w-full max-w-6xl flex flex-col items-center px-2 sm:px-4">

@@ -5,7 +5,7 @@ import img3 from '../../assets/covered-img3.png';
 
 function Covered() {
   return (
-    <div className="font-questrial bg-gray-100 min-h-screen flex justify-center items-center px-4">
+    <div className="font-questrial bg-gray-100  min-h-screen flex justify-center items-center px-4">
       <div className="w-full max-w-6xl">
         {/* Heading */}
         <h1 className="text-center text-3xl sm:text-4xl lg:text-7xl font-bold mb-10 sm:mb-12">

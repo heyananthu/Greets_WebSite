@@ -56,8 +56,8 @@ function ClientStories() {
 
       </section>
       <div>
-        <Ourclient />
-        <Footer />
+        {/* <Ourclient />
+        <Footer /> */}
       </div>
     </div>
 
