@@ -33,10 +33,10 @@ function Mep4() {
                     </div>
                 </div>
             </div>
-            <div>
-                {/* <MepExpertise /> */}
-                {/* <Footer /> */}
-            </div>
+            {/* <div>
+                <MepExpertise />
+                <Footer />
+            </div> */}
         </div>
 
     )

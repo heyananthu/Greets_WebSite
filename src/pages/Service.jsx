@@ -8,22 +8,15 @@ import MepExpertise from '../components/Service/MepExpertise'
 import Footer from '../components/sharedcomponents/Footer'
 function Service() {
     return (
-        <div className="min-h-screen flex flex-col">
-            <div className="flex-1">
-                <Navbar />
-                <div className='bg-gray-100'>
-                    <Hero />
-                    <h1 className='text-center text-[43px] mt-12 font-questrial font-semibold'>
-                        MEP (Mechanical, Electrical, and Plumbing) Services
-                    </h1>
-                    <Main />
-                </div>
+        <div>
+            <Navbar />
+            <div className='bg-gray-100 '>
+                <Hero />
+                <h1 className='text-center text-[43px] mt-12 font-questrial font-semibold'>MEP (Mechanical, Electrical, and Plumbing) Services</h1>
+                <Main />
             </div>
-            <div className='mt-[95rem] md:mt-[5rem]'>
-                <MepExpertise />
-                <Footer />
-
-            </div>
+            <MepExpertise />
+            <Footer />
 
         </div>
     )

@@ -9,12 +9,14 @@ const cards = [<OurSolutions />, <Strategy />, <Approach2 />, <Consultancy />, <
 
 function Main() {
     return (
-        <div style={{ height: `${cards.length * 110}vh` }} className="relative bg-green-700">
+        <div className="relative bg-green-700">
             {cards.map((Card, index) => (
                 <div
                     key={index}
-                    className="sticky top-0 h-fit w-full py-12"
-                    style={{ zIndex: index + 1 }}
+                    className={
+                        "sticky top-0 h-fit w-full " +
+                        (index === cards.length - 1 ? "pt-12" : "py-12")
+                    } style={{ zIndex: index + 1 }}
                 >
                     {Card}
                 </div>

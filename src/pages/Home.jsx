@@ -9,23 +9,20 @@ import Ourclient from '../components/Home/Card_components/Ourclient'
 import Footer from '../components/sharedcomponents/Footer'
 import ClientStories from '../components/Home/Card_components/ClientStories'
 function Home() {
-    return (
-        <div className="min-h-screen flex flex-col">
-            <div className="flex-1">
-                <div className='bg-gray-100'>
-                    <Navbar />
-                    <Hero />
-                    <GridSection />
-                </div>
-                <TransformingSolution />
-                <Industries />
-                <Main />
-                {/* <ClientStories /> */}
-            </div>
-            <Ourclient />
-            <Footer />
-        </div>
-    )
+  return (
+    <div className="min-h-screen flex flex-col">
+      <div className="flex-1">
+        <Navbar />
+        <Hero />
+        <GridSection />
+        <TransformingSolution />
+        <Industries />
+        <Main />
+        <Ourclient /> 
+      </div>
+      <Footer />
+    </div>
+  );
 }
 
 export default Home

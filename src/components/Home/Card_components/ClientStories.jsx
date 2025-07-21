@@ -55,10 +55,10 @@ function ClientStories() {
         </div>
 
       </section>
-      <div>
-        {/* <Ourclient />
-        <Footer /> */}
-      </div>
+      {/* <div>
+        <Ourclient />
+        <Footer />
+      </div> */}
     </div>
 
   );
