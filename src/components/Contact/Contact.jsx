@@ -11,7 +11,7 @@ function Contact() {
         <div className="min-h-screen  flex items-center px-6 py-10 mt-28 font-questrial">
             <div className="w-full max-w-screen flex flex-col lg:flex-row gap-8">
                 {/* Left: Contact Form */}
-                <div className="bg-black rounded-[2rem] rounded-tl-none rounded-bl-none p-8 lg:p-5 flex flex-col h-screen w-full lg:w-[55%] overflow-y-auto">
+                <div className="bg-black rounded-[2rem] rounded-tl-none rounded-bl-none p-8 lg:p-5 flex flex-col h-fit md:h-screen w-full lg:w-[55%] overflow-y-auto">
                     <h1 className="text-white text-4xl lg:text-[98px] font-bold lg:mb-20 mb-3">Contact Us</h1>
                     <form className="relative flex flex-col gap-4 lg:w-[70%] lg:space-y-8">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">

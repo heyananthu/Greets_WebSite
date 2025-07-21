@@ -17,7 +17,7 @@ function Mep2() {
             </div>
             {/* Right Content */}
             <div className="flex-[2] flex flex-col justify-start py-6 md:py-10 bg-white lg:pl-10 pl-4 md:pl-8">
-                <div className="flex flex-col md:flex-row lg:gap-20 gap-4 pt-6">
+                <div className="flex flex-col  md:flex-row lg:gap-20 gap-4 pt-6">
                     {/* Plumbing */}
                     <div className=" flex flex-col items-start min-w-0 md:min-w-[340px] mt-12 md:mt-0">
                         <div className='flex items-center md:flex-col gap-2'>
