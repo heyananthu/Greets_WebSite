@@ -12,7 +12,7 @@ function MapSection() {
 
         window.initMap = () => {
             const map = new window.google.maps.Map(mapRef.current, {
-                center: { lat: 20, lng: 10 }, // Global center
+                center: { lat: -0.034, lng: 88.200 }, // Global center
                 zoom: 2, // ✅ This matches your screenshot
                 mapTypeId: 'roadmap',
                 disableDefaultUI: false,
@@ -24,7 +24,7 @@ function MapSection() {
 
     return (
         <div className="h-fit py-10 gap-12 font-questrial">
-            <div className="w-full h-[300px] lg:h-[650px]">
+            <div className="w-full h-[300px] lg:h-[600px]">
                 <div
                     ref={mapRef}
                     className="rounded-lg shadow w-full h-full"
