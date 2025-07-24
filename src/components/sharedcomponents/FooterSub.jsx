@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { motion } from 'framer-motion'
 // import logo from '../../assets/Greets_Logo.avif' // Uncomment and adjust if you want to use an image
-import footerlogo from '../../assets/footerlogo.svg'
+import footerlogo from '../../assets/logo.jpg'
 
 
 
@@ -175,17 +175,17 @@ function FooterSub() {
                     </div>
                     <div className='flex flex-col  gap-y-2 '>
                         <p className='text-[14px]'>Privacy Policy</p>
-                        <NavLink to='/codeofethics' className='text-[14px] '>Code of Ethics</NavLink>
+                        {/* <NavLink to='/codeofethics' className='text-[14px] '>Code of Ethics</NavLink>
                         <NavLink to='/health-saftey-environment' className='text-[14px]'>Health, Safety & Environmental</NavLink>
-                        <NavLink to='/quality-policy' className='text-[14px]'>Quality</NavLink>
+                        <NavLink to='/quality-policy' className='text-[14px]'>Quality</NavLink> */}
 
                     </div>
 
 
                 </div>
-                <div className='relative flex flex-row  items-center justify-center gap-x-1 '>
+                <div className='relative flex flex-row  items-center justify-center gap-x-4 mt-4'>
                     <div>
-                        <img src={footerlogo} alt="footerlogo" className='size-32' />
+                        <img src={footerlogo} alt="footerlogo" className='size-20 md:h-14 h-10 md:mb-4' />
                     </div>
 
                     <div className="flex items-end  w-full md:w-auto pt-5">

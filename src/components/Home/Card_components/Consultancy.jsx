@@ -17,9 +17,9 @@ function Consultancy() {
                 {/* Content Section */}
                 <div className="w-full md:w-1/2 px-4 sm:px-8 md:px-10 py-8 md:py-0 flex flex-col items-center md:justify-center font-questrial text-center h-full mb-2 md:mb-5 lg:mb-0 ">
                     <h2 className="text-3xl sm:text-4xl font-bold md:mb-6 mb-2 font-poppins md:mt-12">SUSTAINABILITY</h2>
-
-                    <p className="text-green-600 text-sm sm:text-base leading-relaxed font-poppins mb-3 md:mb-8 max-w-md">
-                    <span className='font-bold'>Dummy :</span> Architecture consultancy helps you turn your vision into a practical, well-designed space by offering expert guidance on planning, design, regulations, and sustainability. Ideal for residential, commercial, or renovation projects, this service ensures cost efficiency, compliance with local laws, and personalized design solutions. Clients benefit from smart space planning, eco-friendly recommendations, and early-stage advice that prevents costly mistakes.
+                    <p className='italic md:text-md text-sm text-center'>Greener Systems. Smarter Performance</p>
+                    <p className="text-green-600 text-sm sm:text-base leading-relaxed font-poppins mb-3 md:mb-8 max-w-md mt-2">
+                        At GREETS, sustainability is not a feature—it’s a foundation. We design MEP systems that reduce energy use, conserve water, lower emissions, and support LEED and green building certifications. Our goal is to deliver systems that restore ecological balance while maximizing building efficiency.
                     </p>
 
                     <button className="px-8 sm:px-12 py-3  cursor-pointer border border-green-700 rounded-bl-none rounded-[2rem] text-sm bg-black text-green-300 hover:bg-green-700 hover:text-black transition-all duration-200">

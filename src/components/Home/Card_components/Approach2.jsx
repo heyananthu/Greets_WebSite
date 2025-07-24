@@ -7,21 +7,19 @@ function Approach2() {
                 <div className="w-[92vw] max-w-screen h-full rounded-[48px] rounded-br-none rounded-bl-none flex flex-col lg:flex-row overflow-hidden">
                     {/* Left Side */}
                     <div className="flex-1 flex flex-col items-center justify-center px-6 py-8  bg-[#f0f0f0]">
-                        <h2 className="text-3xl md:text-4xl font-bold text-black md:mb-4 text-center  font-questrial">AFFORDABLE</h2>
-                        <p className='italic text-md text-center'>Engineered for impact. Delivered with purpose.</p>
-                        <p className="text-green-700 text-md md:text-lg max-w-sm md:mt-6 mt-1">
-                        <span className='font-bold'>Dummy : </span> At GREETS, we design and integrate smart, sustainable MEP solutions tailored to your space, goals, and budget.<br />
-
-                            More than system installers, we align technical expertise with real-world functionality</p>
+                        <h2 className="text-3xl lg:text-4xl font-bold text-black lg:mb-4 text-center  font-questrial">AFFORDABLE</h2>
+                        <p className='italic md:text-md text-sm text-center'>Smart Engineering. Cost-Conscious Delivery.</p>
+                        <p className="text-green-700 text-md lg:text-lg max-w-sm lg:mt-6 mt-1">
+                            We engineer solutions that balance performance with project budgets—without compromise. Through value engineering, lifecycle planning, and optimized procurement, GREETS delivers cost-effective MEP systems that never sacrifice quality or sustainability.
+                        </p>
                     </div>
 
                     {/* Right Side */}
                     <div className="flex-1 flex flex-col items-center justify-center px-6  py-0 mb-12  md:mb-5 bg-white">
-                        <h2 className="text-3xl md:text-4xl font-bold text-black md:mb-4 text-center  font-questrial">TIME</h2>
-                        <p className='italic text-md text-center'>Built to precision. Delivered with confidence.</p>
-                        <p className="text-green-700 text-md md:text-lg max-w-sm mt-2">
-                        <span className='font-bold'>Dummy : </span> At GREETS, we turn plans into reality with precision, speed, and quality. From resorts to commercial facilities, our certified team ensures seamless coordination.
-                        </p>
+                        <h2 className="text-3xl lg:text-4xl font-bold text-black lg:mb-4 text-center  font-questrial">TIME</h2>
+                        <p className='italic md:text-md text-sm text-center'>On Schedule. Without Shortcuts.</p>
+                        <p className="text-green-700 text-md lg:text-lg max-w-sm mt-2">
+                        We understand the importance of time in construction. GREETS brings structured planning, disciplined execution, and digital project tracking to ensure your MEP systems are delivered and commissioned on time—seamlessly integrated within your build schedule.                        </p>
                     </div>
                 </div>
             </div>
