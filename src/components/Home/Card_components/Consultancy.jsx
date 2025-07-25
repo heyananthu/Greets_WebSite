@@ -33,7 +33,25 @@ function Consultancy() {
                     <p className="text-green-600 text-sm sm:text-base leading-relaxed font-poppins mb-3 md:mb-8 max-w-md mt-2">
                     We measure success by the long-term value our systems bring. GREETS delivers tailored, high-performance MEP solutions that enhance building lifecycle, reduce operating costs, and align with your project's functional and commercial goals.                    </p>
 
-                    <button className="px-8 sm:px-12 py-3  cursor-pointer border border-green-700 rounded-bl-none rounded-[2rem] text-sm bg-black text-green-300 hover:bg-green-700 hover:text-black transition-all duration-200">
+                    <button className="px-8 sm:px-12 py-3  cursor-pointer 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    border border-green-700 rounded-bl-none rounded-[2rem] text-sm bg-black text-green-300 hover:bg-green-700 hover:text-black transition-all duration-200">
                         Check Our Solutions
                     </button>
                 </div>

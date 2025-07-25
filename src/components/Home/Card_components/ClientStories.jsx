@@ -26,7 +26,7 @@ function ClientStories() {
 
   return (
     <div>
-      <section className="px-4 sm:px-6 pt-28 pb-12 bg-white font-questrial rounded-t-[3rem] h-fit  md:h-screen">
+      <section className="px-4 sm:px-6 pt-28 pb-12 bg-white font-questrial rounded-t-[3rem] h-fit mb-8">
         <div className="max-w-[1400px] mx-auto">
           {/* Header */}
           <div className="mb-10">
