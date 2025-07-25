@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-import Ourclient from './Ourclient';
-import Footer from '../../sharedcomponents/Footer';
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import ImageModalPortal from '../../../lib/ImageModalPortal';
 import policy1 from '../../../assets/privacyPolicy/quality-privacy.jpg';
 import policy2 from '../../../assets/privacyPolicy/Health.jpg';
 import policy3 from '../../../assets/privacyPolicy/codeofethics.jpg';
@@ -12,9 +10,23 @@ const images = [policy1, policy2, policy3];
 function ClientStories() {
   const [selectedImage, setSelectedImage] = useState(null);
 
+  useEffect(() => {
+    if (!selectedImage) return;
+
+    const handleScroll = () => {
+      setSelectedImage(null);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [selectedImage]);
+
   return (
     <div>
-      <section className="px-4 sm:px-6 pt-28 pb-12 bg-white font-questrial rounded-t-[3rem] h-fit lg:h-screen">
+      <section className="px-4 sm:px-6 pt-28 pb-12 bg-white font-questrial rounded-t-[3rem] h-fit  md:h-screen">
         <div className="max-w-[1400px] mx-auto">
           {/* Header */}
           <div className="mb-10">
@@ -45,43 +57,42 @@ function ClientStories() {
       {/* Fullscreen Image Modal */}
       <AnimatePresence>
         {selectedImage && (
-          <motion.div
-            className="fixed inset-0 bg-transparent flex items-center justify-center z-50"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setSelectedImage(null)}
-          >
+          <ImageModalPortal>
             <motion.div
-              className="relative"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              onClick={(e) => e.stopPropagation()} // prevent modal from closing when clicking on image
+              className="fixed inset-0  flex items-center justify-center z-[9999]"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedImage(null)}
             >
-              {/* Close Button */}
-              <button
-                onClick={() => setSelectedImage(null)}
-                className="absolute -top-1 -right-1 bg-white text-black text-2xl shadow-md font-bold rounded-full w-10 h-10  hover:bg-gray-100 z-10"
+              <motion.div
+                className="relative"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.8, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                onClick={(e) => e.stopPropagation()}
               >
-                &times;
-              </button>
+                {/* Close Button */}
+                <button
+                  onClick={() => setSelectedImage(null)}
+                  className="absolute -top-1 -right-1 bg-white text-black text-2xl shadow-md font-bold rounded-full w-10 h-10 hover:bg-gray-100 z-10"
+                >
+                  &times;
+                </button>
 
-              {/* Full Image */}
-              <img
-                src={selectedImage}
-                alt="Full View"
-                className="w-full h-full md:w-[26rem] lg:w-[30rem]  rounded-xl shadow-lg"
-              />
+                {/* Full Image */}
+                <img
+                  src={selectedImage}
+                  alt="Full View"
+                  className="w-full h-full md:w-[26rem] lg:w-[30rem] rounded-xl shadow-lg"
+                />
+              </motion.div>
             </motion.div>
-          </motion.div>
+          </ImageModalPortal>
         )}
       </AnimatePresence>
 
-      {/* Optional Footer */}
-      {/* <Ourclient /> */}
-      {/* <Footer /> */}
     </div>
   );
 }

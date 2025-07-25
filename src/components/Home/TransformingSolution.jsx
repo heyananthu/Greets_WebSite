@@ -11,10 +11,10 @@ function TransformingSolution() {
             <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
 
             {/* Content */}
-            <div className="relative z-10 flex  h-full px-6 sm:px-10 md:px-20 lg:pl-36 pt-20 ">
+            <div className="relative z-10 flex  h-full px-6 sm:px-10 md:px-20 lg:pl-36 lg:pt-20 ">
                 <div className="text-white space-y-6 md:space-y-20 font-questrial max-w-6xl text-left">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[5rem]  mb-4 md:mb-8">
-                        Building Tomorrow with Green <br />
+                        Building Tomorrow with Green <br className='hidden lg:block'/>
                         Transforming Solutions
                     </h1>
 

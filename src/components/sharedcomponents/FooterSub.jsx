@@ -24,7 +24,7 @@ function FooterSub() {
                 <h1 className='lg:text-[20rem] text-8xl'>Greets</h1>
             </div>
             <div className='md:flex md:justify-between px-8 mt-5'>
-                <div className='md:pl-8  grid grid-cols-1 md:grid-cols-4  text-[14px]  gap-y-8'>
+                <div className='md:pl-8  grid grid-cols-1 md:grid-cols-3  text-[14px] gap-x-5  gap-y-8'>
                     <div className='flex flex-col gap-y-1 w-fit relative'>
                         {[
                             { to: '/', label: 'Home' },
@@ -168,12 +168,12 @@ function FooterSub() {
                         <p>info@gmail.com</p>
                         <p>080 4302 7655</p>
                     </div>
-                    <div className='flex flex-col gap-y-2 w-fit lg:ml-16 md:ml-8'>
+                    {/* <div className='flex flex-col gap-y-2 w-fit lg:ml-16 md:ml-8'>
                         <NavLink to='/' >LinkedIn</NavLink>
                         <NavLink to='/' >Instagram</NavLink>
                         <NavLink to='/' >Facebook</NavLink>
-                    </div>
-                    <div className='flex flex-col  gap-y-2 '>
+                    </div> */}
+                    <div className='flex flex-col  gap-y-2 lg:ml-16 md:ml-8'>
                         <p className='text-[14px]'>Privacy Policy</p>
                         {/* <NavLink to='/codeofethics' className='text-[14px] '>Code of Ethics</NavLink>
                         <NavLink to='/health-saftey-environment' className='text-[14px]'>Health, Safety & Environmental</NavLink>
