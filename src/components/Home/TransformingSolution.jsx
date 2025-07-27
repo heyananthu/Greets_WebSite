@@ -1,5 +1,5 @@
 import React from 'react';
-import banner from '../../assets/secondbanner.jpg';
+import banner from '../../assets/transform.avif';
 
 function TransformingSolution() {
     return (
