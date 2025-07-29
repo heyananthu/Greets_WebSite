@@ -23,9 +23,9 @@ import tulah from '../../../assets/greets_client_icons/tulah-clinical.avif'
 
 const clients = [
     { logo: greenisland, name: 'Green Island' },
-    { logo: IDCSeychelles, name: 'IDC Seychelles' },
+    // { logo: IDCSeychelles, name: 'IDC Seychelles' },
     { logo: taj, name: 'Taj' },
-    { logo: GulfCraft, name: 'Gulf Craft' },
+    // { logo: GulfCraft, name: 'Gulf Craft' },
     { logo: platinum, name: 'Platinum' },
     { logo: rbi, name: 'RBI' },
     { logo: IndianOil, name: 'Indian Oil' },
@@ -37,11 +37,11 @@ const clients = [
     { logo: elgi, name: 'ELGi' },
     { logo: ecoinfrastructure, name: 'Eco Infrastructure Solutions' },
     { logo: centurygroup, name: 'Century Group' },
-    { logo: sbr, name: 'SBR Group' },
+    // { logo: sbr, name: 'SBR Group' },
     { logo: jssl, name: 'JSSL' },
     { logo: pitti, name: 'Pitti' },
     { logo: harvest, name: 'Harvest School' },
-    { logo: tulah, name: 'tulah' },
+    // { logo: tulah, name: 'tulah' },
 ];
 
 function Ourclient() {
