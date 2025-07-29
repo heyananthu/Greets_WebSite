@@ -24,7 +24,7 @@ function Consultancy() {
                         At GREETS, sustainability is not a feature—it’s a foundation. We design MEP systems that reduce energy use, conserve water, lower emissions, and support LEED and green building certifications. Our goal is to deliver systems that restore ecological balance while maximizing building efficiency.
                     </p>
 
-                    <button onClick={()=>navigate('/services')} className="px-8 sm:px-12 py-3  cursor-pointer border border-green-700 rounded-bl-none rounded-[2rem] text-sm bg-black text-green-300 hover:bg-green-700 hover:text-black transition-all duration-200">
+                    <button onClick={()=>navigate('/services')} className="px-8 sm:px-12 py-3  cursor-pointer border border-green-700 rounded-bl-none rounded-[2rem] text-sm bg-black text-white hover:bg-green-700 hover:text-black transition-all duration-200">
                         Check Our Services
                     </button>
                 </div>
@@ -36,7 +36,7 @@ function Consultancy() {
                         We measure success by the long-term value our systems bring. GREETS delivers tailored, high-performance MEP solutions that enhance building lifecycle, reduce operating costs, and align with your project's functional and commercial goals.                    </p>
 
                     <button onClick={()=>navigate('/services')} className="px-8 sm:px-12 py-3  cursor-pointer
-                    border border-green-700 rounded-bl-none rounded-[2rem] text-sm bg-black text-green-300 hover:bg-green-700 hover:text-black transition-all duration-200">
+                    border border-green-700 rounded-bl-none rounded-[2rem] text-sm bg-black text-white hover:bg-green-700 hover:text-black transition-all duration-200">
                         Check Our Services
                     </button>
                 </div>
