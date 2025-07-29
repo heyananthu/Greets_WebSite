@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import greenisland from '../../../assets/greets_client_icons/GreenIsland.jpg'
 import IDCSeychelles from '../../../assets/greets_client_icons/IDCSeychelles.jpg'
@@ -19,7 +19,7 @@ import sbr from '../../../assets/greets_client_icons/sbr-group.png'
 import jssl from '../../../assets/greets_client_icons/jssl.png'
 import pitti from '../../../assets/greets_client_icons/pitti.jpg'
 import harvest from '../../../assets/greets_client_icons/harvest-school.png'
-// import tulah from '../../../assets/greets_client_icons/tulah-clinical.avif'
+import tulah from '../../../assets/greets_client_icons/tulah-clinical.avif'
 
 const clients = [
     { logo: greenisland, name: 'Green Island' },
@@ -32,118 +32,67 @@ const clients = [
     { logo: smartowner, name: 'Smart Owner' },
     { logo: phoenix, name: 'Phoenix' },
     { logo: Decathlon, name: 'Decathlon' },
+    { logo: sheraton, name: 'Sheraton' },
+    { logo: khushihospital, name: 'Khushi Hospital' },
+    { logo: elgi, name: 'ELGi' },
+    { logo: ecoinfrastructure, name: 'Eco Infrastructure Solutions' },
+    { logo: centurygroup, name: 'Century Group' },
     { logo: sbr, name: 'SBR Group' },
     { logo: jssl, name: 'JSSL' },
     { logo: pitti, name: 'Pitti' },
     { logo: harvest, name: 'Harvest School' },
-    // { logo: tulah, name: 'Tulah Clinical' },
+    { logo: tulah, name: 'tulah' },
 ];
 
 function Ourclient() {
     const controls = useAnimation();
-    const [isVisible, setIsVisible] = useState(false);
+    const sliderRef = useRef(null);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        // Start animation when component comes into view
-                        const startAnimation = async () => {
-                            await controls.start({
-                                x: [0, -100 * clients.length * 100],
-                                transition: {
-                                    duration: 1300,
-                                    ease: "linear",
-                                    repeat: Infinity,
-                                    repeatType: "loop",
-                                    repeatDelay: 0,
-                                }
-                            });
-                        };
-                        startAnimation();
-                    }
-                });
-            },
-            { threshold: 0.1 } // Start when 10% of the component is visible
-        );
-
-        const element = document.querySelector('.client-section');
-        if (element) {
-            observer.observe(element);
-        }
-
-        return () => {
-            if (element) {
-                observer.unobserve(element);
-            }
+        const startAnimation = async () => {
+            if (!sliderRef.current) return;
+            const sliderWidth = sliderRef.current.scrollWidth / 2; // width of one set
+            await controls.start({
+                x: [0, -sliderWidth],
+                transition: {
+                    duration: 50,// adjust for speed
+                    ease: "linear",
+                    repeat: Infinity,
+                    repeatType: "loop",
+                }
+            });
         };
+        startAnimation();
     }, [controls]);
+
+    // Duplicate the clients array for seamless loop
+    const allClients = [...clients, ...clients];
 
     return (
         <section className="bg-green-700 rounded-b-[2rem] py-16 px-4 sm:px-6 md:px-10 min-h-[70vh] font-questrial client-section">
             <div className="max-w-[1600px] mx-auto">
                 <h2 className="text-white text-3xl sm:text-4xl font-bold font-poppins mb-12">Our Clients</h2>
-
-                {/* Infinite scrolling animation container */}
                 <div className="overflow-hidden">
                     <motion.div
-                        className="flex gap-4"
+                        className="flex flex-nowrap gap-4"
                         animate={controls}
                         initial={{ x: 0 }}
+                        ref={sliderRef}
                     >
-                        {/* First set of clients */}
-                        {clients.map((client, idx) => (
+                        {allClients.map((client, idx) => (
                             <div
-                                key={`first-${idx}`}
+                                key={idx}
                                 className="bg-black rounded-[3rem] w-[22rem] h-[11rem] flex items-center justify-center flex-shrink-0"
                             >
                                 <img
                                     src={client.logo}
                                     alt={client.name}
-                                    className="object-contain max-h-[4rem] max-w-[60%]"
-                                />
-                            </div>
-                        ))}
-
-                        {/* Duplicate set for seamless loop */}
-                        {clients.map((client, idx) => (
-                            <div
-                                key={`second-${idx}`}
-                                className="bg-black rounded-[3rem] w-[22rem] h-[11rem] flex items-center justify-center flex-shrink-0"
-                            >
-                                <img
-                                    src={client.logo}
-                                    alt={client.name}
-                                    className="object-contain max-h-[3rem] max-w-[40%]"
-                                />
-                            </div>
-                        ))}
-
-                        {/* Third set for extra smoothness */}
-                        {clients.map((client, idx) => (
-                            <div
-                                key={`third-${idx}`}
-                                className="bg-black rounded-[3rem] w-[22rem] h-[11rem] flex items-center justify-center flex-shrink-0"
-                            >
-                                <img
-                                    src={client.logo}
-                                    alt={client.name}
-                                    className="object-contain max-h-[3rem] max-w-[40%]"
-                                />
-                            </div>
-                        ))}
-
-                        {/* Fourth set for perfect infinite loop */}
-                        {clients.map((client, idx) => (
-                            <div
-                                key={`fourth-${idx}`}
-                                className="bg-black rounded-[3rem] w-[22rem] h-[11rem] flex items-center justify-center flex-shrink-0"
-                            >
-                                <img
-                                    src={client.logo}
-                                    alt={client.name}
-                                    className="object-contain max-h-[3rem] max-w-[40%]"
+                                    className={
+                                        "object-contain max-h-[4rem] max-w-[60%]" +
+                                        (["tulah", "ELGi", "Khushi Hospital", "Gulf Craft", "Platinum"].includes(client.name)
+                                            ? " bg-white p-2 rounded-lg"
+                                            : "")
+                                    }
                                 />
                             </div>
                         ))}
