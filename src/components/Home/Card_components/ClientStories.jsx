@@ -5,16 +5,24 @@ import policy1 from '../../../assets/privacyPolicy/quality-privacy.jpg';
 import policy2 from '../../../assets/privacyPolicy/Health.jpg';
 import policy3 from '../../../assets/privacyPolicy/codeofethics.jpg';
 
+// Import PDF versions for better quality viewing
+import policy1Pdf from '../../../assets/privacyPolicy/QualityPolicy.pdf';
+import policy2Pdf from '../../../assets/privacyPolicy/Health.pdf';
+import policy3Pdf from '../../../assets/privacyPolicy/codeofethics.pdf';
+
 const images = [policy1, policy2, policy3];
+const pdfs = [policy1Pdf, policy2Pdf, policy3Pdf];
 
 function ClientStories() {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [zoomLevel, setZoomLevel] = useState(1);
 
   useEffect(() => {
     if (!selectedImage) return;
 
     const handleScroll = () => {
       setSelectedImage(null);
+      setZoomLevel(1);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -23,6 +31,8 @@ function ClientStories() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [selectedImage]);
+
+
 
   return (
     <div>
@@ -47,7 +57,7 @@ function ClientStories() {
                 alt={`Policy ${index + 1}`}
                 className="w-full h-auto md:w-[14rem] lg:w-[18rem] cursor-pointer rounded-xl shadow-md hover:shadow-xl transition"
                 whileHover={{ scale: 1.03 }}
-                onClick={() => setSelectedImage(img)}
+                onClick={() => setSelectedImage(pdfs[index])}
               />
             ))}
           </div>
@@ -59,14 +69,14 @@ function ClientStories() {
         {selectedImage && (
           <ImageModalPortal>
             <motion.div
-              className="fixed inset-0  flex items-center justify-center z-[9999]"
+              className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedImage(null)}
             >
               <motion.div
-                className="relative"
+                className="relative bg-white rounded-lg shadow-xl fixed inset-0 w-screen h-screen max-w-none max-h-none overflow-auto"
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}
@@ -76,16 +86,18 @@ function ClientStories() {
                 {/* Close Button */}
                 <button
                   onClick={() => setSelectedImage(null)}
-                  className="absolute -top-1 -right-1 bg-white text-black text-2xl shadow-md font-bold rounded-full w-10 h-10 hover:bg-gray-100 z-10"
+                  className="absolute top-2 right-2 bg-gray-800 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg hover:bg-gray-700 z-10"
                 >
-                  &times;
+                  ×
                 </button>
 
-                {/* Full Image */}
-                <img
+                {/* Document */}
+                <iframe
                   src={selectedImage}
-                  alt="Full View"
-                  className="w-full h-full md:w-[26rem] lg:w-[30rem] rounded-xl shadow-lg"
+                  title="Policy PDF"
+                  className="w-full h-full rounded-lg border-0"
+                  style={{ background: 'white' }}
+                  allowFullScreen
                 />
               </motion.div>
             </motion.div>

@@ -23,7 +23,7 @@ function Footer() {
                                     id="footer-email"
                                     type="email"
                                     required
-                                    className="w-full md:w-[22rem] py-2 px-24 text-lg border border-black outline-none mb-2 bg-transparent font-[Montserrat]"
+                                    className="w-full  py-2 px-24 text-lg border border-black outline-none mb-2 bg-transparent "
                                 />
                             </div>
                             <div className="flex items-center mb-6">

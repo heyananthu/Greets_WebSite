@@ -15,7 +15,7 @@ function Hero() {
                     playsInline
                 />
                 {/* Gray Overlay */}
-                <div className="absolute top-0 left-0 w-full h-full bg-cyan-400/20 z-5"></div>
+                <div className="absolute top-0 left-0 w-full h-full  z-5"></div>
                 {/* Bottom White Gradient Overlay */}
                 <div className="absolute bottom-0 left-0 w-full h-48 z-10 pointer-events-none bg-gradient-to-t from-white to-transparent"></div>
                 {/* Overlay Content */}
