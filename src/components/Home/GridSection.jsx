@@ -1,8 +1,10 @@
 import React from 'react';
 import gridimg from '../../assets/gird-img.jpg';
 import icon from '../../assets/gridsection-icon.svg'
+import { useNavigate } from 'react-router-dom';
 
 function GridSection() {
+    const navigate = useNavigate()
     return (
         <div className='p-4 md:p-0 font-questrial'>
             <div className='font-[var(--font-questrial)]'>
@@ -22,7 +24,7 @@ function GridSection() {
                             </div>
 
                             <div className="mt-4 md:mt-2 lg:mt-0 px-2 sm:px-0">
-                                <button className="px-6 py-3 cursor-pointer border border-black rounded-bl-none rounded-[2rem] text-sm bg-green-700 text-black hover:bg-black hover:text-green-400 transition-all duration-200">
+                                <button onClick={()=>navigate('/contact')} className="px-6 py-3 cursor-pointer border border-black rounded-bl-none rounded-[2rem] text-sm bg-green-700 text-black hover:bg-black hover:text-green-400 transition-all duration-200">
                                     Schedule a Free Consultation
                                 </button>
                             </div>
@@ -80,8 +82,8 @@ function GridSection() {
                         </div>
 
                         <div className="px-2 sm:px-0">
-                            <button className="px-6 py-3 cursor-pointer border border-white rounded-bl-none rounded-[2rem] text-sm bg-black text-white hover:bg-green-700 hover:text-black transition-all duration-200 w-full md:w-[15rem]">
-                                Check Our Solutions
+                            <button onClick={()=>navigate('/services')} className="px-6 py-3 cursor-pointer border border-white rounded-bl-none rounded-[2rem] text-sm bg-black text-white hover:bg-green-700 hover:text-black transition-all duration-200 w-full md:w-[15rem]">
+                                Check Our Services
                             </button>
                         </div>
 
