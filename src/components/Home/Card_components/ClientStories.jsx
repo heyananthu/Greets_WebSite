@@ -95,10 +95,25 @@ function ClientStories() {
                 <iframe
                   src={selectedImage}
                   title="Policy PDF"
-                  className="w-full h-full rounded-lg border-0"
+                  className="w-full h-[80vh] sm:h-full rounded-lg border-0"
                   style={{ background: 'white' }}
                   allowFullScreen
                 />
+                <div className="p-4 text-center">
+                  <a
+                    href={selectedImage}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                  >
+                    Open PDF in New Tab
+                  </a>
+                  <div className="sm:hidden mt-2">
+                    <p>
+                      If the PDF is not visible, <a href={selectedImage} className="text-blue-600 underline" download>download it here</a>.
+                    </p>
+                  </div>
+                </div>
               </motion.div>
             </motion.div>
           </ImageModalPortal>
