@@ -13,11 +13,11 @@ function Strategy() {
                 </div>
 
                 {/* Right Side */}
-                <div className="flex-1 flex flex-col items-center justify-center px-6 py-0 mb-12 md:mb-5 bg-white">
-                    <h2 className="text-3xl md:text-4xl font-bold text-black lg:mb-4 mb-2 text-center  font-questrial">QUALITY</h2>
-                    <p className='italic md:text-md text-sm text-center'>Built to precision. Delivered with confidence.</p>
-                    <p className="text-green-700 text-md lg:text-lg max-w-sm mt-2 mb-2">
-                    Our commitment to quality is built into every step—from concept to commissioning. Backed by certified professionals and rigorous QA/QC protocols, GREETS ensures that every system we deliver meets global benchmarks for reliability, safety, and performance.                    </p>
+                <div className="flex-1 flex flex-col items-center justify-center px-6 py-8 mb-12 md:mb-16 bg-white h-full lg:-mt-5">
+                    <h2 className="text-3xl md:text-4xl font-bold text-black mb-1 lg:mb-4 font-questrial">QUALITY</h2>
+                    <p className='italic md:text-md text-sm'>Built to precision. Delivered with purpose.</p>
+                    <p className="text-green-700 text-md lg:text-lg max-w-sm lg:mt-6 mt-2">
+                    Our commitment to quality is built into every step—from concept to commissioning. Backed by certified professionals and rigorous QA/QC protocols, GREETS ensures that every system we deliver meets global benchmarks for reliability, safety, and performance.</p>
                 </div>
             </div>
         </div>

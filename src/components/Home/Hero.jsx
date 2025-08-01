@@ -2,15 +2,17 @@ import React, { useState, useEffect } from 'react'
 import banner1 from '../../assets/banner/banner1.webp'
 import banner2 from '../../assets/banner/banner2.jpg'
 import banner3 from '../../assets/banner/banner3.avif'
+import banner4 from '../../assets/banner/banner4.jpeg'
+import banner5 from '../../assets/banner/banner5.jpg'
 
 function Hero() {
     const [currentBanner, setCurrentBanner] = useState(0);
-    const banners = [banner1, banner2, banner3];
+    const banners = [ banner3 ,banner4,banner1, banner2,  ];
 
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentBanner((prev) => (prev + 1) % banners.length);
-        }, 5000); // Change banner every 5 seconds
+        }, 4000); // Change banner every 5 seconds
 
         return () => clearInterval(interval);
     }, [banners.length]);

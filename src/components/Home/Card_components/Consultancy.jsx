@@ -29,7 +29,7 @@ function Consultancy() {
                     </button>
                 </div>
 
-                <div className="w-full md:w-1/2 px-4 sm:px-8 md:px-10 py-8 md:py-0 flex flex-col items-center md:justify-center font-questrial text-center h-full mb-2 md:mb-5 lg:mb-0 ">
+                <div className="w-full md:w-1/2 px-4 sm:px-8 md:px-10 py-8 md:py-0 flex flex-col items-center md:justify-center font-questrial text-center h-full mb-2 md:mb-5 lg:mb-3 ">
                     <h2 className="text-3xl sm:text-4xl font-bold md:mb-6 mb-2 font-poppins md:mt-12">VALUE</h2>
                     <p className='italic md:text-md text-sm text-center'>Driven by Purpose. Focused on Results</p>
                     <p className="text-green-600 text-sm sm:text-base leading-relaxed font-poppins mb-3 md:mb-8 max-w-md mt-2">

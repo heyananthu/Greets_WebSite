@@ -15,11 +15,11 @@ function Approach2() {
                     </div>
 
                     {/* Right Side */}
-                    <div className="flex-1 flex flex-col items-center justify-center px-6  py-0 mb-12  md:mb-5 bg-white">
-                        <h2 className="text-3xl lg:text-4xl font-bold text-black lg:mb-4 text-center  font-questrial">TIME</h2>
-                        <p className='italic md:text-md text-sm text-center'>On Schedule. Without Shortcuts.</p>
-                        <p className="text-green-700 text-md lg:text-lg max-w-sm mt-2">
-                        We understand the importance of time in construction. GREETS brings structured planning, disciplined execution, and digital project tracking to ensure your MEP systems are delivered and commissioned on time—seamlessly integrated within your build schedule.                        </p>
+                    <div className="flex-1 flex flex-col items-center justify-center px-6 py-8 mb-12 md:mt-20 bg-white">
+                        <h2 className="text-3xl lg:text-4xl font-bold text-black mb-1 lg:mb-4 font-questrial">TIME</h2>
+                        <p className='italic md:text-md text-sm'>On Schedule. Without Shortcuts.</p>
+                        <p className="text-green-700 text-md lg:text-lg max-w-sm lg:mt-6 mt-2">
+                        We understand the importance of time in construction. GREETS brings structured planning, disciplined execution, and digital project tracking to ensure your MEP systems are delivered and commissioned on time—seamlessly integrated within your build schedule.</p>
                     </div>
                 </div>
             </div>
