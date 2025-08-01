@@ -88,7 +88,7 @@ function Ourclient() {
                                     src={client.logo}
                                     alt={client.name}
                                     className={
-                                        "object-contain max-h-[6rem] max-w-[80%]" +
+                                        "object-contain max-h-[6rem] max-w-[90%]" +
                                         (["tulah", "ELGi", "Khushi Hospital", "Gulf Craft", "Platinum","Decathlon"].includes(client.name)
                                             ? " bg-white p-3 rounded-lg"
                                             : "")
