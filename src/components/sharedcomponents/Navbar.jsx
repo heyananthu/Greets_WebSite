@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import logo from '../../assets/logo-cut.jpg';
-import icon from '../../assets/Greets_icon.jpg'
+import icon from '../../assets/Greets_icon.png'
 const ChevronDown = ({ rotated }) => (
     <svg
         className={`w-4 h-4 ml-1 transition-transform duration-200 ${rotated ? 'rotate-180' : ''}`}
