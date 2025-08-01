@@ -16,8 +16,8 @@ function Consultancy() {
                     </div>
 
                     {/* Right Side */}
-                    <div className="flex-1 flex flex-col items-center justify-center px-6 py-8 mb-20 md:mt-20 bg-white">
-                        <h2 className="text-3xl font-bold text-black text-center mb-1 lg:mb-4 font-questrial">VALUE</h2>
+                    <div className="flex-1 flex flex-col items-center justify-center px-6 py-8  bg-white">
+                        <h2 className="text-3xl font-bold text-black text-center mb-1 lg:mb-4 -mt-5 font-questrial">VALUE</h2>
                         <p className='italic md:text-md text-sm text-center'>Driven by Purpose. Focused on Results</p>
                         <p className="text-green-700 text-md md:text-lg max-w-sm lg:mt-6 mt-2 text-center">
                             We measure success by the long-term value our systems bring. GREETS delivers tailored, high-performance MEP solutions that enhance building lifecycle, reduce operating costs, and align with your project's functional and commercial goals.
