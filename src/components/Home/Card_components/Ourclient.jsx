@@ -71,7 +71,7 @@ function Ourclient() {
     return (
         <section className="bg-green-700 rounded-[3rem] py-16 px-4 sm:px-6 md:px-10 min-h-[60vh] font-questrial client-section">
             <div className="max-w-[1600px] mx-auto">
-                <h2 className="text-white text-3xl sm:text-4xl font-bold font-poppins mb-12">Our Clients</h2>
+                <h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold font-poppins mb-12">Our Clients</h2>
                 <div className="overflow-hidden">
                     <motion.div
                         className="flex flex-nowrap gap-4"

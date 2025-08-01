@@ -43,7 +43,7 @@ function ClientStories() {
             <h2 className="text-3xl md:text-5xl font-bold font-poppins text-gray-900 mb-4">
               Our Policies
             </h2>
-            <p className="text-green-600 text-lg sm:text-xl">
+            <p className="text-green-600 text-lg ">
               Click a policy image to view it in full screen.
             </p>
           </div>

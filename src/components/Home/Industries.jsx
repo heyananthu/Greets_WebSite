@@ -75,7 +75,7 @@ export default function Industries() {
                             key={industry.title}
                             className={industry.className + " w-full lg:w-[25.5rem] h-full lg:h-[23rem]"}
                         >
-                            <h2 className="text-2xl md:text-4xl lg:text-5xl font-light mb-4">{industry.title}</h2>
+                            <h2 className="text-2xl md:text-3xl  font-light mb-4">{industry.title}</h2>
                             <p className="text-base md:text-lg  font-normal">{industry.description}</p>
                         </div>
                     ))}

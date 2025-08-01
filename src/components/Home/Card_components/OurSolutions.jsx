@@ -10,10 +10,10 @@ function OurSolutions() {
                     <h1 className="text-green-700 text-4xl  md:text-5xl font-bold leading-snug  lg:mb-6">
                         Our Approach
                     </h1>
-                    <p className="text-black text-sm md:text-lg font-semibold italic mb-2">
+                    <p className="text-black text-sm  font-semibold italic mb-2">
                         "Helping you make the right decision"
                     </p>
-                    <p className='lg:text-lg text:sm lg:mt-12 text-green-700'>
+                    <p className='md:text-lg text:sm lg:mt-12 text-green-700'>
                         At GREETS,<br />
                         we offer a comprehensive spectrum of MEP (Mechanical, Electrical, and Plumbing) services engineered for performance, sustainability, and long-term value.
 

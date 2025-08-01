@@ -15,13 +15,13 @@ function EcologicalTransformationCard() {
                     <h1 className="text-green-700 text-3xl  font-bold leading-snug lg:mb-6">
                         Driving Ecological Transformation
                     </h1>
-                    <p className="text-green-700 text-sm md:text-lg font-semibold italic mb-2">
+                    <p className="text-green-700 text-sm  font-semibold italic mb-2">
                         "Sustainable solutions for a better future"
                     </p>
-                    <p className='lg:text-lg text-sm lg:mt-12'>
+                    <p className='md:text-lg text-sm lg:mt-12'>
                         We are committed to delivering sustainable, cost-effective, and impactful MEP systems that support LEED and other green building certifications—ensuring every project contributes positively to the environment and community.
                     </p>
-                    <p className='lg:text-lg text-sm lg:mt-6 mt-1'>
+                    <p className='md:text-lg text-sm lg:mt-6 mt-1'>
                         Our approach integrates cutting-edge green technologies with proven engineering principles, creating buildings that not only meet today's needs but also preserve resources for future generations. We prioritize energy efficiency, water conservation, and renewable energy integration in every project.
                     </p>
                     <div className="mt-20">
