@@ -12,10 +12,10 @@ function EcologicalTransformationCard() {
             <div className="w-[92vw] max-w-screen h-full bg-stone-300 rounded-[48px] rounded-br-none rounded-bl-none flex flex-col md:flex-row overflow-hidden">
                 {/* Left Side - Content */}
                 <div className="md:flex-1 flex flex-col justify-center py-2 md:py-5 px-6 md:mb-12 lg:mb-0 text-center">
-                    <h1 className="text-green-700 text-3xl md:text-5xl font-bold leading-snug lg:mb-6">
+                    <h1 className="text-green-700 text-3xl  font-bold leading-snug lg:mb-6">
                         Driving Ecological Transformation
                     </h1>
-                    <p className="text-green-700 text-sm md:text-xl font-semibold italic mb-2">
+                    <p className="text-green-700 text-sm md:text-lg font-semibold italic mb-2">
                         "Sustainable solutions for a better future"
                     </p>
                     <p className='lg:text-lg text-sm lg:mt-12'>
