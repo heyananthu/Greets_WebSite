@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { motion } from 'framer-motion'
 // import logo from '../../assets/Greets_Logo.avif' // Uncomment and adjust if you want to use an image
-import footerlogo from '../../assets/logo.jpg'
+import footerlogo from '../../assets/logo2.jpg'
 
 
 
@@ -20,9 +20,9 @@ function FooterSub() {
 
     return (
         <div className='font-questrial text-black mb-12'>
-            <div className='text-center md:flex md:justify-start md:pl-12 mt-8'>
+            {/* <div className='text-center md:flex md:justify-start md:pl-12 mt-8'>
                 <h1 className='lg:text-[20rem] text-8xl'>Greets</h1>
-            </div>
+            </div> */}
             <div className='md:flex md:justify-between px-8 mt-5'>
                 <div className='md:pl-8  grid grid-cols-1 md:grid-cols-3  text-[14px] gap-x-5  gap-y-8'>
                     <div className='flex flex-col gap-y-1 w-fit relative'>
@@ -166,7 +166,7 @@ function FooterSub() {
                     <div className=''>
                         <p>384, 9th Main Rd, 7th Sector<br />HSR Layout, Bengalure <br />Karnataka 560102</p>
                         <p>info@gmail.com</p>
-                        <p>080 4302 7655</p>
+                        {/* <p>080 4302 7655</p> */}
                     </div>
                     {/* <div className='flex flex-col gap-y-2 w-fit lg:ml-16 md:ml-8'>
                         <NavLink to='/' >LinkedIn</NavLink>
@@ -178,17 +178,14 @@ function FooterSub() {
                         {/* <NavLink to='/codeofethics' className='text-[14px] '>Code of Ethics</NavLink>
                         <NavLink to='/health-saftey-environment' className='text-[14px]'>Health, Safety & Environmental</NavLink>
                         <NavLink to='/quality-policy' className='text-[14px]'>Quality</NavLink> */}
-
                     </div>
-
-
                 </div>
                 <div className='relative flex flex-row  items-center justify-center gap-x-4 mt-4'>
                     <div>
-                        <img src={footerlogo} alt="footerlogo" className='size-20 md:h-14 h-10 md:mb-4' />
+                        <img src={footerlogo} alt="footerlogo" className='lg:size-40 lg:h-28 h-14 md:mb-1' />
                     </div>
 
-                    <div className="flex items-end  w-full md:w-auto pt-5">
+                    <div className="flex items-end  w-full md:w-auto lg:mt-auto md:mt-4 lg:mb-4 ">
                         <span className="text-sm ">© 2035<span className="align-middle text-xs ml-1 underline">™</span></span>
                     </div>
                 </div>

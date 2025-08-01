@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import logo from '../../assets/Greets_Logo.avif';
-
+import logo from '../../assets/logo-cut.jpg';
+import icon from '../../assets/Greets_icon.jpg'
 const ChevronDown = ({ rotated }) => (
     <svg
         className={`w-4 h-4 ml-1 transition-transform duration-200 ${rotated ? 'rotate-180' : ''}`}
@@ -143,7 +143,7 @@ export default function Navbar() {
         {
             path: '/about',
             label: 'About',
-            children: [{ path: '/testimonial', label: 'Testimonial' }],
+            // children: [{ path: '/testimonial', label: 'Testimonial' }],
         },
         { path: '/services', label: 'Services' },
         {
@@ -188,10 +188,10 @@ export default function Navbar() {
                 animate={visible ? 'visible' : 'hidden'}
                 exit="hidden"
                 className={`fixed inset-x-0 top-0 z-50 flex items-center justify-between 
-          px-4 sm:px-8 lg:px-16 py-2 font-questrial ${atTop ? 'bg-gray-100' : 'bg-white shadow-sm'
+          px-4 sm:px-8 lg:px-16 py-2 font-questrial pt-4 ${atTop ? 'bg-white' : 'bg-white shadow-sm'
                     }`}
             >
-                <img src={logo} alt="logo" className="w-32 h-20 sm:w-40 sm:h-24" />
+                <img src={logo} alt="logo" className="w-32 h-20 sm:w-32 sm:h-16" />
 
                 <nav className="hidden md:block">
                     <ul className="flex gap-2 text-sm h-full items-center">
@@ -205,6 +205,9 @@ export default function Navbar() {
                                 active={location.pathname === item.path}
                             />
                         ))}
+                        <li className="flex items-center h-full px-1.5">
+                            <img src={icon} alt="Greets Icon" className="w-5 h-5 ml-5" />
+                        </li>
                     </ul>
                 </nav>
 
