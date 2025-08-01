@@ -47,9 +47,9 @@ function GridSection() {
     return (
         <div className='p-4 md:p-0 font-questrial relative'>
             {/* Fixed Icon with fade-in/out animation */}
-            <div className={`fixed top-1/2 right-20 transform -translate-y-1/2 z-50 transition-opacity duration-700 ease-in-out ${isIconVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+            <div className={`fixed top-1/2 md:right-20 right-8 transform -translate-y-1/2 z-50 transition-opacity duration-700 ease-in-out ${isIconVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
                 <div className="shadow-xl bg-white rounded-full p-2 border-2 border-transparent">
-                    <img src={greetsicon} alt="Greets Icon" className="w-16 h-16" />
+                    <img src={greetsicon} alt="Greets Icon" className="md:w-16 md:h-16 w-5 h-5" />
                 </div>
             </div>
 

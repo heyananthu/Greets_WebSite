@@ -19,7 +19,7 @@ function Hero() {
 
     return (
         <div className="mb-16 relative">
-            <div className="w-full h-[15rem] md:h-[18rem] sm:h-[24rem] lg:h-[35rem] relative overflow-hidden">
+            <div className="w-full h-[19rem] md:h-[18rem] sm:h-[24rem] lg:h-[35rem] relative overflow-hidden">
                 {/* Banner Images with Fade Effect */}
                 {banners.map((banner, index) => (
                     <div

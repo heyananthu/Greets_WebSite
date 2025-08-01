@@ -14,7 +14,7 @@ function Home() {
       <div className="flex-1">
         <div>
           <Navbar />
-          <div className='mt-24 text-xl text-center font-questrial bg-gray-100 py-3 font-black'>
+          <div className='mt-24 text-lg md:text-xl text-center font-questrial bg-gray-100 py-3 font-black'>
             <h1>Driving Excellence in MEP Design & Execution for Tomorrow’s</h1>
           </div>
           <Hero />
