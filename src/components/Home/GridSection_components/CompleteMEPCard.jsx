@@ -7,16 +7,11 @@ function CompleteMEPCard() {
 
     return (
         <div className="h-screen w-full flex items-center justify-center font-questrial px-4 relative">
-            {/* Fixed Icon - Same position across all cards */}
-            <div className="absolute top-1/2 right-8 transform -translate-y-1/2 z-10">
-                <div className="bg-white rounded-full p-6 shadow-lg">
-                    <img src={greetsicon} alt="Greets Icon" className="w-16 h-16" />
-                </div>
-            </div>
-            
+
+
             <div className="w-[92vw] max-w-screen h-full bg-green-700 rounded-[48px] rounded-br-none rounded-bl-none flex flex-col md:flex-row overflow-hidden">
                 {/* Left Side - Content */}
-                <div className="md:flex-1 flex flex-col justify-center py-2 md:py-5 px-6 md:mb-12 lg:mb-0">
+                <div className="md:flex-1 flex flex-col justify-center py-2 md:py-5 px-6 md:mb-12 lg:mb-0 text-center">
                     <h1 className="text-white text-4xl md:text-5xl font-bold leading-snug lg:mb-6">
                         Complete MEP Solutions, Tailored for Every Sector
                     </h1>
@@ -30,11 +25,11 @@ function CompleteMEPCard() {
                         From HVAC and fire protection to advanced BMS, water management, and automation, our integrated solutions are tailored to meet the evolving needs of modern infrastructure—across residential, commercial, industrial, and institutional sectors.
                     </p>
                     <div className="mt-8">
-                        <button 
-                            onClick={() => navigate('/contact')} 
+                        <button
+                            onClick={() => navigate('/services')}
                             className="px-6 py-3 cursor-pointer border border-white rounded-bl-none rounded-[2rem] text-sm bg-green-700 text-white hover:bg-white hover:text-green-700 transition-all duration-200 hover:scale-105"
                         >
-                            Schedule a Free Consultation
+                            Check Our Services
                         </button>
                     </div>
                 </div>

@@ -206,7 +206,7 @@ export default function Navbar() {
                             />
                         ))}
                         <li className="flex items-center h-full px-1.5">
-                            <img src={icon} alt="Greets Icon" className="w-7 h-7 ml-5" />
+                            <img src={icon} alt="Greets Icon" className="w-8 h-7 ml-5" />
                         </li>
                     </ul>
                 </nav>
