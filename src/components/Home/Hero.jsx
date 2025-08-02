@@ -7,7 +7,7 @@ import banner6 from '../../assets/banner/banner6.webp'
 
 function Hero() {
     const [currentBanner, setCurrentBanner] = useState(0);
-    const banners = [banner3, banner4, banner1, banner2, banner6];
+    const banners = [banner3, banner4, banner2, banner6];
 
     useEffect(() => {
         const interval = setInterval(() => {
