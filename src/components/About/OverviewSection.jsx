@@ -3,7 +3,7 @@ import React from 'react';
 function OverviewSection() {
     return (
         <div className='w-full py-2 px-4 md:px-8 lg:px-0'>
-            <div className='w-full md:h-[37rem] bg-green-700 flex flex-col lg:flex-row items-center justify-between  lg:justify-end font-questrial gap-8 rounded-[1rem]'>
+            <div className='w-full md:h-[31rem] bg-green-700 flex flex-col lg:flex-row items-center justify-between  lg:justify-end font-questrial gap-8 rounded-[1rem]'>
 
                 {/* Title */}
                 <div className='w-full lg:w-1/2 flex justify-center items-center'>

@@ -8,7 +8,7 @@ function OurSolutions() {
                 {/* Left Side - Content */}
                 <div className="md:flex-1 flex flex-col items-center justify-center py-2 md:py-5 px-6 md:mb-12 lg:mb-0">
                     {/* Main Heading */}
-                    <h1 className="text-green-700 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight sm:leading-snug mb-2 sm:mb-4 lg:mb-6">
+                    <h1 className="text-green-700 text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight sm:leading-snug mb-2 sm:mb-4 lg:mb-6">
                         Our Approach
                     </h1>
                     

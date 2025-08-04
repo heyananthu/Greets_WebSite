@@ -69,12 +69,12 @@ function Ourclient() {
     const allClients = [...clients, ...clients];
 
     return (
-        <section className="bg-green-700 rounded-[3rem] py-16 px-4 sm:px-6 md:px-10 min-h-[60vh] font-questrial client-section">
+        <section className="bg-green-700 rounded-[1.5rem] sm:rounded-[2rem] md:rounded-[3rem] py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-10 min-h-[40vh] sm:min-h-[50vh] md:min-h-[60vh] font-questrial client-section">
             <div className="max-w-[1600px] mx-auto">
-                <h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-12">Our Clients</h2>
+                <h2 className="text-white text-sm sm:text-2xl md:text-3xl lg:text-5xl  font-bold mb-6 sm:mb-8 md:mb-12 text-center sm:text-left">Our Clients</h2>
                 <div className="overflow-hidden">
                     <motion.div
-                        className="flex flex-nowrap gap-4"
+                        className="flex flex-nowrap gap-2 sm:gap-3 md:gap-4"
                         animate={controls}
                         initial={{ x: 0 }}
                         ref={sliderRef}
@@ -82,15 +82,15 @@ function Ourclient() {
                         {allClients.map((client, idx) => (
                             <div
                                 key={idx}
-                                className=" w-[22rem] h-[11rem] flex items-center justify-center flex-shrink-0"
+                                className="w-[8rem] sm:w-[12rem] md:w-[16rem] lg:w-[20rem] xl:w-[22rem] h-[4rem] sm:h-[6rem] md:h-[8rem] lg:h-[10rem] xl:h-[11rem] flex items-center justify-center flex-shrink-0 bg-white/5 rounded-lg sm:rounded-xl backdrop-blur-sm"
                             >
                                 <img
                                     src={client.logo}
                                     alt={client.name}
                                     className={
-                                        "object-contain max-h-[6rem] max-w-[90%]" +
+                                        "object-contain max-h-[2.5rem] sm:max-h-[3.5rem] md:max-h-[4.5rem] lg:max-h-[5.5rem] xl:max-h-[6rem] max-w-[85%] sm:max-w-[90%]" +
                                         (["tulah", "ELGi", "Khushi Hospital", "Gulf Craft", "Platinum","Decathlon"].includes(client.name)
-                                            ? " bg-white p-3 rounded-lg"
+                                            ? " bg-white p-1 sm:p-2 md:p-3 rounded-md sm:rounded-lg"
                                             : "")
                                     }
                                 />
