@@ -53,10 +53,10 @@ function GridSection() {
         <div ref={sectionRef} className="relative bg-white font-questrial">
             {/* Fixed icon shown only during sticky card scroll */}
             <div
-                className={`fixed md:top-20 top-16 md:right-16 right-5 z-50 transition-opacity duration-700 ease-in-out ${showIcon ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                className={`fixed md:top-20 top-24 md:right-16 right-5 z-50 transition-opacity duration-700 ease-in-out ${showIcon ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
             >
-                <div className="bg-white rounded-full p-4 shadow-xl">
-                    <img src={greetsicon} alt="Greets Icon" className="md:w-16 md:h-16 h-4 w-4" />
+                <div className="bg-white rounded-full p-4 shadow-xl ">
+                    <img src={greetsicon} alt="Greets Icon" className="md:w-16 md:h-16 h-5 w-5" />
                 </div>
             </div>
 
