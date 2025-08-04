@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import logo from '../../assets/logo.jpeg';
+import logo from '../../assets/Logo.jpeg';
 import icon from '../../assets/Greets_icon.png'
 const ChevronDown = ({ rotated }) => (
     <svg
