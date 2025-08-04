@@ -191,7 +191,7 @@ export default function Navbar() {
           px-4 sm:px-8 lg:px-16 py-2 font-questrial pt-4 ${atTop ? 'bg-white' : 'bg-white shadow-sm'
                     }`}
             >
-                <img src={logo} alt="logo" className="w-32 h-20 sm:w-32 sm:h-16" />
+                <img src={logo} alt="logo" className="w-28 h-12 sm:w-36 sm:h-16" />
 
                 <nav className="hidden md:block">
                     <ul className="flex gap-2 text-sm h-full items-center">

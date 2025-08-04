@@ -12,7 +12,7 @@ function GridSection() {
     useEffect(() => {
         const checkStickyState = () => {
             let anyStuck = false;
-            
+
             cardRefs.current.forEach(ref => {
                 if (ref) {
                     const rect = ref.getBoundingClientRect();
@@ -23,7 +23,7 @@ function GridSection() {
                     }
                 }
             });
-            
+
             setShowIcon(anyStuck);
         };
 
