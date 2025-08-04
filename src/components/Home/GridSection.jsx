@@ -10,25 +10,36 @@ function GridSection() {
     const cardRefs = useRef([]);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                // Check if any sticky card is intersecting
-                const anyVisible = entries.some(entry => entry.isIntersecting);
-                setShowIcon(anyVisible);
-            },
-            {
-                root: null,
-                threshold: 0.5, // Half of the card must be visible
-            }
-        );
+        const checkStickyState = () => {
+            let anyStuck = false;
+            
+            cardRefs.current.forEach(ref => {
+                if (ref) {
+                    const rect = ref.getBoundingClientRect();
+                    // Check if the card is stuck at the top (within a small threshold)
+                    // Card is considered "stuck" when it's at the top of viewport
+                    if (rect.top <= 5 && rect.bottom > window.innerHeight * 0.5) {
+                        anyStuck = true;
+                    }
+                }
+            });
+            
+            setShowIcon(anyStuck);
+        };
 
-        // Observe each sticky card
-        cardRefs.current.forEach(ref => {
-            if (ref) observer.observe(ref);
-        });
+        // Check on scroll
+        const handleScroll = () => {
+            checkStickyState();
+        };
+
+        // Initial check
+        checkStickyState();
+
+        // Add scroll listener
+        window.addEventListener('scroll', handleScroll, { passive: true });
 
         return () => {
-            observer.disconnect();
+            window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
