@@ -17,11 +17,11 @@ function About() {
             <Hero />
             <OverviewSection />
             <GrowthStory />
-            <Approach />
+            {/* <Approach /> */}
             <Presence />
-            <OurMoto />
+            {/* <OurMoto /> */}
             <UsInNumber />
-            <Covered />
+            {/* <Covered /> */}
             <Footer />
         </div>
     )
