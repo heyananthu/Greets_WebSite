@@ -137,9 +137,9 @@ function UsInNumber() {
     }, []);
 
     return (
-        <div ref={sectionRef} className="bg-grey-200 text-white font-questrial min-h-screen py-8 px-4">
+        <div ref={sectionRef} className="bg-green-700 text-white font-questrial min-h-screen py-8 px-4">
             <div className="max-w-screen mx-auto px-12 pt-12">
-                <h1 className="text-2xl md:text-4xl font-bold mb-32">Us in Numbers</h1>
+                <h1 className="text-3xl md:text-5xl font-bold mb-24">Us in Numbers</h1>
 
                 <div className="flex flex-col md:flex-row gap-8">
                     {/* First Card (100 → from 90) */}
