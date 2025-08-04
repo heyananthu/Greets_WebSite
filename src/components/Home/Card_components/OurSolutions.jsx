@@ -7,7 +7,7 @@ function OurSolutions() {
             <div className="w-[92vw] max-w-screen h-full bg-[#e7e7e7] rounded-[48px] rounded-br-none rounded-bl-none flex flex-col md:flex-row overflow-hidden">
                 {/* Left Side */}
                 <div className="md:flex-1 flex flex-col items-center justify-center py-2 md:py-5 px-6 md:mb-12 lg:mb-0">
-                    <h1 className="text-green-700 text-4xl  md:text-5xl font-bold leading-snug  lg:mb-6">
+                    <h1 className="text-green-700 text-3xl  md:text-5xl font-bold leading-snug  lg:mb-6">
                         Our Approach
                     </h1>
                     <p className="text-black text-sm  font-semibold italic mb-2">

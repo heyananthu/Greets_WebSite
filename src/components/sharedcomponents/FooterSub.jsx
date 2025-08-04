@@ -182,7 +182,7 @@ function FooterSub() {
                 </div>
                 <div className='relative flex flex-row  items-center justify-center gap-x-4 mt-4'>
                     <div>
-                        <img src={footerlogo} alt="footerlogo" className='lg:size-40 lg:h-28 h-14 md:mb-1' />
+                        <img src={footerlogo} alt="footerlogo" className='lg:w-44 lg:h-28 w-32 h-14 md:mb-1' />
                     </div>
 
                     <div className="flex items-end  w-full md:w-auto lg:mt-auto md:mt-4 lg:mb-4 ">
