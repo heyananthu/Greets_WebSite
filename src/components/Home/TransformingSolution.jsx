@@ -7,7 +7,7 @@ import transform from '../../assets/transform.avif'
 
 function TransformingSolution() {
     const [currentBanner, setCurrentBanner] = useState(0);
-    const banners = [transform,banner7,banner1, banner2, banner3];
+    const banners = [transform, banner7, banner1, banner2, banner3];
 
     useEffect(() => {
         const interval = setInterval(() => {

@@ -7,7 +7,7 @@ function OverviewSection() {
 
                 {/* Title */}
                 <div className='w-full lg:w-1/2 flex justify-center items-center'>
-                    <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-bold text-center leading-tight'>
+                    <h1 className='text-sm md:text-5xl  font-bold text-center leading-tight'>
                         MEP <br /> OVERVIEW
                     </h1>
                 </div>
@@ -29,7 +29,7 @@ function OverviewSection() {
                                     className="flex items-center space-x-4 p-4  duration-300"
                                 >
                                     <div className="w-3 h-3 bg-green-500 rounded-full flex-shrink-0"></div>
-                                    <span className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
+                                    <span className="text-white text-lg font-bold">
                                         {item}
                                     </span>
                                 </div>

@@ -4,11 +4,12 @@ function Presence() {
     return (
         <div className='font-questrial w-full bg-gray-50 py-4 lg:py-8'>
             <div className='w-full max-w-7xl mx-auto px-4 md:px-8'>
+                <h1 className='text-green-700 md:text-5xl text-3xl font-bold text-center mb-8'>Global foot print </h1>
                 <div className='w-full flex justify-center'>
                     <img 
                         src={map} 
                         alt="Global Presence Map" 
-                        className='w-full max-w-full h-auto max-h-[400px] md:w-[80rem] md:max-h-[300px] lg:max-h-[600px] object-contain '
+                        className='w-full max-w-full h-auto max-h-[400px] md:w-[80rem] md:max-h-[300px] lg:max-h-[500px] object-contain '
                     />
                 </div>
                 {/* <div className='flex items-start justify-center'>
