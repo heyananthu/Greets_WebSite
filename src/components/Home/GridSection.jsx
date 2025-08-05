@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import greetsicon from '../../assets/Greets_icon.png';
+import greetsicon from '../../assets/icon-svg.svg';
 import CompleteMEPCard from './GridSection_components/CompleteMEPCard';
 import EcologicalTransformationCard from './GridSection_components/EcologicalTransformationCard';
 import InnovationCard from './GridSection_components/InnovationCard';
