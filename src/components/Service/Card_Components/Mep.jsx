@@ -14,11 +14,11 @@ function Mep() {
                         {/* Mechanical Services */}
                         <div className="flex flex-col items-start min-w-0 md:min-w-[340px]">
                             <div className='flex md:flex-col gap-2'>
-                                <div className="md:mb-4">
+                                {/* <div className="md:mb-4">
                                     <span className="inline-flex items-center justify-center">
                                         <img src={settingIconImage} alt="Drop Icon" className="md:w-24 md:h-24 h-12 w-12 " />
                                     </span>
-                                </div>
+                                </div> */}
                                 <h1 className="lg:text-4xl text-2xl lg:text-nowrap md:mb-6 mb-1 font-bold">
                                     Mechanical Services <br />
                                     (HVAC)
@@ -58,11 +58,11 @@ function Mep() {
                         {/* Electrical Services */}
                         <div className="flex flex-col items-start min-w-0 md:min-w-[320px]">
                             <div className='flex items-center md:flex-col gap-2'>
-                                <div className="md:mb-4">
+                                {/* <div className="md:mb-4">
                                     <span className="inline-flex items-center justify-center">
                                         <img src={boltIcon} alt="Drop Icon" className="md:w-24 md:h-24 h-12 w-12 " />
                                     </span>
-                                </div>
+                                </div> */}
                                 <h1 className="lg:text-4xl text-2xl font-bold md:mb-6  mb-1">
                                     Electrical Services
                                 </h1>

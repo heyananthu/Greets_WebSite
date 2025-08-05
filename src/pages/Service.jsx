@@ -12,10 +12,10 @@ function Service() {
             <Navbar />
             <div className='bg-gray-100 '>
                 <Hero />
-                <h1 className='text-center text-[43px] mt-12 font-questrial font-semibold'>MEP (Mechanical, Electrical, and Plumbing) Services</h1>
+                <h1 className='text-center text-3xl md:text-5xl mt-12 font-questrial font-semibold'>MEP (Mechanical, Electrical, and Plumbing) Services</h1>
                 <Main />
             </div>
-            <MepExpertise />
+            {/* <MepExpertise /> */}
             <Footer />
 
         </div>

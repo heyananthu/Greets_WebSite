@@ -16,17 +16,17 @@ function Mep2() {
                 />
             </div>
             {/* Right Content */}
-            <div className="flex-[2] flex flex-col justify-start py-6 md:py-10 bg-white lg:pl-10 pl-4 md:pl-8">
-                <div className="flex flex-col  md:flex-row lg:gap-20 gap-4 pt-6">
+            <div className="flex-1 flex flex-col justify-center items-center p-4 md:p-12  md:py-10 bg-white">
+                <div className="flex flex-col md:flex-row lg:gap-16 gap-4 lg:-mt-32">
                     {/* Plumbing */}
-                    <div className=" flex flex-col items-start min-w-0 md:min-w-[340px] mt-12 md:mt-0">
-                        <div className='flex items-center md:flex-col gap-2'>
-                            <div className="md:mb-4">
-                                <span className="inline-flex items-center justify-center md:w-24 md:h-24 h-12 w-12">
-                                    <img src={dropIcon} alt="Drop Icon" className="md:w-24 md:h-24 h-12 w-12 " />
-                                </span>
-                            </div>
-                            <h1 className="lg:text-4xl text-2xl lg:text-nowrap md:mb-12 mb-1 font-bold">Plumbing</h1>
+                    <div className="flex flex-col items-start min-w-0 md:min-w-[340px]">
+                        <div className='flex md:flex-col gap-2'>
+                            {/* <div className="md:mb-4">
+                                    <span className="inline-flex items-center justify-center">
+                                        <img src={dropIcon} alt="Drop Icon" className="md:w-24 md:h-24 h-12 w-12 " />
+                                    </span>
+                                </div> */}
+                            <h1 className="lg:text-4xl text-2xl lg:text-nowrap md:mb-6 mb-1 font-bold">Plumbing</h1>
                         </div>
                         <ul className="lg:text-lg text-sm font-semibold">
                             <li>
@@ -38,7 +38,7 @@ function Mep2() {
                                 Drainage & Sewage Systems
                             </li>
                             <li>
-                                <span className="text-black  font-bold mr-2">*</span>
+                                <span className="text-black font-bold mr-2">*</span>
                                 Rainwater Harvesting Systems
                             </li>
                             <li>
@@ -56,16 +56,18 @@ function Mep2() {
                         </ul>
                     </div>
                     {/* Fire Protection Services */}
-                    <div className="flex flex-col items-start min-w-0 md:min-w-[340px] pt-12 md:pt-0">
+                    <div className="flex flex-col items-start min-w-0 md:min-w-[320px]">
                         <div className='flex items-center md:flex-col gap-2'>
-                            <div className="md:mb-4">
-                                <span className="inline-flex items-center justify-center md:w-24 md:h-24 h-12 w-12">
-                                    <img src={fireIcon} alt="Drop Icon" className="md:w-24 md:h-24 h-12 w-12 " />
-                                </span>
-                            </div>
-                            <h1 className="lg:text-4xl text-2xl lg:text-nowrap md:mb-12 mb-1 font-bold">Fire Protection Services</h1>
+                            {/* <div className="md:mb-4">
+                                    <span className="inline-flex items-center justify-center">
+                                        <img src={fireIcon} alt="Drop Icon" className="md:w-24 md:h-24 h-12 w-12 " />
+                                    </span>
+                                </div> */}
+                            <h1 className="lg:text-4xl text-2xl font-bold md:mb-6  mb-1">
+                                Fire Protection Services
+                            </h1>
                         </div>
-                        <ul className="lg:text-lg text-sm font-semibold ">
+                        <ul className="lg:text-lg text-sm font-semibold">
                             <li>
                                 <span className="text-black font-bold mr-2">*</span>
                                 Fire Detection & Alarm Systems
