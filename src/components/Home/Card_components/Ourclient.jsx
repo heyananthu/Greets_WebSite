@@ -69,9 +69,9 @@ function Ourclient() {
     const allClients = [...clients, ...clients];
 
     return (
-        <section className="bg-green-700 rounded-[1.5rem] sm:rounded-[2rem] md:rounded-[3rem] py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-10 min-h-[40vh] sm:min-h-[50vh] md:min-h-[60vh] font-questrial client-section">
+        <section className="bg-green-700 rounded-[1.5rem] sm:rounded-[2rem] md:rounded-[3rem] py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-10 min-h-[40vh] sm:min-h-[50vh] md:min-h-[65vh] font-questrial client-section">
             <div className="max-w-[1600px] mx-auto">
-                <h2 className="text-white text-sm sm:text-2xl md:text-3xl lg:text-5xl  font-bold mb-6 sm:mb-8 md:mb-12 text-center sm:text-left">Our Clients</h2>
+                <h2 className="text-white text-3xl lg:text-5xl  font-bold mb-6 sm:mb-8 md:mb-12 text-center sm:text-left">Our Clients</h2>
                 <div className="overflow-hidden">
                     <motion.div
                         className="flex flex-nowrap gap-2 sm:gap-3 md:gap-4"

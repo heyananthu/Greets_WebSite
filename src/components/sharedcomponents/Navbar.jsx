@@ -151,8 +151,8 @@ export default function Navbar() {
             label: 'Projects',
             children: [
                 { path: '/key-projects', label: 'Key Projects' },
-                { path: '/upcoming-projects', label: 'Upcoming Projects ' },
-                { path: '/completed-projects', label: 'Completed Projects' },
+                // { path: '/upcoming-projects', label: 'Upcoming Projects ' },
+                // { path: '/completed-projects', label: 'Completed Projects' },
             ],
         },
         { path: '/contact', label: 'Contact Us' },

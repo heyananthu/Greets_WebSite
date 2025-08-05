@@ -29,9 +29,10 @@ function FooterSub() {
                         {[
                             { to: '/', label: 'Home' },
                             {
-                                to: '/about', label: 'About', isAccordion: true, children: [
-                                    { to: '/testimonial', label: 'Testimonial' }
-                                ]
+                                to: '/about', label: 'About',
+                                //  isAccordion: true, children: [
+                                //     { to: '/testimonial', label: 'Testimonial' }
+                                // ]
                             },
                             { to: '/services', label: 'Services' },
                             { to: '/projects', label: 'Projects', isAccordion: true },
@@ -104,7 +105,7 @@ function FooterSub() {
                                                             )}
                                                         </NavLink>
                                                     </motion.div>
-                                                    <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial">
+                                                    {/* <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial">
                                                         <NavLink to="/upcoming-projects" className="flex items-center gap-1 group">
                                                             {({ isActive }) => (
                                                                 <>
@@ -131,7 +132,7 @@ function FooterSub() {
                                                                 </>
                                                             )}
                                                         </NavLink>
-                                                    </motion.div>
+                                                    </motion.div> */}
                                                 </>
                                             )}
                                         </div>

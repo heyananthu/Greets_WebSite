@@ -4,7 +4,7 @@ import Mep2 from './Mep2';
 import Mep3 from './Mep3';
 import Mep4 from './Mep4';
 
-const cards = [<Mep />, <Mep2 />];
+const cards = [<Mep />, <Mep2 />,];
 
 function Main() {
     return (

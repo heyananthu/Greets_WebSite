@@ -3,30 +3,28 @@ import { motion } from 'framer-motion';
 
 const numbers = [
     {
-        value: 100,
-        start: 90,
-        suffix: 'M+',
-        prefix: '$',
-        desc: "Clients' Income during the Last Quarter",
-    },
-    {
         value: 5,
-        suffix: '',
+        suffix: '+',
         prefix: '',
-        desc: 'Industry Awards',
+        desc: 'Presence in Countries',
     },
     {
-        value: 350,
-        suffix: '',
+        value: 11,
+        suffix: '+',
         prefix: '',
-        desc: 'Business Partners in over 8 Countries',
+        desc: 'Years of Experience',
+    },
+    {
+        value: 250,
+        suffix: '+',
+        prefix: '',
+        desc: 'Happy Clients Across the Globe',
     },
     {
         value: 10,
-        start: 5,
-        suffix: '',
+        suffix: '+',
         prefix: '',
-        desc: 'Years of Experience',
+        desc: 'Business Partners',
     },
 ];
 
