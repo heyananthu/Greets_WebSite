@@ -25,9 +25,9 @@ function InnovationCard() {
                         <p className='text-xs sm:text-sm md:text-base lg:text-lg text-white leading-relaxed'>
                             Our team thrives on delivering results that balance ecology, economy, and efficiency. Headquartered in India, with a presence in the Maldives, Mauritius, Seychelles, Gambia, and other tropical regions, we manage complex international projects with precision and care.
                         </p>
-                        <p className='text-xs sm:text-sm md:text-base lg:text-lg text-white leading-relaxed'>
+                        {/* <p className='text-xs sm:text-sm md:text-base lg:text-lg text-white leading-relaxed'>
                             With deep expertise across 20+ service verticals, we partner with clients from concept to commissioning—ensuring every project is smartly designed, precisely built, and future-ready. Our commitment: delivering engineered environments that are efficient, ecological, and built to last.
-                        </p>
+                        </p> */}
                     </div>
                     
                     {/* Button */}

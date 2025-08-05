@@ -25,9 +25,9 @@ function CompleteMEPCard() {
                         <p className='text-xs sm:text-sm md:text-base lg:text-lg text-white leading-relaxed'>
                             GREETS provides end-to-end MEP services—spanning design, planning, estimation, procurement, and execution—crafted to meet the unique needs of Residential, Commercial, Industrial, Healthcare, Hospitality, Educational, and Government projects.
                         </p>
-                        <p className='text-xs sm:text-sm md:text-base lg:text-lg text-white leading-relaxed'>
+                        {/* <p className='text-xs sm:text-sm md:text-base lg:text-lg text-white leading-relaxed'>
                             From HVAC and fire protection to advanced BMS, water management, and automation, our integrated solutions are tailored to meet the evolving needs of modern infrastructure—across residential, commercial, industrial, and institutional sectors.
-                        </p>
+                        </p> */}
                     </div>
                     
                     {/* Button */}
