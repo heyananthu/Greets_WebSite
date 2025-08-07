@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import './PhoneInputFix.css'; // Add this import
@@ -8,25 +8,39 @@ import toast, { Toaster } from 'react-hot-toast';
 function Contact() {
     const [phone, setPhone] = useState('');
     const [country, setCountry] = useState('');
-    const [result, setResult] = React.useState("");
+    const [result, setResult] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
+    const [componentReady, setComponentReady] = useState(false);
+
+    useEffect(() => {
+        // Ensure component is fully ready
+        const timer = setTimeout(() => {
+            setComponentReady(true);
+        }, 100);
+
+        return () => clearTimeout(timer);
+    }, []);
 
     const onSubmit = async (event) => {
         event.preventDefault();
+        setIsLoading(true);
         setResult("Sending....");
-        const formData = new FormData(event.target);
+        
+        try {
+            const formData = new FormData(event.target);
 
-        // Add the Web3Forms access key
-        formData.append("access_key", "f87ed089-97ea-4b2d-9a7e-e53973dd44fd");
+            // Add the Web3Forms access key
+            formData.append("access_key", "f87ed089-97ea-4b2d-9a7e-e53973dd44fd");
 
-        // Add phone number to form data
-        formData.append("phone", phone);
+            // Add phone number to form data
+            formData.append("phone", phone);
 
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
 
-        const data = await response.json();
+            const data = await response.json();
 
         if (data.success) {
             setResult("");
@@ -75,7 +89,26 @@ function Contact() {
                 },
             });
         }
+        } catch (error) {
+            console.error('Form submission error:', error);
+            setResult("");
+            toast.error('Network error. Please check your connection and try again.', {
+                duration: 4000,
+                position: 'top-center',
+            });
+        } finally {
+            setIsLoading(false);
+        }
     };
+
+    // Show loading state while component initializes
+    if (!componentReady) {
+        return (
+            <div className="min-h-screen flex items-center justify-center">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-700"></div>
+            </div>
+        );
+    }
 
     return (
         <div className="min-h-screen  flex items-center px-6 py-10 mt-28 font-questrial">
