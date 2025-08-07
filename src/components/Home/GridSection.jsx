@@ -53,7 +53,7 @@ function GridSection() {
         <div ref={sectionRef} className="relative bg-white font-questrial">
             {/* Fixed icon shown only during sticky card scroll */}
             <div
-                className={`fixed md:top-20 top-24 md:right-16 right-5 z-50 transition-opacity duration-700 ease-in-out ${showIcon ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                className={`fixed md:top-20 top-20 md:right-16 right-5 z-50 transition-opacity duration-700 ease-in-out ${showIcon ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
             >
                 <div className="bg-white rounded-full p-4 shadow-xl ">
                     <img src={greetsicon} alt="Greets Icon" className="md:w-16 md:h-16 h-5 w-5" />
@@ -61,16 +61,27 @@ function GridSection() {
             </div>
 
             {/* Sticky card sections */}
-            {cards.map((card, idx) => (
-                <div
-                    key={idx}
-                    ref={el => (cardRefs.current[idx] = el)}
-                    className={`sticky top-0 h-fit w-full ${idx === cards.length - 1 ? 'pt-12' : 'py-12'}`}
-                    style={{ zIndex: idx + 1 }}
-                >
-                    {card}
-                </div>
-            ))}
+            {cards.map((card, idx) => {
+                let heightClass;
+                if (idx === 0) {
+                    heightClass = 'h-[70vh] md:h-[90vh] py-12'; // First card: matches CompleteMEPCard height
+                } else if (idx === 1) {
+                    heightClass = 'h-[75vh] md:h-[95vh] py-12'; // Second card: matches EcologicalTransformationCard height
+                } else {
+                    heightClass = 'h-[80vh] md:h-[100vh] pt-12 pb-0'; // Third card: matches InnovationCard height, no bottom padding
+                }
+
+                return (
+                    <div
+                        key={idx}
+                        ref={el => (cardRefs.current[idx] = el)}
+                        className={`sticky top-0 w-full ${heightClass}`}
+                        style={{ zIndex: idx + 1 }}
+                    >
+                        {card}
+                    </div>
+                );
+            })}
         </div>
     );
 }

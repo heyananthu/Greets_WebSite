@@ -6,8 +6,8 @@ function InnovationCard() {
     const navigate = useNavigate();
 
     return (
-        <div className="min-h-screen h-auto sm:h-screen w-full flex items-center justify-center font-questrial px-2 sm:px-4 py-4 sm:py-0 relative">
-            <div className="w-[96vw] sm:w-[92vw] max-w-screen min-h-[90vh] sm:h-full bg-green-700 text-white rounded-[24px] sm:rounded-[48px] rounded-br-none rounded-bl-none flex flex-col overflow-hidden">
+        <div className="h-[80vh] md:h-[100vh] w-full flex items-center justify-center font-questrial px-2 sm:px-4 pt-4 sm:pt-0 pb-0 relative">
+            <div className="w-[96vw] sm:w-[92vw] max-w-screen h-full bg-green-700 text-white rounded-[24px] sm:rounded-[48px] rounded-br-none rounded-bl-none flex flex-col overflow-hidden">
                 {/* Content */}
                 <div className="flex-1 flex flex-col justify-center items-center py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 text-center">
                     {/* Main Heading */}
