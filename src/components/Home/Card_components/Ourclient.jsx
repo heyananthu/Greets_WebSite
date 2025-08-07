@@ -72,7 +72,7 @@ function Ourclient() {
         <section className="bg-green-700 rounded-[1.5rem] sm:rounded-[2rem] md:rounded-[3rem] py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-10 min-h-[40vh] sm:min-h-[50vh] md:min-h-[65vh] font-questrial client-section">
             <div className="max-w-[1600px] mx-auto">
                 <h2 className="text-white text-3xl lg:text-5xl  font-bold mb-6 sm:mb-8 md:mb-12 text-center sm:text-left">Our Clients</h2>
-                <div className="overflow-hidden">
+                <div className="overflow-hidden mt-10">
                     <motion.div
                         className="flex flex-nowrap gap-2 sm:gap-3 md:gap-4"
                         animate={controls}
@@ -89,7 +89,7 @@ function Ourclient() {
                                     alt={client.name}
                                     className={
                                         "object-contain max-h-[2.5rem] sm:max-h-[3.5rem] md:max-h-[4.5rem] lg:max-h-[5.5rem] xl:max-h-[6rem] max-w-[85%] sm:max-w-[90%]" +
-                                        (["tulah", "ELGi", "Khushi Hospital", "Gulf Craft", "Platinum","Decathlon"].includes(client.name)
+                                        (["tulah", "ELGi","Eco Infrastructure Solutions", "Khushi Hospital", "Gulf Craft", "Platinum","Decathlon"].includes(client.name)
                                             ? " bg-white p-1 sm:p-2 md:p-3 rounded-md sm:rounded-lg"
                                             : "")
                                     }

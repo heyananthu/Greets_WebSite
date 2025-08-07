@@ -166,7 +166,7 @@ function FooterSub() {
                     </div>
                     <div className=''>
                         <p>384, 9th Main Rd, 7th Sector<br />HSR Layout, Bengalure <br />Karnataka 560102</p>
-                        <p>info@gmail.com</p>
+                        <p>info@greets.co.in</p>
                         {/* <p>080 4302 7655</p> */}
                     </div>
                     {/* <div className='flex flex-col gap-y-2 w-fit lg:ml-16 md:ml-8'>

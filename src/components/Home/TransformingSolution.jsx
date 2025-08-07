@@ -18,7 +18,7 @@ function TransformingSolution() {
     }, [banners.length]);
 
     return (
-        <div className="relative h-fit md:h-screen w-full py-12  overflow-hidden">
+        <div className="relative h-fit md:h-screen w-full py-12 md:mt-12 overflow-hidden">
             {/* Rotating Banner Backgrounds */}
             {banners.map((banner, index) => (
                 <div

@@ -8,7 +8,7 @@ const cards = [<Mep />, <Mep2 />,];
 
 function Main() {
     return (
-        <div className="relative bg-grey-100">
+        <div className="relative bg-grey-100 ">
             {cards.map((Card, index) => (
                 <div
                     key={index}

@@ -6,7 +6,7 @@ import dropIcon from '../../../assets/icons/drop-icon.png';
 import fireIcon from '../../../assets/icons/fire-icon.png';
 function Mep2() {
     return (
-        <div className="flex flex-col md:flex-row bg-white w-[92vw] max-w-screen mx-auto h-screen rounded-[32px] md:rounded-[48px] rounded-br-none rounded-bl-none overflow-hidden font-questrial">
+        <div className="flex flex-col md:flex-row bg-white  w-[92vw] max-w-screen mx-auto h-screen rounded-[32px] md:rounded-[48px] rounded-br-none rounded-bl-none overflow-hidden font-questrial">
             {/* Left Image */}
             <div className="w-[22rem] min-h-[600px] hidden lg:block relative">
                 <img
