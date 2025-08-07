@@ -6,7 +6,7 @@ function CompleteMEPCard() {
     const navigate = useNavigate();
 
     return (
-        <div className="h-[70vh] md:h-[90vh] w-full flex items-center justify-center font-questrial px-2 sm:px-4 py-4 sm:py-0 relative">
+        <div className="h-[80vh] md:h-[90vh] w-full flex items-center justify-center font-questrial px-2 sm:px-4 py-0 lg:py-0 relative">
             <div className="w-[96vw] sm:w-[92vw] max-w-screen h-full bg-green-700 rounded-[24px] sm:rounded-[48px] rounded-br-none rounded-bl-none flex flex-col overflow-hidden">
                 {/* Content */}
                 <div className="flex-1 flex flex-col justify-center items-center py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 text-center">

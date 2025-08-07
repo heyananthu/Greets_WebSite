@@ -64,11 +64,11 @@ function GridSection() {
             {cards.map((card, idx) => {
                 let heightClass;
                 if (idx === 0) {
-                    heightClass = 'h-[70vh] md:h-[90vh] py-12'; // First card: matches CompleteMEPCard height
+                    heightClass = 'h-[80vh] md:h-[90vh] py-12 lg:py-12'; // Mobile and large screen padding
                 } else if (idx === 1) {
-                    heightClass = 'h-[75vh] md:h-[95vh] py-12'; // Second card: matches EcologicalTransformationCard height
+                    heightClass = 'h-[80vh] md:h-[95vh] py-12 lg:py-12'; // Mobile and large screen padding
                 } else {
-                    heightClass = 'h-[80vh] md:h-[100vh] pt-12 pb-0'; // Third card: matches InnovationCard height, no bottom padding
+                    heightClass = 'h-[80vh] md:h-[100vh] pt-12 pb-0 lg:pt-12 lg:pb-0'; // Mobile and large screen padding
                 }
 
                 return (
