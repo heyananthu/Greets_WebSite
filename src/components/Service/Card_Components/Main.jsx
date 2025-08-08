@@ -8,14 +8,15 @@ const cards = [<Mep />, <Mep2 />,];
 
 function Main() {
     return (
-        <div className="relative bg-grey-100 ">
+        <div className="relative bg-grey-100">
             {cards.map((Card, index) => (
                 <div
                     key={index}
                     className={
-                        "sticky top-0 h-fit w-full " +
+                        "sticky top-0 h-screen w-full " +
                         (index === cards.length - 1 ? "pt-12" : "py-12")
-                    } style={{ zIndex: index + 1 }}
+                    } 
+                    style={{ zIndex: index + 1 }}
                 >
                     {Card}
                 </div>
