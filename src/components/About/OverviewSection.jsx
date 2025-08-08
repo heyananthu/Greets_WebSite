@@ -7,7 +7,7 @@ function OverviewSection() {
 
                 {/* Title */}
                 <div className='w-full lg:w-1/2 flex justify-center items-center'>
-                    <h1 className='text-sm md:text-5xl  font-bold text-center leading-tight'>
+                    <h1 className='text-3xl md:text-5xl  font-bold text-center leading-tight py-5'>
                         MEP <br /> OVERVIEW
                     </h1>
                 </div>

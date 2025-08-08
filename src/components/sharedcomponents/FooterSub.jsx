@@ -35,7 +35,9 @@ function FooterSub() {
                                 // ]
                             },
                             { to: '/services', label: 'Services' },
-                            { to: '/projects', label: 'Projects', isAccordion: true },
+                            { to: '/projects', label: 'Projects', 
+                                // isAccordion: true 
+                            },
                             { to: '/contact', label: 'Contact Us' },
                         ].map((item, idx) => (
                             item.isAccordion ? (
@@ -89,7 +91,7 @@ function FooterSub() {
                                                 </motion.div>
                                             ))}
                                             {/* Projects submenu */}
-                                            {item.label === 'Projects' && (
+                                            {/* {item.label === 'Projects' && (
                                                 <>
                                                     <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial">
                                                         <NavLink to="/key-projects" className="flex items-center gap-1 group">
@@ -105,7 +107,7 @@ function FooterSub() {
                                                             )}
                                                         </NavLink>
                                                     </motion.div>
-                                                    {/* <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial">
+                                                    <motion.div className="flex items-center gap-1 group" whileHover="hover" initial="initial">
                                                         <NavLink to="/upcoming-projects" className="flex items-center gap-1 group">
                                                             {({ isActive }) => (
                                                                 <>
@@ -132,9 +134,9 @@ function FooterSub() {
                                                                 </>
                                                             )}
                                                         </NavLink>
-                                                    </motion.div> */}
+                                                    </motion.div>
                                                 </>
-                                            )}
+                                            )} */}
                                         </div>
                                     )}
                                 </React.Fragment>

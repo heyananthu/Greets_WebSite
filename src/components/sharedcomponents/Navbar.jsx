@@ -149,11 +149,11 @@ export default function Navbar() {
         {
             path: '/projects',
             label: 'Projects',
-            children: [
-                { path: '/key-projects', label: 'Key Projects' },
-                // { path: '/upcoming-projects', label: 'Upcoming Projects ' },
-                // { path: '/completed-projects', label: 'Completed Projects' },
-            ],
+            // children: [
+            //     { path: '/key-projects', label: 'Key Projects' },
+            //     { path: '/upcoming-projects', label: 'Upcoming Projects ' },
+            //     { path: '/completed-projects', label: 'Completed Projects' },
+            // ],
         },
         { path: '/contact', label: 'Contact Us' },
     ];

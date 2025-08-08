@@ -25,12 +25,12 @@ function Contact() {
         event.preventDefault();
         setIsLoading(true);
         setResult("Sending....");
-        
+
         try {
             const formData = new FormData(event.target);
 
             // Add the Web3Forms access key
-            formData.append("access_key", "f87ed089-97ea-4b2d-9a7e-e53973dd44fd");
+            formData.append("access_key", "536557d0-ed59-4474-9c2f-a66d3edbcb20");
 
             // Add phone number to form data
             formData.append("phone", phone);
@@ -42,53 +42,53 @@ function Contact() {
 
             const data = await response.json();
 
-        if (data.success) {
-            setResult("");
-            event.target.reset();
-            setPhone(''); // Reset phone input
-            setCountry(''); // Reset country
+            if (data.success) {
+                setResult("");
+                event.target.reset();
+                setPhone(''); // Reset phone input
+                setCountry(''); // Reset country
 
-            // Show success toast
-            toast.success('Message sent successfully! We\'ll get back to you soon.', {
-                duration: 4000,
-                position: 'top-center',
-                style: {
-                    background: '#15803d',
-                    color: '#fff',
-                    fontWeight: '500',
-                    fontSize: '16px',
-                    padding: '16px 24px',
-                    borderRadius: '12px',
-                    boxShadow: '0 10px 25px rgba(21, 128, 61, 0.3)',
-                },
-                iconTheme: {
-                    primary: '#fff',
-                    secondary: '#15803d',
-                },
-            });
-        } else {
-            console.log("Error", data);
-            setResult(data.message);
+                // Show success toast
+                toast.success('Message sent successfully! We\'ll get back to you soon.', {
+                    duration: 4000,
+                    position: 'top-center',
+                    style: {
+                        background: '#15803d',
+                        color: '#fff',
+                        fontWeight: '500',
+                        fontSize: '16px',
+                        padding: '16px 24px',
+                        borderRadius: '12px',
+                        boxShadow: '0 10px 25px rgba(21, 128, 61, 0.3)',
+                    },
+                    iconTheme: {
+                        primary: '#fff',
+                        secondary: '#15803d',
+                    },
+                });
+            } else {
+                console.log("Error", data);
+                setResult(data.message);
 
-            // Show error toast
-            toast.error(data.message || 'Something went wrong. Please try again.', {
-                duration: 4000,
-                position: 'top-center',
-                style: {
-                    background: '#EF4444',
-                    color: '#fff',
-                    fontWeight: '500',
-                    fontSize: '16px',
-                    padding: '16px 24px',
-                    borderRadius: '12px',
-                    boxShadow: '0 10px 25px rgba(239, 68, 68, 0.3)',
-                },
-                iconTheme: {
-                    primary: '#fff',
-                    secondary: '#EF4444',
-                },
-            });
-        }
+                // Show error toast
+                toast.error(data.message || 'Something went wrong. Please try again.', {
+                    duration: 4000,
+                    position: 'top-center',
+                    style: {
+                        background: '#EF4444',
+                        color: '#fff',
+                        fontWeight: '500',
+                        fontSize: '16px',
+                        padding: '16px 24px',
+                        borderRadius: '12px',
+                        boxShadow: '0 10px 25px rgba(239, 68, 68, 0.3)',
+                    },
+                    iconTheme: {
+                        primary: '#fff',
+                        secondary: '#EF4444',
+                    },
+                });
+            }
         } catch (error) {
             console.error('Form submission error:', error);
             setResult("");
