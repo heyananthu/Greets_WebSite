@@ -15,7 +15,7 @@ function KeyProject() {
                     {projects.map((project, idx) => (
                         <motion.div
                             key={idx}
-                            className={`flex flex-col md:flex-row items-center ${idx % 2 === 1 ? 'md:flex-row-reverse -mt-10' : '-mt-3'}`}
+                            className={`flex flex-col md:flex-row items-center ${idx % 2 === 1 ? 'md:flex-row-reverse ' : 'mt-7'}`}
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true, amount: 0.3 }}
@@ -51,7 +51,7 @@ function KeyProject() {
                                 <img
                                     src={project.img}
                                     alt={project.title}
-                                    className="w-full h-full md:h-[21.5rem] object-cover"
+                                    className="w-full h-full md:h-[25.5rem] object-top"
                                 />
                             </motion.div>
                         </motion.div>
