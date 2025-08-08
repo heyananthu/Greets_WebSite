@@ -10,25 +10,24 @@ function KeyProject() {
     return (
         <div className="overflow-x-hidden"> {/* Prevent horizontal scroll */}
             {/* <Navbar /> */}
-            <section className="w-full py-16 ">
+            <section className="w-full ">
                 <div className="">
                     {projects.map((project, idx) => (
                         <motion.div
                             key={idx}
-                            className={`flex flex-col md:flex-row items-center ${idx % 2 === 1 ? 'md:flex-row-reverse ' : 'mt-7'}`}
-                            initial={{ opacity: 0 }}
+className={`flex flex-col md:flex-row items-center ${idx % 2 === 1 ? 'md:flex-row-reverse ' : 'mt-7'}`}                            initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            transition={{ duration: 0.6, ease: "easeOut" }}
+                            viewport={{ once: true, amount: 0.1 }}
+                            transition={{ duration: 0.4, ease: "easeOut" }}
                         >
                             {/* Text Section */}
                             <motion.div
                                 className="w-full md:w-1/2 bg-gray-100 flex items-center justify-center p-6 min-h-[250px] md:min-h-[384px]"
-                                initial={{ x: idx % 2 === 0 ? -300 : 300, opacity: 0 }}
+                                initial={{ x: idx % 2 === 0 ? -100 : 100, opacity: 0 }}
                                 whileInView={{ x: 0, opacity: 1 }}
-                                viewport={{ once: true, amount: 0.4 }}
+                                viewport={{ once: true, amount: 0.1 }}
                                 transition={{
-                                    duration: 0.6,
+                                    duration: 0.4,
                                     ease: "easeOut"
                                 }}
                             >
@@ -40,11 +39,11 @@ function KeyProject() {
                             {/* Image Section */}
                             <motion.div
                                 className="w-full md:w-1/2 min-h-[250px] md:min-h-[384px]"
-                                initial={{ x: idx % 2 === 0 ? 300 : -300, opacity: 0 }}
+                                initial={{ x: idx % 2 === 0 ? 100 : -100, opacity: 0 }}
                                 whileInView={{ x: 0, opacity: 1 }}
-                                viewport={{ once: true, amount: 0.4 }}
+                                viewport={{ once: true, amount: 0.1 }}
                                 transition={{
-                                    duration: 0.6,
+                                    duration: 0.4,
                                     ease: "easeOut"
                                 }}
                             >
