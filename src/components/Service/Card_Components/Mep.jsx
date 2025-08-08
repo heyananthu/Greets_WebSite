@@ -2,7 +2,7 @@ import React from 'react'
 
 import settingIconImage from '../../../assets/icons/setting-icon.png';
 import boltIcon from '../../../assets/icons/thunder-icon.png';
-import banner from '../../../assets/services-card1.avif'
+import banner from '../../../assets/banner/service-banner1.jpg'
 function Mep() {
     return (
         <div className='font-questrial bg-gray-100 pt-1 h-screen w-full'>
@@ -105,7 +105,7 @@ function Mep() {
                     <img
                         src={banner}
                         alt="City"
-                        className="w-full h-full object-cover grayscale"
+                        className="w-full h-full object-cover "
                     />
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaTint, FaFire } from 'react-icons/fa'
-import banner from '../../../assets/services-card2.avif'
+import banner from '../../../assets/banner/service-banner2.jpg'
 import { RiDropFill } from "react-icons/ri";
 import dropIcon from '../../../assets/icons/drop-icon.png';
 import fireIcon from '../../../assets/icons/fire-icon.png';
@@ -12,7 +12,7 @@ function Mep2() {
                 <img
                     src={banner}
                     alt="Construction"
-                    className="w-full h-full object-cover grayscale"
+                    className="w-full h-full object-right "
                 />
             </div>
             {/* Right Content */}
