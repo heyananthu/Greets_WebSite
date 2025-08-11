@@ -5,18 +5,18 @@ import { useInView } from 'react-intersection-observer';
 import banner from '../../assets/banner/growthstory-banner.avif';
 
 const growthData = [
-    { year: '2016', isGreen: false, services: ['MEP DESIGN'] },
-    { year: '2018', isGreen: true, services: ['MEP DESIGN', 'PMC'] },
-    { year: '2021', isGreen: false, services: ['MEP DESIGN', 'PMC', 'TRADE'] },
-    { year: '2023', isGreen: true, services: ['MEP DESIGN', 'PMC', 'TRADE', 'EXECUTION'] },
-    { year: '2024', isGreen: false, services: ['MEP DESIGN', 'PMC', 'TRADE', 'EXECUTION', 'AMC'] },
-    { year: '2025', isGreen: true, services: ['MEP DESIGN', 'PMC', 'TRADE', 'EXECUTION', 'AMC', 'INTL LOCAL', 'PRESENCE'] },
+    { year: '2016', isGreen: false, services: ['MEP Design'] },
+    { year: '2018', isGreen: true, services: ['MEP Design', 'PMC'] },
+    { year: '2021', isGreen: false, services: ['MEP Design', 'PMC', 'Trade'] },
+    { year: '2023', isGreen: true, services: ['MEP Design', 'PMC', 'Trade', 'Execution'] },
+    { year: '2024', isGreen: false, services: ['MEP Design', 'PMC', 'Trade', 'Execution', 'AMC'] },
+    { year: '2025', isGreen: true, services: ['MEP Design', 'PMC', 'Trade', 'Execution', 'AMC', 'Intl. Local', 'Presence'] },
 ];
-function toTitleCase(str) {
-    return str
-        .toLowerCase()
-        .replace(/\b\w/g, char => char.toUpperCase());
-}
+// function toTitleCase(str) {
+//     return str
+//         .toLowerCase()
+//         .replace(/\b\w/g, char => char.toUpperCase());
+// }
 function GrowthStory() {
     const [hoveredCard, setHoveredCard] = useState(null);
 
@@ -146,9 +146,9 @@ function GrowthStory() {
                                         {entry.services.map((service, i) => (
                                             <div
                                                 key={i}
-                                                className="text-sm sm:text-base lg:text-lg text-center tracking-wide font-medium first-letter:uppercase"
+                                                className="text-sm sm:text-base lg:text-lg text-center tracking-wide font-medium "
                                             >
-                                                {toTitleCase(service)}
+                                                {service}
                                             </div>
                                         ))}
                                     </div>
