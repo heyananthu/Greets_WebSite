@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { LuCalendarDays } from "react-icons/lu";
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import banner from '../../assets/banner/growthstory-banner.avif';
 
 const growthData = [
@@ -15,15 +16,42 @@ const growthData = [
 function GrowthStory() {
     const [hoveredCard, setHoveredCard] = useState(null);
 
+    // Intersection observer for triggering animation when in view
+    const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
+    const controls = useAnimation();
+
+    React.useEffect(() => {
+        if (inView) {
+            controls.start({
+                x: ['-100vw', 0], // Start from far left outside the screen
+                opacity: [0, 1],
+                transition: { duration: 0.8, ease: "easeOut" }
+            }).then(() => {
+                // After sliding in, start shaking infinitely
+                controls.start({
+                    x: [0, -8, 8, -8, 8, 0],
+                    transition: {
+                        duration: 1,
+                        repeat: Infinity,
+                        repeatType: "loop",
+                        ease: "easeInOut"
+                    }
+                });
+            });
+        }
+    }, [inView, controls]);
+
+
     return (
         <div className="bg-[#eaeaea]">
             {/* Title */}
-            <h1 className="text-center font-questrial font-black text-gray-800 text-3xl md:text-5xl uppercase mb-2 py-4">
+            <h1 className="text-center font-questrial font-black text-black text-3xl md:text-5xl uppercase mb-2 py-4">
                 Growth Story
             </h1>
 
             {/* Banner Background */}
             <div
+                ref={ref}
                 className="font-questrial min-h-screen py-10 px-4 sm:px-6 md:px-8"
                 style={{
                     backgroundImage: `url(${banner})`,
@@ -40,15 +68,7 @@ function GrowthStory() {
                             gap-8 lg:gap-x-20 
                             justify-items-center
                         "
-                        animate={{
-                            x: [0, -8, 8, -8, 8, 0]
-                        }}
-                        transition={{
-                            duration: 1,
-                            repeat: Infinity,
-                            repeatType: "loop",
-                            ease: "easeInOut"
-                        }}
+                        animate={controls}
                     >
                         {growthData.map((entry, idx) => (
                             <div
@@ -96,7 +116,7 @@ function GrowthStory() {
                                         {entry.services.map((service, i) => (
                                             <div
                                                 key={i}
-                                                className="text-sm sm:text-base lg:text-lg text-center  tracking-wide font-medium"
+                                                className="text-sm sm:text-base lg:text-lg text-center tracking-wide font-medium"
                                             >
                                                 {service}
                                             </div>
