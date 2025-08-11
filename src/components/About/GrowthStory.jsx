@@ -48,7 +48,7 @@ function GrowthStory() {
             }}>
                 <div className="max-w-screen lg:px-10">
                     {/* Cards Grid */}
-                    <motion.div 
+                    <motion.div
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                         animate={{
                             x: [0, -8, 8, -8, 8, 0]
@@ -95,7 +95,7 @@ function GrowthStory() {
                                             }}
                                         >
                                             <LuCalendarDays
-                                                size={32}
+                                                size={35}
                                                 className={entry.isGreen ? 'text-white' : 'text-gray-600'}
                                             />
                                         </motion.div>
