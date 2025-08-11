@@ -16,7 +16,7 @@ function About() {
             <Navbar />
             <Hero />
             <OverviewSection />
-            {/* <GrowthStory /> */}
+            <GrowthStory />
             {/* <Approach /> */}
             <Presence />
             {/* <OurMoto /> */}

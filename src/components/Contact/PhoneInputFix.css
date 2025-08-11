@@ -41,3 +41,22 @@
     font-size: 1.2rem;
     color: #000;
 }
+
+/* Hide flag when phone is empty but keep button clickable */
+.phone-empty .react-tel-input .flag {
+    opacity: 0;
+}
+
+.phone-empty .react-tel-input .selected-flag {
+    opacity: 0;
+}
+
+/* Alternative approach - hide the flag image specifically */
+.phone-empty .react-tel-input .flag-dropdown .selected-flag .flag {
+    display: none;
+}
+
+.phone-empty .react-tel-input .flag-dropdown .selected-flag::before {
+    content: '';
+    display: none;
+}

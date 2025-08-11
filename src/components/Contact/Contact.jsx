@@ -23,6 +23,29 @@ function Contact() {
 
     const onSubmit = async (event) => {
         event.preventDefault();
+        
+        // Check if country is selected (mandatory validation)
+        if (!country || country.trim() === '') {
+            toast.error('Please select a country for your phone number.', {
+                duration: 4000,
+                position: 'top-center',
+                style: {
+                    background: '#EF4444',
+                    color: '#fff',
+                    fontWeight: '500',
+                    fontSize: '16px',
+                    padding: '16px 24px',
+                    borderRadius: '12px',
+                    boxShadow: '0 10px 25px rgba(239, 68, 68, 0.3)',
+                },
+                iconTheme: {
+                    primary: '#fff',
+                    secondary: '#EF4444',
+                },
+            });
+            return; // Stop form submission
+        }
+
         setIsLoading(true);
         setResult("Sending....");
 
@@ -32,8 +55,9 @@ function Contact() {
             // Add the Web3Forms access key
             formData.append("access_key", "536557d0-ed59-4474-9c2f-a66d3edbcb20");
 
-            // Add phone number to form data
+            // Add phone number and country to form data
             formData.append("phone", phone);
+            formData.append("country", country);
 
             const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
@@ -137,10 +161,16 @@ function Contact() {
                             </div>
                             <div>
                                 {/* <label className="text-gray-400 text-sm mb-1 block">Phone</label> */}
-                                <div className="relative">
+                                <div className={`relative ${(!phone || phone.length <= 0) ? 'phone-empty' : ''}`}>
                                     <PhoneInput
                                         value={phone}
-                                        onChange={setPhone}
+                                        onChange={(value) => {
+                                            setPhone(value);
+                                            // If phone is completely cleared, reset country as well
+                                            if (!value || value.length === 0) {
+                                                setCountry('');
+                                            }
+                                        }}
                                         onCountryChange={setCountry}
                                         enableSearch={true}
                                         inputProps={{
@@ -153,9 +183,12 @@ function Contact() {
                                         dropdownClass="!max-h-[300px] !bg-white !text-black !shadow-lg !z-50"
                                         containerClass="!w-full !h-[2.75rem]"
                                     />
-                                    {(!phone || phone.length <= 0) && !country && (
-                                        <span className="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none flex items-center h-[2.75rem]">
+                                    {(!phone || phone.length <= 0) && (
+                                        <span className="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none flex items-center gap-1 h-[2.75rem] z-20">
                                             <PiGlobeHemisphereEastLight className="text-black" size={20} />
+                                            <svg className="w-3 h-3 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                            </svg>
                                         </span>
                                     )}
                                 </div>

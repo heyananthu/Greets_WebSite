@@ -1,160 +1,130 @@
-import React from 'react'
-import chart2016 from '../../assets/2016.png'
-import chart2018 from '../../assets/chart-2018.png'
-import chart2021 from '../../assets/2021.png'
-import chart2023 from '../../assets/chart-2023.png'
-import chart2024 from '../../assets/chart-2024.png'
-import chart2025 from '../../assets/2025.png'
-import india from '../../assets/flag/India.png'
-import maldives from '../../assets/flag/Maldives.png'
-import mauritius from '../../assets/flag/mauritius.png'
-import seychelles from '../../assets/flag/seychelles.png'
-import gambia from '../../assets/flag/gambia.png'
-
+import React, { useState } from 'react'
+import { HiOutlineCalendar } from 'react-icons/hi2'
+import { LuCalendarDays } from "react-icons/lu";
+import { motion } from 'framer-motion'
+import banner from '../../assets/banner/growthstory-banner.avif'
 const growthData = [
     {
-        chart: chart2016,
-        img: india,
-        items: [
-            { text: 'MEP Design', bold: true },
-            { text: 'HVAC' },
-            { text: 'Electrical' },
-            { text: 'Plumbing' },
-            { text: 'Fire' },
-        ],
+        year: '2016',
+        isGreen: false,
+        services: ['MEP DESIGN']
     },
     {
-        chart: chart2018,
-        // img: maldives,
-        items: [
-            { text: 'MEP Design', bold: true },
-            { text: 'PMC', new: true },
-            { text: 'HVAC' },
-            { text: 'Electrical' },
-            { text: 'Plumbing' },
-            { text: 'Fire' },
-        ],
+        year: '2018',
+        isGreen: true,
+        services: ['MEP DESIGN', 'PMC']
     },
     {
-        chart: chart2021,
-        img: mauritius,
-        items: [
-            { text: 'MEP Design', bold: true },
-            { text: 'PMC', bold: true },
-            { text: 'Trade', new: true },
-            { text: 'HVAC' },
-            { text: 'Electrical' },
-            { text: 'Plumbing' },
-            { text: 'Fire' },
-            { text: 'Sustainability' },
-            { text: 'Networking' },
-            { text: 'BMS' },
-            { text: 'Security and AV' },
-        ],
+        year: '2021',
+        isGreen: false,
+        services: ['MEP DESIGN', 'PMC', 'TRADE']
     },
     {
-        chart: chart2023,
-        img: maldives,
-        items: [
-            { text: 'MEP Design', bold: true },
-            { text: 'PMC', bold: true },
-            { text: 'Trade', bold: true },
-            { text: 'Execution', new: true },
-            { text: 'HVAC' },
-            { text: 'Electrical' },
-            { text: 'Plumbing' },
-            { text: 'Fire' },
-            { text: 'Sustainability' },
-            { text: 'BMS' },
-            { text: 'Security & AV' },
-            { text: 'Home Automation' },
-            { text: 'LMS' },
-        ],
+        year: '2023',
+        isGreen: true,
+        services: ['MEP DESIGN', 'PMC', 'TRADE', 'EXECUTION']
     },
     {
-        chart: chart2024,
-        img: seychelles,
-        items: [
-            { text: 'MEP Design', bold: true },
-            { text: 'PMC', bold: true },
-            { text: 'Trade', bold: true },
-            { text: 'Execution', bold: true },
-            { text: 'AMC', new: true },
-            { text: 'HVAC' },
-            { text: 'Electrical' },
-            { text: 'Plumbing' },
-            { text: 'Fire' },
-            { text: 'Sustainability' },
-            { text: 'Networking' },
-            { text: 'BMS' },
-            { text: 'Security & AV' },
-            { text: 'Home Automation' },
-            { text: 'LMS' },
-            { text: 'IOT' },
-
-        ],
+        year: '2024',
+        isGreen: false,
+        services: ['MEP DESIGN', 'PMC', 'TRADE', 'EXECUTION', 'AMC']
     },
     {
-        chart: chart2025,
-        img: gambia,
-        items: [
-            { text: 'MEP Design', bold: true, },
-            { text: 'PMC', bold: true },
-            { text: 'Trade', bold: true },
-            { text: 'Execution', bold: true },
-            { text: 'AMC', bold: true },
-            { text: 'Intl. Local', new: true },
-            { text: 'Presence', new: true },
-            { text: 'HVAC' },
-            { text: 'Electrical' },
-            { text: 'Plumbing' },
-            { text: 'Fire' },
-            { text: 'Sustainability' },
-            { text: 'Networking' },
-            { text: 'BMS' },
-            { text: 'Security & AV' },
-            { text: 'Home Automation' },
-            { text: 'LMS' },
-            { text: 'IOT' },
-            // { text: 'Compressed air' },
-        ],
+        year: '2025',
+        isGreen: true,
+        services: ['MEP DESIGN', 'PMC', 'EXECUTION', 'AMC', 'TRADE', 'EXECUTION', 'INTL LOCAL']
     },
 ];
 
 function GrowthStory() {
+    const [hoveredCard, setHoveredCard] = useState(null);
+
     return (
-        <div className="font-questrial bg-green-700 min-h-screen py-10">
-            <h1 className="text-center font-black text-white text-6xl md:text-8xl uppercase mb-3">Growth Story</h1>
-            <div className="max-w-screen mx-auto flex flex-col items-center">
-                <div className="flex flex-wrap justify-center w-full">
-                    {growthData.map((entry, idx) => (
-                        <div key={entry.year} className="flex flex-col items-center ">
-                            {/* Card with image */}
-                            <div className="relative w-64 h-64 md:w-56 md:h-56 flex items-center justify-center border-8 border-green-700  bg-black">
-                                <img src={entry.chart} alt={`chart for ${entry.year}`} className="w-full h-full object-cover" />
-                                {/* <span className="absolute inset-0 flex items-center justify-center text-white text-4xl z-10">{entry.year}</span> */}
-                            </div>
-                            {/* List */}
-                            <div className='flex justify-end w-48'>
-                                {entry.img && <img src={entry.img} alt="" className='size-12' />}
-                            </div>
-                            <ul className="text-black text-left text-md w-full pl-3">
-                                {entry.items.map((item, i) => (
-                                    <li
-                                        key={i}
-                                        className={
-                                            `${item.bold ? 'font-bold text-2xl' : ''} ${item.new ? 'text-blue-950 font-black text-2xl' : ''}`
+        <div className='bg-[#eaeaea]'>
+            <h1 className="text-center font-questrial font-black text-gray-800 text-3xl md:text-5xl uppercase mb-2 py-4">Growth Story</h1>
+            <div className="font-questrial min-h-screen py-16 px-4" style={{
+                backgroundImage: `url(${banner})`,
+                backgroundColor: '#f8fafc'
+            }}>
+                <div className="max-w-screen lg:px-10">
+                    {/* Cards Grid */}
+                    <motion.div 
+                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                        animate={{
+                            x: [0, -8, 8, -8, 8, 0]
+                        }}
+                        transition={{
+                            duration: 1,
+                            repeat: Infinity,
+                            repeatType: "loop",
+                            ease: "easeInOut"
+                        }}
+                    >
+                        {growthData.map((entry, idx) => (
+                            <div
+                                key={entry.year}
+                                className={`
+                                rounded-3xl p-8 shadow-lg transition-all cursor-pointer duration-300 w-full h-full lg:w-[29rem] overflow-hidden
+                                ${entry.isGreen
+                                        ? 'bg-green-700 text-white'
+                                        : 'bg-[#eaeaea] text-gray-800'
+                                    }
+                            `}
+                                style={{ minHeight: '420px' }}
+                                onMouseEnter={() => setHoveredCard(idx)}
+                                onMouseLeave={() => setHoveredCard(null)}
+                            >
+                                <motion.div
+                                    animate={{
+                                        y: hoveredCard === idx ? -10 : 0,
+                                        transition: {
+                                            duration: 0.2,
+                                            ease: "easeOut"
                                         }
-                                    >
-                                        {item.text}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
+                                    }}
+                                >
+                                    {/* Calendar Icon */}
+                                    <div className="flex justify-center mb-4">
+                                        <motion.div
+                                            animate={{
+                                                rotate: hoveredCard === idx ? 45 : 0,
+                                                transition: {
+                                                    duration: 0.3,
+                                                    ease: "easeInOut"
+                                                }
+                                            }}
+                                        >
+                                            <LuCalendarDays
+                                                size={32}
+                                                className={entry.isGreen ? 'text-white' : 'text-gray-600'}
+                                            />
+                                        </motion.div>
+                                    </div>
+
+                                    {/* Year */}
+                                    <h2 className="text-center text-3xl lg:text-5xl font-bold mb-8">
+                                        {entry.year}
+                                    </h2>
+
+                                    {/* Services List */}
+                                    <div className="space-y-3">
+                                        {entry.services.map((service, i) => (
+                                            <div
+                                                key={i}
+                                                className="text-lg text-center lg:text-sm font-semibold tracking-wide"
+                                            >
+                                                {service}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </motion.div>
+                            </div>
+                        ))}
+                    </motion.div>
                 </div>
             </div>
         </div>
+
     );
 }
 
