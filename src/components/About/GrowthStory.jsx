@@ -10,9 +10,13 @@ const growthData = [
     { year: '2021', isGreen: false, services: ['MEP DESIGN', 'PMC', 'TRADE'] },
     { year: '2023', isGreen: true, services: ['MEP DESIGN', 'PMC', 'TRADE', 'EXECUTION'] },
     { year: '2024', isGreen: false, services: ['MEP DESIGN', 'PMC', 'TRADE', 'EXECUTION', 'AMC'] },
-    { year: '2025', isGreen: true, services: ['MEP DESIGN', 'PMC', 'TRADE', 'EXECUTION', 'AMC', 'INTL LOCAL', 'Presence'] },
+    { year: '2025', isGreen: true, services: ['MEP DESIGN', 'PMC', 'TRADE', 'EXECUTION', 'AMC', 'INTL LOCAL', 'PRESENCE'] },
 ];
-
+function toTitleCase(str) {
+    return str
+        .toLowerCase()
+        .replace(/\b\w/g, char => char.toUpperCase());
+}
 function GrowthStory() {
     const [hoveredCard, setHoveredCard] = useState(null);
 
@@ -27,16 +31,42 @@ function GrowthStory() {
                 opacity: [0, 1],
                 transition: { duration: 0.8, ease: "easeOut" }
             }).then(() => {
-                // After sliding in, start shaking infinitely
-                controls.start({
-                    x: [0, -8, 8, -8, 8, 0],
-                    transition: {
-                        duration: 1,
-                        repeat: Infinity,
-                        repeatType: "loop",
-                        ease: "easeInOut"
-                    }
-                });
+                // After sliding in, start the shake pattern
+                const startShakePattern = () => {
+                    // First shake cycle (longer with more shakes)
+                    controls.start({
+                        x: [0, -10, 10, -8, 8, -6, 6, -4, 4, 0],
+                        transition: {
+                            duration: 1.2,
+                            ease: "easeInOut"
+                        }
+                    }).then(() => {
+                        // Pause/slow phase
+                        controls.start({
+                            x: [0, -2, 2, -1, 1, 0],
+                            transition: {
+                                duration: 2.0,
+                                ease: "easeInOut"
+                            }
+                        }).then(() => {
+                            // Second shake cycle (longer with more shakes)
+                            controls.start({
+                                x: [0, -10, 10, -8, 8, -6, 6, -4, 4, 0],
+                                transition: {
+                                    duration: 1.2,
+                                    ease: "easeInOut"
+                                }
+                            }).then(() => {
+                                // Wait before repeating the entire pattern
+                                setTimeout(() => {
+                                    startShakePattern();
+                                }, 2500);
+                            });
+                        });
+                    });
+                };
+                
+                startShakePattern();
             });
         }
     }, [inView, controls]);
@@ -116,9 +146,9 @@ function GrowthStory() {
                                         {entry.services.map((service, i) => (
                                             <div
                                                 key={i}
-                                                className="text-sm sm:text-base lg:text-lg text-center tracking-wide font-medium"
+                                                className="text-sm sm:text-base lg:text-lg text-center tracking-wide font-medium first-letter:uppercase"
                                             >
-                                                {service}
+                                                {toTitleCase(service)}
                                             </div>
                                         ))}
                                     </div>
